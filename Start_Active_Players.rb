@@ -2,7 +2,10 @@
 require 'watir'
 
 # Opens the Google Chrome Web Browser
-browser = Watir::Browser.new :chrome
+browser = Watir::Browser.new(:chrome)
+
+# Maximizes the Web Browser Window
+browser.window.maximize
 
 # Goes to Web Address
 browser.goto("https://basketball.fantasysports.yahoo.com")
