@@ -25,13 +25,13 @@ browser.element(:id => 'login-signin').click
 # Click on My Team
 browser.element(:class => 'F-link', text: /^YOUR_TEAM_NAME$/).click
 
-# Click on Start Active Players
-browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
-
-# Click on the Small Next Day Forward Arrow Icon
-browser.element(:class => "Js-next").click
-
-# Click on Start Active Players
-browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
+# Set Active Players for X Amount of Days (Default is 7)
+i = 0
+number_of_days = 7
+until i == number_of_days
+	browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
+	browser.element(:class => "Js-next").click
+	i += 1
+end
 
 # Hey
