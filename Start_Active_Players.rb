@@ -25,17 +25,13 @@ browser.element(:id => 'login-signin').click
 # Click on My Team
 browser.element(:class => 'F-link', text: /^YOUR_TEAM_NAME$/).click
 
-# Refresh the Browser
-browser.refresh
-
 # Click on Start Active Players
 browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
 
 # Click on the Small Next Day Forward Arrow Icon
 browser.element(:class => "Js-next").click
 
-# Refresh the Browser
-browser.refresh
-
 # Click on Start Active Players
 browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
+
+# Hey
