@@ -1,4 +1,4 @@
-# import the watir gem/library...formerly known as 'watir-webdriver'
+# Import the watir gem/library...formerly known as 'watir-webdriver'
 require 'watir'
 
 # Opens the Google Chrome Web Browser
