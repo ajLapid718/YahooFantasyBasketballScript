@@ -1,3 +1,5 @@
+require 'watir'
+
 # Opens the Google Chrome Web Browser
 browser = Watir::Browser.new :chrome
 
