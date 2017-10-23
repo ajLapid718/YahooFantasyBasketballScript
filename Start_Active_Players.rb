@@ -26,12 +26,10 @@ browser.element(:id => 'login-signin').click
 browser.element(:class => 'F-link', text: /^YOUR_TEAM_NAME$/).click
 
 # Set Active Players for X Amount of Days (Default is 7)
-i = 0
 number_of_days = 7
-until i == number_of_days
+number_of_days.times do
 	browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
 	browser.element(:class => "Js-next").click
-	i += 1
 end
-
 # Hey
+# Sleep. Quit. Exit. Boom.
