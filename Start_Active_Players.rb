@@ -1,5 +1,6 @@
 # Import the watir gem/library...formerly known as 'watir-webdriver'
 require 'watir'
+# Require the date class for more descriptive dates in the terminal
 require 'date'
 
 # Opens the Google Chrome Web Browser
