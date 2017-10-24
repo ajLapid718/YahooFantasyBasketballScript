@@ -39,4 +39,5 @@ end
 puts "Everything is all set!"
 sleep(2)
 puts "Goodbye!"
+sleep(1)
 browser.close
