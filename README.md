@@ -1,13 +1,17 @@
-When I figure out what's going on, you'll know what's going on.
+# Yahoo Fantasy Basketball
 
-I have some basic functionality going on.
-There's a lot of improvements that can be done.
-But I'm pretty happy with what I've done so far.
+##### Step By Step
 
-I'll try to work on this for the week.
-Looking to get a range/loop going to handle the repetitive logic at the bottom.
-Going to need to get user input.
-Going to need to make sure the password gets typed as a hidden text in the terminal.
-
-Going to see how far I can take this in a week.
-This was the MVP so anything from here is a major plus to me.
+1. Opens a web browser session
+2. Maximizes the web browser window
+3. Goes to the Yahoo Fantasy Basketball website
+4. Clicks on sign in
+5. Fills out your e-mail address
+6. Submits your e-mail address
+7. Fills out your password
+8. Submits your password
+9. Navigates to My Team
+10. Clicks on the "start active players" button
+11. Clicks on the "next day" arrow
+12. Repeats step 10 and step 11 until the desired amount of days are covered and handled
+13. Closes the browser session
