@@ -34,5 +34,9 @@ number_of_days.times do
 	browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
 	browser.element(:class => "Js-next").click
 end
-# Hey
-# Sleep. Quit. Exit. Boom.
+
+# Farewell Messages and Closing the Browser Session
+puts "Everything is all set!"
+sleep(2)
+puts "Goodbye!"
+browser.close
