@@ -19,4 +19,5 @@
 ##### From Configuration to Implementation
 
 - To be continued...
-- Type in `ruby "Start_Active_Players.rb"` in your terminal and hit enter
+- Type in `ruby "Start_Active_Players.rb"` in your terminal and press enter
+- ...to be continued
