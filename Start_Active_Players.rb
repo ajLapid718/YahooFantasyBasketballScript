@@ -34,11 +34,11 @@ puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} t
 number_of_days.times do |counter|
 	amount_of_starts = browser.as(:target => "sports").size
 	sleep(2)
-	puts "You have #{amount_of_starts} players who have a game on #{(DateTime.now + counter)}.strftime("%B, %d, %Y")}!"
+	puts "You have #{amount_of_starts} players who have a game on #{(DateTime.now + counter).strftime("%B, %d, %Y")}!"
 	browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
 	browser.element(:class => "Js-next").click
 	puts "#{number_of_days - (counter + 1)} day[s] left to go!"
-	your_amount_of_starts = amount_of_starts
+	your_amount_of_starts += amount_of_starts
 	sleep(3)
 end
 
@@ -59,7 +59,7 @@ number_of_days.times do |counter|
 	sleep(2)
 	puts "Your opponent has #{amount_of_starts} players who have a game on #{(DateTime.now + counter).strftime("%B, %d, %Y")}!"
 	browser.element(:class => "Js-next").click
-	their_amount_of_starts = amount_of_starts
+	their_amount_of_starts += amount_of_starts
 	sleep(2)
 end
 
