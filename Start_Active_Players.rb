@@ -43,7 +43,7 @@ number_of_days.times do |counter|
 end
 
 sleep(1)
-puts "Everything is all set for #{number_of_days} days!"
+puts "Everything is all set for #{number_of_days} days (including today)!"
 sleep(1)
 puts "Goodbye!"
 sleep(1)
