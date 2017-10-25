@@ -10,10 +10,20 @@ browser = Watir::Browser.new(:chrome)
 browser.window.maximize
 
 # Goes to Web Address
-browser.goto("https://basketball.fantasysports.yahoo.com")
+begin
+	browser.goto("https://basketball.fantasysports.yahoo.com")
+rescue
+	puts "You've been rescued from an error! Yay!"
+end
 
 # Clicks on Sign In
-browser.element(:id => 'yucs-profile').click
+begin
+	browser.element(:id => 'yucs-profile').click
+rescue
+	puts "You've been rescued from an error! Yay!"
+	sleep(1)
+	retry
+end
 
 # Types in Email Address and Presses Enter
 browser.tap { |b| b.text_field(:id => 'login-username').set("YOUR_EMAIL_ADDRESS") }.send_keys(:enter)
@@ -22,8 +32,13 @@ browser.tap { |b| b.text_field(:id => 'login-username').set("YOUR_EMAIL_ADDRESS"
 browser.tap { |b| b.text_field(:id => 'login-passwd').set("YOUR_PASSWORD") }.send_keys(:enter)
 
 # Click on My Team
-sleep(1)
-browser.element(:class => 'F-link', text: /^YOUR_TEAM_NAME$/).click
+begin
+	browser.element(:class => 'F-link', text: /^YOUR_TEAM_NAME$/).click
+rescue
+	puts "You've been rescued from an error! Yay!"
+	sleep(1)
+	retry
+end
 
 # Set Active Players for X Amount of Days (Default is 7)
 sleep(1)
