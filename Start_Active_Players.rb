@@ -15,19 +15,14 @@ browser.goto("https://basketball.fantasysports.yahoo.com")
 # Clicks on Sign In
 browser.element(:id => 'yucs-profile').click
 
-# Types in Email Address
-browser.text_field(:id => 'login-username').set("YOUR_EMAIL_ADDRESS")
+# Types in Email Address and Presses Enter
+browser.tap { |b| b.text_field(:id => 'login-username').set("YOUR_EMAIL_ADDRESS") }.send_keys(:enter)
 
-# Clicks on Next
-browser.element(:id => 'login-signin').click
-
-# Types in Password
-browser.text_field(:id => 'login-passwd').set("YOUR_PASSWORD")
-
-# Clicks on Sign In
-browser.element(:id => 'login-signin').click
+# Types in Password and Presses Enter
+browser.tap { |b| b.text_field(:id => 'login-passwd').set("YOUR_PASSWORD") }.send_keys(:enter)
 
 # Click on My Team
+sleep(1)
 browser.element(:class => 'F-link', text: /^YOUR_TEAM_NAME$/).click
 
 # Set Active Players for X Amount of Days (Default is 7)
