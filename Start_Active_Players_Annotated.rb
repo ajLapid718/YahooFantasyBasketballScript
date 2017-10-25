@@ -43,17 +43,13 @@ end
 # Set Active Players for X Amount of Days (Default is 7)
 # By default, if you run this on Monday it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
 # Change the value of number_of_days accordingly
-sleep(1)
 number_of_days = 7
 puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (number_of_days-1)).strftime("%B, %d, %Y")}"
-sleep(1)
 number_of_days.times do |counter|
-	sleep(1)
 	browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
-	sleep(1)
 	browser.element(:class => "Js-next").click
-	sleep(1)
 	puts "#{number_of_days - (counter + 1)} day[s] left to go!"
+	sleep(3)
 end
 
 # Farewell Messages and Closing the Browser Session
