@@ -3,10 +3,11 @@ require 'watir'
 # Require the date class for more descriptive dates in the terminal
 require 'date'
 
-# Opens the Google Chrome Web Browser
-browser = Watir::Browser.new(:chrome)
+# Opens a Web Browser Session for Google Chrome (Either in Headless Mode or in Incognito Mode)
+browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --headless])
+browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --incognito])
 
-# Maximizes the Web Browser Window
+# Maximizes the Web Browser Window (This is unnecessary in Headless Mode)
 browser.window.maximize
 
 # Goes to Web Address
@@ -31,7 +32,7 @@ browser.tap { |b| b.text_field(:id => 'login-username').set("YOUR_EMAIL_ADDRESS"
 # Types in Password and Presses Enter
 browser.tap { |b| b.text_field(:id => 'login-passwd').set("YOUR_PASSWORD") }.send_keys(:enter)
 
-# Click on My Team
+# Navigates to My Team
 begin
 	browser.element(:class => 'F-link', text: /^YOUR_TEAM_NAME$/).click
 rescue
@@ -41,8 +42,8 @@ rescue
 end
 
 # Set Active Players for X Amount of Days (Default is 7)
-# By default, if you run this on Monday it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
-# Change the value of number_of_days accordingly
+# By default, if you run this on Monday it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday aka 7 days
+# Change the value of the number_of_days variable accordingly
 number_of_days = 7
 puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (number_of_days-1)).strftime("%B, %d, %Y")}"
 number_of_days.times do |counter|
