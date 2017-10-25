@@ -41,9 +41,11 @@ rescue
 end
 
 # Set Active Players for X Amount of Days (Default is 7)
+# By default, if you run this on Monday it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+# Change the value of number_of_days accordingly
 sleep(1)
 number_of_days = 7
-puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + number_of_days).strftime("%B, %d, %Y")}"
+puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (number_of_days-1)).strftime("%B, %d, %Y")}"
 sleep(1)
 number_of_days.times do |counter|
 	sleep(1)
