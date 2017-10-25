@@ -1,8 +1,7 @@
 require 'watir'
 require 'date'
 
-browser = Watir::Browser.new(:chrome)
-browser.window.maximize
+browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --headless])
 
 begin
 	browser.goto("https://basketball.fantasysports.yahoo.com")
