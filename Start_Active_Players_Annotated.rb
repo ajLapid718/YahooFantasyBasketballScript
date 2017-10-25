@@ -1,15 +1,22 @@
+# Import the watir gem/library...formerly known as 'watir-webdriver'
 require 'watir'
+# Require the date class for more descriptive dates in the terminal
 require 'date'
 
+# Opens the Google Chrome Web Browser
 browser = Watir::Browser.new(:chrome)
+
+# Maximizes the Web Browser Window
 browser.window.maximize
 
+# Goes to Web Address
 begin
 	browser.goto("https://basketball.fantasysports.yahoo.com")
 rescue
 	puts "You've been rescued from an error! Yay!"
 end
 
+# Clicks on Sign In
 begin
 	browser.element(:id => 'yucs-profile').click
 rescue
@@ -18,9 +25,13 @@ rescue
 	retry
 end
 
+# Types in Email Address and Presses Enter
 browser.tap { |b| b.text_field(:id => 'login-username').set("YOUR_EMAIL_ADDRESS") }.send_keys(:enter)
+
+# Types in Password and Presses Enter
 browser.tap { |b| b.text_field(:id => 'login-passwd').set("YOUR_PASSWORD") }.send_keys(:enter)
 
+# Click on My Team
 begin
 	browser.element(:class => 'F-link', text: /^YOUR_TEAM_NAME$/).click
 rescue
@@ -29,6 +40,9 @@ rescue
 	retry
 end
 
+# Set Active Players for X Amount of Days (Default is 7)
+# By default, if you run this on Monday it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+# Change the value of number_of_days accordingly
 sleep(1)
 number_of_days = 7
 puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (number_of_days-1)).strftime("%B, %d, %Y")}"
@@ -42,6 +56,7 @@ number_of_days.times do |counter|
 	puts "#{number_of_days - (counter + 1)} day[s] left to go!"
 end
 
+# Farewell Messages and Closing the Browser Session
 sleep(1)
 puts "Everything is all set for #{number_of_days} days!"
 sleep(1)
