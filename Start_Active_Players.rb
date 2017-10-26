@@ -1,6 +1,7 @@
 require 'watir'
 require 'date'
 require 'highline/import'
+START_TIME = Time.now
 
 print "Enter your Yahoo e-mail address (example: person123): "
 YAHOO_EMAIL_ADDRESS = gets.chomp
@@ -71,7 +72,7 @@ number_of_days.times do |counter|
 end
 
 begin
-	browser.a(text: /^Matchups$/).click
+	browser.a(text: /^Basketball '17'$/).click
 rescue
 	puts "Could not find Matchups or a timeout happened. Will refresh and try again!"
 	sleep(1)
@@ -106,6 +107,8 @@ sleep(1)
 puts "Everything is all set for #{number_of_days} day[s] (including today)!"
 sleep(1)
 puts "You have a total of #{your_amount_of_starts} starts and your opponent has a total of #{their_amount_of_starts} starts! Whoa!"
+sleep(1)
+puts "This script took #{(Time.now - START_TIME).to_i} from start to finish!"
 sleep(1)
 puts "Goodbye!"
 sleep(1)
