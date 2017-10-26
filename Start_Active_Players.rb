@@ -67,6 +67,18 @@ number_of_days.times do |counter|
 	sleep(2)
 	puts "You have #{amount_of_starts} players who have a game on #{(DateTime.now + counter).strftime("%B, %d, %Y")}!"
 	browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
+
+	if amount_of_starts >= 11
+		puts "The following players remain on the bench, you may want to review this day: "
+		a, b = [browser.table(:id => "statTable0")[12][2].text, browser.table(:id => "statTable0")[12][4].text]
+		c, d = [browser.table(:id => "statTable0")[13][2].text, browser.table(:id => "statTable0")[13][4].text]
+		e, f = [browser.table(:id => "statTable0")[14][2].text, browser.table(:id => "statTable0")[14][4].text]
+		puts "#{a} and his schedule: #{b.empty? ? "does not have a game" : b}"
+		puts "#{c} and his schedule: #{d.empty? ? "does not have a game" : d}"
+		puts "#{e} and his schedule #{f.empty? ? "does not have a game" : f}"
+		sleep(2)
+	end
+
 	browser.element(:class => "Js-next").click
 	puts "#{number_of_days - (counter + 1)} day[s] left to go!"
 	your_amount_of_starts += amount_of_starts
