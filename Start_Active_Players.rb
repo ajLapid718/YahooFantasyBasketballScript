@@ -28,6 +28,7 @@ rescue
 	retry
 end
 
+puts "Currently logging in..."
 browser.tap { |b| b.text_field(:id => 'login-username').set(YAHOO_EMAIL_ADDRESS) }.send_keys(:enter)
 browser.tap { |b| b.text_field(:id => 'login-passwd').set(YAHOO_PASSWORD) }.send_keys(:enter)
 puts "Successfully logged in. Navigating to My Team now."
