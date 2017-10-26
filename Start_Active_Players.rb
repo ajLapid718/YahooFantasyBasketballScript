@@ -42,6 +42,7 @@ rescue
 	retry
 end
 
+puts " "
 puts "Currently logging in..."
 browser.tap { |b| b.text_field(:id => 'login-username').set(YAHOO_EMAIL_ADDRESS) }.send_keys(:enter)
 browser.tap { |b| b.text_field(:id => 'login-passwd').set(yahoo_password) }.send_keys(:enter)
@@ -57,6 +58,7 @@ rescue
 	retry
 end
 
+puts " "
 number_of_days = 7
 your_amount_of_starts = 0
 puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (number_of_days-1)).strftime("%B, %d, %Y")}"
@@ -72,7 +74,7 @@ number_of_days.times do |counter|
 end
 
 begin
-	browser.a(text: /^Basketball '17'$/).click
+	browser.a(text: /^Basketball '17$/).click
 rescue
 	puts "Could not find Matchups or a timeout happened. Will refresh and try again!"
 	sleep(1)
@@ -91,6 +93,7 @@ rescue
 	retry
 end
 
+puts " "
 number_of_days = 7
 their_amount_of_starts = 0
 puts "Your opponent's starts per day from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (number_of_days-1)).strftime("%B, %d, %Y")}"
@@ -104,11 +107,13 @@ number_of_days.times do |counter|
 end
 
 sleep(1)
+puts " "
+sleep(1)
 puts "Everything is all set for #{number_of_days} day[s] (including today)!"
 sleep(1)
 puts "You have a total of #{your_amount_of_starts} starts and your opponent has a total of #{their_amount_of_starts} starts! Whoa!"
 sleep(1)
-puts "This script took #{(Time.now - START_TIME).to_i} from start to finish!"
+puts "This script took #{(Time.now - START_TIME).to_i} seconds to complete!"
 sleep(1)
 puts "Goodbye!"
 sleep(1)
