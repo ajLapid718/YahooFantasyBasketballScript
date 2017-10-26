@@ -1,29 +1,42 @@
 require 'watir'
 require 'date'
 
+print "Enter your Yahoo e-mail address (example: person123): "
+YAHOO_EMAIL_ADDRESS = gets.chomp
+print "Enter your password: "
+YAHOO_PASSWORD = gets.chomp
+print "Enter the name of your team: "
+MY_TEAM = gets.chomp
+print "Enter the name of your opponent's team: "
+TEAM_NAME_OF_YOUR_OPPONENT = gets.chomp
+
 browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --headless])
 
 begin
 	browser.goto("https://basketball.fantasysports.yahoo.com")
 rescue
-	puts "You've been rescued from an error! Yay!"
+	puts "There's been an error regarding accessing the website. This is a troubling start."
 end
 
 begin
 	browser.element(:id => 'yucs-profile').click
 rescue
-	puts "You've been rescued from an error! Yay!"
+	puts "There's been an error regarding clicking on the Sign In link. Will refresh and try again!"
+	sleep(1)
+	browser.refresh
 	sleep(1)
 	retry
 end
 
-browser.tap { |b| b.text_field(:id => 'login-username').set("YOUR_EMAIL_ADDRESS") }.send_keys(:enter)
-browser.tap { |b| b.text_field(:id => 'login-passwd').set("YOUR_PASSWORD") }.send_keys(:enter)
+browser.tap { |b| b.text_field(:id => 'login-username').set(YAHOO_EMAIL_ADDRESS) }.send_keys(:enter)
+browser.tap { |b| b.text_field(:id => 'login-passwd').set(YAHOO_PASSWORD) }.send_keys(:enter)
 
 begin
-	browser.element(:class => 'F-link', text: /^YOUR_TEAM_NAME$/).click
+	browser.element(:class => 'F-link', text: MY_TEAM).click
 rescue
-	puts "You've been rescued from an error! Yay!"
+	puts "There's been an error regarding clicking on your team name."
+	sleep(1)
+	browser.refresh
 	sleep(1)
 	retry
 end
@@ -44,9 +57,20 @@ end
 
 begin
 	browser.a(text: /^Matchups$/).click
-	browser.element(:class => 'F-link', text: /^TEAM_NAME_OF_YOUR_OPPONENT$/).click
 rescue
-	puts "You've been rescued from an error! Yay!"
+	puts "Could not find Matchups or a timeout happened. Will refresh and try again!"
+	sleep(1)
+	browser.refresh
+	sleep(1)
+	retry
+end
+
+begin
+	browser.element(:class => 'F-link', text: TEAM_NAME_OF_YOUR_OPPONENT).click
+rescue
+	puts "Can not find the opponent's team name. Will refresh and try again!"
+	sleep(1)
+	browser.refresh
 	sleep(1)
 	retry
 end
