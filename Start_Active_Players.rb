@@ -1,10 +1,10 @@
 require 'watir'
 require 'date'
+require 'highline/import'
 
 print "Enter your Yahoo e-mail address (example: person123): "
 YAHOO_EMAIL_ADDRESS = gets.chomp
-print "Enter your password: "
-YAHOO_PASSWORD = gets.chomp
+YAHOO_PASSWORD = ask("Enter your password: ") { |q| q.echo = "*" }
 print "Enter the name of your team: "
 MY_TEAM = gets.chomp
 print "Enter the name of your opponent's team: "
