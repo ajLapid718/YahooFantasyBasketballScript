@@ -4,7 +4,20 @@ require 'highline/import'
 
 print "Enter your Yahoo e-mail address (example: person123): "
 YAHOO_EMAIL_ADDRESS = gets.chomp
-YAHOO_PASSWORD = ask("Enter your password: ") { |q| q.echo = "*" }
+
+begin
+	yahoo_password = ask("Enter your password: ") { |q| q.echo = "*" }
+	password_confirmation_attempt = ask("Confirm your password: ") { |q| q.echo = "*" }
+	if yahoo_password == password_confirmation_attempt
+		yahoo_password = yahoo_password
+	else
+		raise Exception.new("Your passwords do not match. Try again.")
+	end
+rescue Exception => error_message
+	puts "#{error_message}"
+	retry
+end
+
 print "Enter the name of your team: "
 MY_TEAM = gets.chomp
 print "Enter the name of your opponent's team: "
@@ -30,7 +43,7 @@ end
 
 puts "Currently logging in..."
 browser.tap { |b| b.text_field(:id => 'login-username').set(YAHOO_EMAIL_ADDRESS) }.send_keys(:enter)
-browser.tap { |b| b.text_field(:id => 'login-passwd').set(YAHOO_PASSWORD) }.send_keys(:enter)
+browser.tap { |b| b.text_field(:id => 'login-passwd').set(yahoo_password) }.send_keys(:enter)
 puts "Successfully logged in. Navigating to My Team now."
 
 begin
