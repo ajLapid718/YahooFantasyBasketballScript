@@ -8,7 +8,7 @@ require 'date'
 
 #### Input pertinent information
 
-Some information is required in order for this activity to be properly automated. For this version,
+Some information is required in order for this activity to be properly automated. For this version
 of the script to work, it is necessary for a user to manually edit the source code. In other words,
 you will type in your Yahoo e-mail address within the quotation marks. The same goes for your password
 in addition to your team name. An example of a valid entry would be:
@@ -18,8 +18,7 @@ in addition to your team name. An example of a valid entry would be:
 - `YOUR_TEAM_NAME = "Concrete Jungle"`
 
 It is unsafe to have your information out in the open, so you may have to keep re-entering your information each time you would like to set your active players. The plus side to this is that if
-are okay with leaving your information in the file, then you may never have to retype your information
-again for the rest of the fantasy season unless you change your password. You could just open the terminal and run the script with less hassle involved.
+are comfortable with leaving your information in the file, then you may never have to retype your information again for the rest of the fantasy season unless you change your password. You could just open the terminal and run the script with less hassle involved.
 
 ```ruby
 YOUR_EMAIL_ADDRESS = ""
