@@ -1,6 +1,9 @@
 # Start Active Players Lite
 
-#### Import the necessary gems or libraries
+#### Import the necessary gems and/or libraries
+
+Requiring a gem follows the idea of importing zipped up data that is already housed on your local system. Without these two lines of code, a user cannot interact with the Watir library. Starting up a browser session with `browser = Watir::Browser.new(:chrome)` or `browser.goto("www.google.com")` would throw up error messages. In order for the `require 'watir'` call to process correctly, a user should have already ran `gem install watir` in their terminal at some point in the past. Since that has more to do with configuration, please refer to the repository's main `README.md` file where you will find information about an executable file called chromedriver.exe, PATH setup, and more.
+
 ```ruby
 require 'watir'
 require 'date'
@@ -23,7 +26,10 @@ YOUR_PASSWORD = ""
 YOUR_TEAM_NAME = ""
 ```
 
-#### Start a browser session with Google Chrome in Incognito Mode with a maximized window
+#### Start a browser session
+
+An instance of the Browser class is initialized and is store in the instance variable `@browser` (could have named it anything), which will be accessed throughout the series of function calls. Check out the difference between local variables and instance variables if you would like to know more about the accessibility of a variable (scope). One look at the Watir documentation (essentially a place to see which functions can be invoked as well as updates), an instance of the browser class can be passed information such as the type of web browser to open and switches (similar to options or preferences). The code originally has a skeleton template of `Watir::Browser.new(browser, *args)`. When a function looks like that, the contents of the parentheses are known as parameters. When the parameters are filled in, such as in the example below, then they are known as arguments. That's that for this section.
+
 ```ruby
 def start_browser
   @browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --incognito])
@@ -43,6 +49,9 @@ end
 ```
 
 #### Click on the Sign In button
+
+In order for the button to be located, Watir provides an instance method (see: instance methods, class methods, functions) known as `#element` which accepts the argument of `:id` and the id is an HTML attribute. Some level of HTML and CSS as well as the Inspector Tools (right-click + inspect) is helpful for understanding what is going on under the hood. Basically, the sign-in button is labeled with the id of `yucs-profile` and the driver (term of the mechanism performing the automated actions) locates the element (piece of information) and clicks on it, just as a person would do manually.
+
 ```ruby
 def sign_in
   begin
@@ -56,6 +65,9 @@ end
 ```
 
 #### Type in e-mail address and press enter
+
+Not only can you instruct the driver to type in information, but you can also send it keystroke commands such as hitting `:enter` after typing in a password or the common hotkey combination of `[:control, "a"]` to select all.
+
 ```ruby
 def enter_email
   @browser.tap { |b| b.text_field(:id => 'login-username').set(YOUR_EMAIL_ADDRESS) }.send_keys(:enter)
@@ -83,7 +95,7 @@ end
 ```
 
 #### Click the Set Active Players button
-The instance variable `number_of_days` is initially set to a value of seven. By default, if you run this on a Monday then it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday aka 7 days. Feel free to change the value of the `number_of_days` instance variable accordingly. It may be in your best interest to be mindful of the time of day when you are running this script; Yahoo fantasy basketball moves on to the next day starting at 3:00am or 4:00am Eastern Standard Time. As a result, this script might undershoot or overshoot the `number_of_days` you had intended by a day or so. Approach this as you see fit!
+The instance variable `number_of_days` is initially set to a value of seven. By default, if you run this on a Monday then it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday aka 7 days. Feel free to change the value of the `number_of_days` instance variable accordingly. It may be in your best interest to be mindful of the time of day when you are running this script; Yahoo fantasy basketball moves on to the next day starting at 3:00am or 4:00am Eastern Standard Time. As a result, this script might undershoot or overshoot the `number_of_days` you had intended by a day or so. Approach this as you see fit! Things that might catch your eye here: loops such as `@number_of_days.times do`, Ruby blocks with a variable within pipes `|counter|`, string interpolation aka `"#{@number_of_days - 1 (counter + 1)}"`, keywords such as `puts`, and regular expressions aka regexp such as `/^Start Active Players$/`.
 ```ruby
 def set_active_players
   @number_of_days = 7
