@@ -1,6 +1,7 @@
 # Start Active Players Lite
 
 #### Import the necessary gems or libraries
+
 ```ruby
 require 'watir'
 require 'date'

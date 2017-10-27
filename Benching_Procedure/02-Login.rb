@@ -10,7 +10,7 @@ def go_to_yahoo
   end
 end
 
-def click_on_profile
+def click_on_sign_in
   begin
     @browser.element(:id => 'yucs-profile').click
   rescue
@@ -33,5 +33,5 @@ end
 # Invoke Login Process
 start_browser_session
 go_to_yahoo
-click_on_profile
+click_on_sign_in
 log_user
