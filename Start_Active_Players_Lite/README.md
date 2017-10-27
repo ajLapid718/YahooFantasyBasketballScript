@@ -14,11 +14,12 @@ require 'date'
 #### Input pertinent information
 
 Some information is required in order for this activity to be properly automated. For this version
-of the script to work, it is necessary for a user to manually edit the source code. In other words, once you have downloaded this repository (a term that refers to a folder on GitHub) or copied the script `Start_Them.rb` to your computer, you will have to type in your Yahoo e-mail address within the quotation marks. The same goes for your password in addition to your team name. An example of a valid entry would be:
+of the script to work, it is necessary for a user to manually edit the source code. In other words, once you have downloaded this repository (a term that refers to a folder on GitHub) or copied the script `Start_Them.rb` to your computer, you will have to type in your Yahoo e-mail address within the quotation marks. The same goes for your password in addition to your team name. The same applies toward the amount of days (default value is seven days) you would like to set your lineup for. An example of a valid entry would be:
 
 - `YOUR_EMAIL_ADDRESS = "person123"` or `YOUR_EMAIL_ADDRESS = "person123@yahoo.com"`
 - `YOUR_PASSWORD = "password321"`
 - `YOUR_TEAM_NAME = "Concrete Jungle"`
+- `NUMBER_OF_DAYS = 14`
 
 It is typically unsafe to have your private information in any file on your computer, so you may have to keep re-entering and removing your information in a back-and-forth manner each time you would like to set your active players. However, the plus side to this is that if are comfortable with leaving your information in the file, then you may never have to retype your information again for the rest of the fantasy season unless you change your password. You could just open the terminal and run the script with less hassle involved. Keep in mind that once these variables (constants) are filled out here, you do not have to alter any other part of the source code at any point.
 
@@ -26,6 +27,7 @@ It is typically unsafe to have your private information in any file on your comp
 YOUR_EMAIL_ADDRESS = ""
 YOUR_PASSWORD = ""
 YOUR_TEAM_NAME = ""
+NUMBER_OF_DAYS = 7
 ```
 
 #### Start a browser session
@@ -105,22 +107,21 @@ end
 ```
 
 #### Click the Set Active Players button
-The instance variable `number_of_days` is initially set to a value of seven. By default, if you run this on a Monday then it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday aka 7 days. Feel free to change the value of the `number_of_days` instance variable accordingly.
+The constant `NUMBER_OF_DAYS` is initially set to a value of seven. By default, if you run this on a Monday then it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday aka 7 days. Feel free to change the value of the `NUMBER_OF_DAYS` constant accordingly.
 
-It may be in your best interest to be mindful of the time of day when you are running this script; Yahoo fantasy basketball moves on to the next day starting at 3:00am or 4:00am Eastern Standard Time. As a result, this script might undershoot or overshoot the `number_of_days` you had intended by a day or so. Approach this as you see fit!
+It may be in your best interest to be mindful of the time of day when you are running this script; Yahoo fantasy basketball moves on to the next day starting at 3:00am or 4:00am Eastern Standard Time. As a result, this script might undershoot or overshoot the `NUMBER_OF_DAYS` you had intended by a day or so. Approach this as you see fit!
 
-Things that might pique your interest: loops such as `@number_of_days.times do`, Ruby blocks having a variable within pipes `|counter|`, string interpolation aka `"#{@number_of_days - 1 (counter + 1)}"`, keywords such as `puts`, and regular expressions aka regexp such as `/^Start Active Players$/`.
+Things that might pique your interest: loops such as `NUMBER_OF_DAYS.times do`, Ruby blocks having a variable within pipes `|counter|`, string interpolation aka `"#{NUMBER_OF_DAYS - 1 (counter + 1)}"`, keywords such as `puts`, and regular expressions aka regexp such as `/^Start Active Players$/`.
 
 I may have misled you earlier; this is probably the coolest thing to witness if you are sticking around to watch the driver automate the process!
 
 ```ruby
 def set_active_players
-  @number_of_days = 7
-  puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (@number_of_days-1)).strftime("%B, %d, %Y")}"
-  @number_of_days.times do |counter|
+  puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (NUMBER_OF_DAYS-1)).strftime("%B, %d, %Y")}"
+  NUMBER_OF_DAYS.times do |counter|
     browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
     browser.element(:class => "Js-next").click
-    puts "#{@number_of_days - (counter + 1)} day[s] left to go!"
+    puts "#{NUMBER_OF_DAYS - (counter + 1)} day[s] left to go!"
     sleep(3)
   end
 end
@@ -130,7 +131,7 @@ end
 ```ruby
 def farewell
   sleep(1)
-  puts "Everything is all set for #{@number_of_days} days (including today)!"
+  puts "Everything is all set for #{NUMBER_OF_DAYS} days (including today)!"
   sleep(1)
   puts "Goodbye!"
   sleep(1)
