@@ -17,9 +17,9 @@ in addition to your team name. An example of a valid entry would be:
 - `YOUR_PASSWORD = "password321"`
 - `YOUR_TEAM_NAME = "Concrete Jungle"`
 
-It is unsafe to have your information out in the open, so you may have to keep typing in your information each time you would like to set your active players. The plus side to this is that if
-are okay with keeping your information in the file, then you never have to retype your information
-again for the rest of the fantasy season unless you change your password.
+It is unsafe to have your information out in the open, so you may have to keep re-entering your information each time you would like to set your active players. The plus side to this is that if
+are okay with leaving your information in the file, then you may never have to retype your information
+again for the rest of the fantasy season unless you change your password. You could just open the terminal and run the script with less hassle involved.
 
 ```ruby
 YOUR_EMAIL_ADDRESS = ""
