@@ -23,12 +23,11 @@
 - ...to be continued
 
 ##### To Do List
-- [ ] Clean up the formatting (spacing and tabbing) for better readability and organization
-- [ ] Define functions in order to consolidate the separate parts of the script
+- [x] Clean up the formatting (spacing and tabbing) for better readability and organization
+- [x] Define functions in order to consolidate the separate parts of the script
 - [x] In the event of 11, 12, or 13 players having a game on the same day (or active position slots are fully occupied) report which players are on the bench
-- [ ] Update the annotated version of the script to become up to date
-- [ ] Add more information to this README file
-- [ ] Improve exception handling especially regarding the logging in
+- [x] Update the annotated version of the script to become up to date
+- [x] Add more information to this README file
 
 ##### Possible Functionality to Implement (Potential Extras)
 - [ ] Account for the Injury List (IL) position for a more accurate head count
