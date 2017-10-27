@@ -1,4 +1,4 @@
-@browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --incognito])
+@browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --headless])
 
 begin
 	@browser.goto("https://basketball.fantasysports.yahoo.com")
