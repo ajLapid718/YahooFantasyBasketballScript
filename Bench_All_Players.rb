@@ -59,13 +59,13 @@ end
 puts " "
 puts "Currently benching all players for #{Time.now.strftime("%B, %d, %Y")}"
 10.times do |i|
-	sleep(1)
+	sleep(2)
 	player_name = browser.table(:id => "statTable0")[i+2][2]
 	puts "Currently putting #{player_name.text} on the bench!"
 	player_name.click
-	sleep(3)
-	browser.table(:id => "statTable0").trs.last.click
-	sleep(3)
+	sleep(2)
+	browser.elements(:css, "tr[data-pos='BN']").last.click
+	sleep(2)
 end
 
 sleep(1)
@@ -73,7 +73,7 @@ puts " "
 sleep(1)
 puts "Everything is all set for today!"
 sleep(1)
-puts "All your players on the bench!"
+puts "All your players are on the bench!"
 sleep(1)
 puts "This script took #{(Time.now - START_TIME).to_i} seconds to complete!"
 sleep(1)
