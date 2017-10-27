@@ -13,9 +13,9 @@ of the script to work, it is necessary for a user to manually edit the source co
 you will type in your Yahoo e-mail address within the quotation marks. The same goes for your password
 in addition to your team name. An example of a valid entry would be:
 
-- `YOUR_EMAIL_ADDRESS = "person123" or YOUR_EMAIL_ADDRESS = "person123@yahoo.com"`
+- `YOUR_EMAIL_ADDRESS = "person123"` or `YOUR_EMAIL_ADDRESS = "person123@yahoo.com"`
 - `YOUR_PASSWORD = "password321"`
-- `YOUR_TEAM_NAME = Concrete Jungle`
+- `YOUR_TEAM_NAME = "Concrete Jungle"`
 
 It is unsafe to have your information out in the open, so you may have to keep typing in your information each time you would like to set your active players. The plus side to this is that if
 are okay with keeping your information in the file, then you never have to retype your information
