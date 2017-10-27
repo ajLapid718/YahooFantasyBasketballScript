@@ -1,3 +1,6 @@
 require 'watir'
 require 'date'
 require 'highline/import'
+require_relative 'info'
+require_relative 'login'
+require_relative 'bench'
