@@ -7,16 +7,16 @@ print "Enter your Yahoo e-mail address (example: person123): "
 YAHOO_EMAIL_ADDRESS = gets.chomp
 
 begin
-	yahoo_password = ask("Enter your password: ") { |q| q.echo = "*" }
-	password_confirmation_attempt = ask("Confirm your password: ") { |q| q.echo = "*" }
-	if yahoo_password == password_confirmation_attempt
-		yahoo_password = yahoo_password
-	else
-		raise Exception.new("Your passwords do not match. Try again.")
-	end
+  yahoo_password = ask("Enter your password: ") { |q| q.echo = "*" }
+  password_confirmation_attempt = ask("Confirm your password: ") { |q| q.echo = "*" }
+  if yahoo_password == password_confirmation_attempt
+    yahoo_password = yahoo_password
+  else
+    raise Exception.new("Your passwords do not match. Try again.")
+  end
 rescue Exception => error_message
-	puts "#{error_message}"
-	retry
+  puts "#{error_message}"
+  retry
 end
 
 print "Enter the name of your team: "
@@ -27,19 +27,19 @@ TEAM_NAME_OF_YOUR_OPPONENT = gets.chomp
 browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --headless])
 
 begin
-	browser.goto("https://basketball.fantasysports.yahoo.com")
+  browser.goto("https://basketball.fantasysports.yahoo.com")
 rescue
-	puts "There's been an error regarding accessing the website. This is a troubling start."
+  puts "There's been an error regarding accessing the website. This is a troubling start."
 end
 
 begin
-	browser.element(:id => 'yucs-profile').click
+  browser.element(:id => 'yucs-profile').click
 rescue
-	puts "There's been an error regarding clicking on the Sign In link. Will refresh and try again!"
-	sleep(1)
-	browser.refresh
-	sleep(1)
-	retry
+  puts "There's been an error regarding clicking on the Sign In link. Will refresh and try again!"
+  sleep(1)
+  browser.refresh
+  sleep(1)
+  retry
 end
 
 puts " "
@@ -49,13 +49,13 @@ browser.tap { |b| b.text_field(:id => 'login-passwd').set(yahoo_password) }.send
 puts "Successfully logged in. Navigating to My Team now."
 
 begin
-	browser.element(:class => 'F-link', text: MY_TEAM).click
+  browser.element(:class => 'F-link', text: MY_TEAM).click
 rescue
-	puts "There's been an error regarding clicking on your team name."
-	sleep(1)
-	browser.refresh
-	sleep(1)
-	retry
+  puts "There's been an error regarding clicking on your team name."
+  sleep(1)
+  browser.refresh
+  sleep(1)
+  retry
 end
 
 puts " "
@@ -63,46 +63,46 @@ number_of_days = 7
 your_amount_of_starts = 0
 puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (number_of_days-1)).strftime("%B, %d, %Y")}"
 number_of_days.times do |counter|
-	amount_of_starts = browser.as(:target => "sports").size
-	sleep(2)
-	puts "You have #{amount_of_starts} players who have a game on #{(DateTime.now + counter).strftime("%B, %d, %Y")}!"
-	browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
+  amount_of_starts = browser.as(:target => "sports").size
+  sleep(2)
+  puts "You have #{amount_of_starts} players who have a game on #{(DateTime.now + counter).strftime("%B, %d, %Y")}!"
+  browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
 
-	if amount_of_starts >= 11
-		puts "The following players remain on the bench, you may want to review this day: "
-		a, b = [browser.table(:id => "statTable0")[12][2].text, browser.table(:id => "statTable0")[12][4].text]
-		c, d = [browser.table(:id => "statTable0")[13][2].text, browser.table(:id => "statTable0")[13][4].text]
-		e, f = [browser.table(:id => "statTable0")[14][2].text, browser.table(:id => "statTable0")[14][4].text]
-		puts "#{a} and his schedule: #{b.empty? ? "does not have a game" : b}"
-		puts "#{c} and his schedule: #{d.empty? ? "does not have a game" : d}"
-		puts "#{e} and his schedule #{f.empty? ? "does not have a game" : f}"
-		sleep(2)
-	end
+  if amount_of_starts >= 11
+    puts "The following players remain on the bench, you may want to review this day: "
+    a, b = [browser.table(:id => "statTable0")[12][2].text, browser.table(:id => "statTable0")[12][4].text]
+    c, d = [browser.table(:id => "statTable0")[13][2].text, browser.table(:id => "statTable0")[13][4].text]
+    e, f = [browser.table(:id => "statTable0")[14][2].text, browser.table(:id => "statTable0")[14][4].text]
+    puts "#{a} and his schedule: #{b.empty? ? "does not have a game" : b}"
+    puts "#{c} and his schedule: #{d.empty? ? "does not have a game" : d}"
+    puts "#{e} and his schedule #{f.empty? ? "does not have a game" : f}"
+    sleep(2)
+  end
 
-	browser.element(:class => "Js-next").click
-	puts "#{number_of_days - (counter + 1)} day[s] left to go!"
-	your_amount_of_starts += amount_of_starts
-	sleep(3)
+  browser.element(:class => "Js-next").click
+  puts "#{number_of_days - (counter + 1)} day[s] left to go!"
+  your_amount_of_starts += amount_of_starts
+  sleep(3)
 end
 
 begin
-	browser.a(text: /^Basketball '17$/).click
+  browser.a(text: /^Basketball '17$/).click
 rescue
-	puts "Could not find Matchups or a timeout happened. Will refresh and try again!"
-	sleep(1)
-	browser.refresh
-	sleep(1)
-	retry
+  puts "Could not find Matchups or a timeout happened. Will refresh and try again!"
+  sleep(1)
+  browser.refresh
+  sleep(1)
+  retry
 end
 
 begin
-	browser.element(:class => 'F-link', text: TEAM_NAME_OF_YOUR_OPPONENT).click
+  browser.element(:class => 'F-link', text: TEAM_NAME_OF_YOUR_OPPONENT).click
 rescue
-	puts "Can not find the opponent's team name. Will refresh and try again!"
-	sleep(1)
-	browser.refresh
-	sleep(1)
-	retry
+  puts "Can not find the opponent's team name. Will refresh and try again!"
+  sleep(1)
+  browser.refresh
+  sleep(1)
+  retry
 end
 
 puts " "
@@ -110,12 +110,12 @@ number_of_days = 7
 their_amount_of_starts = 0
 puts "Your opponent's starts per day from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (number_of_days-1)).strftime("%B, %d, %Y")}"
 number_of_days.times do |counter|
-	amount_of_starts = browser.as(:target => "sports").size
-	sleep(2)
-	puts "Your opponent has #{amount_of_starts} players who have a game on #{(DateTime.now + counter).strftime("%B, %d, %Y")}!"
-	browser.element(:class => "Js-next").click
-	their_amount_of_starts += amount_of_starts
-	sleep(2)
+  amount_of_starts = browser.as(:target => "sports").size
+  sleep(2)
+  puts "Your opponent has #{amount_of_starts} players who have a game on #{(DateTime.now + counter).strftime("%B, %d, %Y")}!"
+  browser.element(:class => "Js-next").click
+  their_amount_of_starts += amount_of_starts
+  sleep(2)
 end
 
 sleep(1)
