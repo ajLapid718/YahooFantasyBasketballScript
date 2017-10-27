@@ -9,9 +9,7 @@ require 'date'
 #### Input pertinent information
 
 Some information is required in order for this activity to be properly automated. For this version
-of the script to work, it is necessary for a user to manually edit the source code. In other words,
-you will type in your Yahoo e-mail address within the quotation marks. The same goes for your password
-in addition to your team name. An example of a valid entry would be:
+of the script to work, it is necessary for a user to manually edit the source code. In other words, once you have downloaded this repository or copied the script `Start_Them.rb` to your computer, you will have to type in your Yahoo e-mail address within the quotation marks. The same goes for your password in addition to your team name. An example of a valid entry would be:
 
 - `YOUR_EMAIL_ADDRESS = "person123"` or `YOUR_EMAIL_ADDRESS = "person123@yahoo.com"`
 - `YOUR_PASSWORD = "password321"`
