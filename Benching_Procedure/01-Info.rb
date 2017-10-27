@@ -28,4 +28,4 @@ YAHOO_EMAIL_ADDRESS = get_email
 YAHOO_PASSWORD = get_password
 MY_TEAM = get_team_name
 
-# Tab change flag
+# Tab change
