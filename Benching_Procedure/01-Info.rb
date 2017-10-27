@@ -23,7 +23,7 @@ def get_team_name
 	return gets.chomp
 end
 
-# Invoke the Login Process
+# Invoke the Acquiring Information Process
 YAHOO_EMAIL_ADDRESS = get_email
 YAHOO_PASSWORD = get_password
 MY_TEAM = get_team_name
