@@ -30,7 +30,7 @@ YOUR_TEAM_NAME = ""
 
 #### Start a browser session
 
-An instance of the Browser class is initialized and is store in the instance variable `@browser` (could have named it anything), which will be accessed throughout the series of function calls. Check out the difference between local variables and instance variables if you would like to know more about the accessibility of a variable (scope). One look at the Watir documentation (essentially a place to see which functions can be invoked as well as updates), an instance of the browser class can be passed information such as the type of web browser to open and switches (similar to options or preferences).
+An instance of the Browser class is initialized and is stored in the instance variable `@browser` (could have named it anything), which will be accessed throughout the series of function calls. Check out the difference between local variables and instance variables if you would like to know more about the accessibility of a variable (scope). One look at the Watir documentation (essentially a place to see which functions can be invoked as well as updates), an instance of the browser class can be passed information such as the type of web browser to open and switches (similar to options or preferences).
 
 The code originally has a skeleton template of `Watir::Browser.new(browser, *args)`. When a function looks like that, the contents of the parentheses are known as parameters. When the parameters are filled in, such as in the example below, then they are known as arguments. Not all functions are designed to accept parameters, such as `start_browser`(could have been named anything) demonstrates below.
 
@@ -72,6 +72,8 @@ end
 
 Not only can you instruct the driver to type in information, but you can also send it keystroke commands such as hitting `:enter` after typing in a password or the common hotkey combination of `[:control, "a"]` to select all.
 
+If all goes according to plan, then this reference to `YOUR_EMAIL_ADDRESS` will hold your password that you typed in at the top of this file. That means there should be no need to alter the body of this function. Mini-tutorial aside, this part might be the coolest thing to witness...to see automation first-hand.
+
 ```ruby
 def enter_email
   @browser.tap { |b| b.text_field(:id => 'login-username').set(YOUR_EMAIL_ADDRESS) }.send_keys(:enter)
@@ -79,6 +81,10 @@ end
 ```
 
 #### Type in password and press enter
+
+If all goes according to plan, then this reference to `YOUR_PASSWORD` will hold your password that you typed in at the top of this file.
+This part might be the second coolest thing to witness.
+
 ```ruby
 def enter_password
   @browser.tap { |b| b.text_field(:id => 'login-passwd').set(YOUR_PASSWORD) }.send_keys(:enter)
@@ -104,6 +110,9 @@ The instance variable `number_of_days` is initially set to a value of seven. By 
 It may be in your best interest to be mindful of the time of day when you are running this script; Yahoo fantasy basketball moves on to the next day starting at 3:00am or 4:00am Eastern Standard Time. As a result, this script might undershoot or overshoot the `number_of_days` you had intended by a day or so. Approach this as you see fit!
 
 Things that might pique your interest: loops such as `@number_of_days.times do`, Ruby blocks having a variable within pipes `|counter|`, string interpolation aka `"#{@number_of_days - 1 (counter + 1)}"`, keywords such as `puts`, and regular expressions aka regexp such as `/^Start Active Players$/`.
+
+I may have misled you earlier; this is probably the coolest thing to witness if you are sticking around to watch the driver automate the process!
+
 ```ruby
 def set_active_players
   @number_of_days = 7
@@ -147,10 +156,10 @@ end
 
 The main function titled `start_active_players_lite` will be ran from the terminal if the file name typed appropriately matches the file name. In the shell, terminal, or command prompt, the command `ruby 'Start_Them'.rb` would be entered. The code would run from there, assuming that the command was called from the proper directory (folder path).
 
-My command prompt looks like this when I run this script: `~\Desktop\YahooFantasyBasketballScript\Benching_Procedure` and I would input `ruby 'Start_Them'.rb` on the side of that path. Some level of navigating the terminal with the command `cd` (cd: change directory aka change folder) and autocompleting folder names with the `tab` key will be tremendously helpful at this point. More to the point, if someone made a new folder on their desktop titled `foo` and dragged and dropped `Start_Them.rb` into it, then the path would reflect that directory (aka folder) accordingly like so: `~\Desktop\foo\` followed by typing in `ruby 'Start_Them.rb'`. You'll get the hang of it, no worries!
+My command prompt looks like this when I run this script: `~\Desktop\YahooFantasyBasketballScript\Benching_Procedure` and I would input `ruby 'Start_Them'.rb` on the side of that path where the text field exists. Some experience with navigating the terminal using the command `cd` (cd: change directory aka change folder) and autocompleting folder names with the `tab` key will be tremendously helpful at this point. More to the point, if someone made a new folder on their desktop titled `foo` and dragged and dropped `Start_Them.rb` into it, then the path would reflect that directory (aka folder) accordingly like so: `~\Desktop\foo\` followed by typing in `ruby 'Start_Them.rb'`. You'll get the hang of the command line and running scripts on it, no worries! Just a matter of practice!
 
 
-To clarify the order of operations behind the curtain, the only function being ran will be the `start_active_players_lite` function, which inherently calls the helper functions step by step. The functions are defined first, and then they are called; the body of a function does not run upon being declared.
+To clarify the order of operations going on behind the curtain, the only function being ran will be the `start_active_players_lite` function, which inherently calls the helper functions step by step. The functions are defined first, and then they are called; the body of a function does not run upon being declared.
 
 ```ruby
 if __FILE__ == $PROGRAM_NAME
