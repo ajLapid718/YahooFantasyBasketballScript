@@ -1,14 +1,19 @@
+# Start Active Players Lite
+
+##### Import the necessary gems or libraries
 ```ruby
 require 'watir'
 require 'date'
 ```
 
+##### Input pertinent information
 ```ruby
 YOUR_EMAIL_ADDRESS = ""
 YOUR_PASSWORD = ""
 YOUR_TEAM_NAME = ""
 ```
 
+##### Start a browser session with Google Chrome in Incognito Mode with a maximized window
 ```ruby
 def start_browser
   @browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --incognito])
@@ -16,6 +21,7 @@ def start_browser
 end
 ```
 
+##### Type the website url into the address bar
 ```ruby
 def type_url
   begin
@@ -26,8 +32,9 @@ def type_url
 end
 ```
 
+##### Click on the Sign In button
 ```ruby
-def click_profile
+def sign_in
   begin
     @browser.element(:id => 'yucs-profile').click
   rescue
@@ -38,6 +45,7 @@ def click_profile
 end
 ```
 
+#####
 ```ruby
 def enter_email
   @browser.tap { |b| b.text_field(:id => 'login-username').set(YOUR_EMAIL_ADDRESS) }.send_keys(:enter)

@@ -18,7 +18,7 @@ def type_url
   end
 end
 
-def click_profile
+def sign_in
   begin
     @browser.element(:id => 'yucs-profile').click
   rescue
@@ -69,7 +69,7 @@ end
 def start_active_players_lite
   start_browser
   type_url
-  click_profile
+  sign_in
   enter_email
   enter_password
   click_on_team_name
