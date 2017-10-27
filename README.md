@@ -32,7 +32,7 @@
 
 ##### Possible Functionality to Implement (Potential Extras)
 - [ ] Account for the Injury List (IL) position for a more accurate head count
-- [x] Include a bench-all-players procedure as a separate script to account for the case when a user can guarantee a win (preserving percentages or turnovers) by doing so...which typically happens on a Sunday
+- [x] Include a bench-all-players procedure made up of separate files
 - [ ] Get user input to process decisions about substitutions in the event that 11, 12, or 13 players have a game on the same day
 - [ ] Relay the names of players in Free Agency who belong to the top 10 performers of a specified category
 - [ ] Convert the script file into a portable executable file
