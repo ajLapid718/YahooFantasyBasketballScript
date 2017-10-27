@@ -4,6 +4,7 @@ require 'date'
 YOUR_EMAIL_ADDRESS = ""
 YOUR_PASSWORD = ""
 YOUR_TEAM_NAME = ""
+NUMBER_OF_DAYS = 7
 
 def start_browser
   @browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --incognito])
@@ -47,19 +48,18 @@ def click_on_team_name
 end
 
 def set_active_players
-  @number_of_days = 7
-  puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (@number_of_days-1)).strftime("%B, %d, %Y")}"
-  @number_of_days.times do |counter|
+  puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (NUMBER_OF_DAYS-1)).strftime("%B, %d, %Y")}"
+  NUMBER_OF_DAYS.times do |counter|
     browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
     browser.element(:class => "Js-next").click
-    puts "#{@number_of_days - (counter + 1)} day[s] left to go!"
+    puts "#{NUMBER_OF_DAYS - (counter + 1)} day[s] left to go!"
     sleep(3)
   end
 end
 
 def farewell
   sleep(1)
-  puts "Everything is all set for #{@number_of_days} days (including today)!"
+  puts "Everything is all set for #{NUMBER_OF_DAYS} days (including today)!"
   sleep(1)
   puts "Goodbye!"
   sleep(1)
