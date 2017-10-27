@@ -80,5 +80,5 @@ def start_active_players_lite
 end
 
 if __FILE__ == $PROGRAM_NAME
-	start_active_players_lite
+  start_active_players_lite
 end
