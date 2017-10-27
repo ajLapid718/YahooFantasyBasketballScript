@@ -72,11 +72,10 @@ def click_on_team_name
 end
 ```
 
+###### Click the Set Active Players button
 Set Active Players for X Amount of Days (Default is 7)
 By default, if you run this on Monday it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday aka 7 days
 Change the value of the number_of_days variable accordingly
-
-###### Click the Set Active Players button
 ```ruby
 def set_active_players
   @number_of_days = 7
