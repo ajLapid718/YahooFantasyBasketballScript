@@ -45,19 +45,21 @@ def sign_in
 end
 ```
 
-#####
+##### Type in e-mail address and press enter
 ```ruby
 def enter_email
   @browser.tap { |b| b.text_field(:id => 'login-username').set(YOUR_EMAIL_ADDRESS) }.send_keys(:enter)
 end
 ```
 
+##### Type in password and press enter
 ```ruby
 def enter_password
   @browser.tap { |b| b.text_field(:id => 'login-passwd').set(YOUR_PASSWORD) }.send_keys(:enter)
 end
 ```
 
+##### Navigate to My Team
 ```ruby
 def click_on_team_name
   begin
@@ -74,6 +76,7 @@ Set Active Players for X Amount of Days (Default is 7)
 By default, if you run this on Monday it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday aka 7 days
 Change the value of the number_of_days variable accordingly
 
+###### Click the Set Active Players button
 ```ruby
 def set_active_players
   @number_of_days = 7
@@ -87,6 +90,7 @@ def set_active_players
 end
 ```
 
+##### Recap and farewell messages as well as browser shutdown
 ```ruby
 def farewell
   sleep(1)
@@ -98,6 +102,7 @@ def farewell
 end
 ```
 
+##### Call the steps aka helper functions inside a main function
 ```ruby
 def start_active_players_lite
   start_browser
@@ -111,6 +116,7 @@ def start_active_players_lite
 end
 ```
 
+##### Invoke the main method when this is executed from the terminal
 ```ruby
 if __FILE__ == $PROGRAM_NAME
   start_active_players_lite
