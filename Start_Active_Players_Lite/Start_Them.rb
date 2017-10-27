@@ -1,23 +1,15 @@
-# Import the watir gem/library...formerly known as 'watir-webdriver'
 require 'watir'
-# Require the date class for more descriptive dates in the terminal
 require 'date'
 
-# Opens a Web Browser Session for Google Chrome (Either in Headless Mode or in Incognito Mode)
-browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --headless])
 browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --incognito])
-
-# Maximizes the Web Browser Window (This is unnecessary in Headless Mode)
 browser.window.maximize
 
-# Goes to Web Address
 begin
 	browser.goto("https://basketball.fantasysports.yahoo.com")
 rescue
 	puts "You've been rescued from an error! Yay!"
 end
 
-# Clicks on Sign In
 begin
 	browser.element(:id => 'yucs-profile').click
 rescue
@@ -26,13 +18,9 @@ rescue
 	retry
 end
 
-# Types in Email Address and Presses Enter
 browser.tap { |b| b.text_field(:id => 'login-username').set("YOUR_EMAIL_ADDRESS") }.send_keys(:enter)
-
-# Types in Password and Presses Enter
 browser.tap { |b| b.text_field(:id => 'login-passwd').set("YOUR_PASSWORD") }.send_keys(:enter)
 
-# Navigates to My Team
 begin
 	browser.element(:class => 'F-link', text: /^YOUR_TEAM_NAME$/).click
 rescue
@@ -53,7 +41,6 @@ number_of_days.times do |counter|
 	sleep(3)
 end
 
-# Farewell Messages and Closing the Browser Session
 sleep(1)
 puts "Everything is all set for #{number_of_days} days (including today)!"
 sleep(1)
