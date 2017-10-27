@@ -1,5 +1,7 @@
-print "Enter your Yahoo e-mail address (example: person123): "
-YAHOO_EMAIL_ADDRESS = gets.chomp
+def get_email
+	print "Enter your Yahoo e-mail address (example: person123): "
+	return gets.chomp
+end
 
 def get_password
 	begin
@@ -16,7 +18,12 @@ def get_password
 	end
 end
 
-YAHOO_PASSWORD = get_password
+def get_team_name
+	print "Enter the name of your team: "
+	return gets.chomp
+end
 
-print "Enter the name of your team: "
-MY_TEAM = gets.chomp
+# Invoke the Login Process
+YAHOO_EMAIL_ADDRESS = get_email
+YAHOO_PASSWORD = get_password
+MY_TEAM = get_team_name
