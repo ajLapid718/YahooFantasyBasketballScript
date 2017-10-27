@@ -69,14 +69,14 @@ def farewell
 end
 
 def start_active_players_lite
-	start_browser
-	type_url
-	click_profile
-	enter_email
-	enter_password
-	click_on_team_name
-	set_active_players
-	farewell
+  start_browser
+  type_url
+  click_profile
+  enter_email
+  enter_password
+  click_on_team_name
+  set_active_players
+  farewell
 end
 
 if __FILE__ == $PROGRAM_NAME
