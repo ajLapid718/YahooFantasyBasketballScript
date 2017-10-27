@@ -83,7 +83,7 @@ end
 ```
 
 #### Click the Set Active Players button
-The instance variable `number_of_days` is initially set to a value of seven. By default, if you run this on a Monday then it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday aka 7 days. Feel free to change the value of the `number_of_days` instance variable accordingly.
+The instance variable `number_of_days` is initially set to a value of seven. By default, if you run this on a Monday then it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday aka 7 days. Feel free to change the value of the `number_of_days` instance variable accordingly. It may be in your best interest to be mindful of the time of day when you are running this script; Yahoo fantasy basketball moves on to the next day starting at 3:00am or 4:00am Eastern Standard Time. As a result, this script might undershoot or overshoot the `number_of_days` you had intended by a day or so. Approach this as you see fit!
 ```ruby
 def set_active_players
   @number_of_days = 7
