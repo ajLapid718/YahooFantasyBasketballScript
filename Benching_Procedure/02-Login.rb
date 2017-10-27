@@ -6,7 +6,7 @@ def go_to_yahoo
   begin
     @browser.goto("https://basketball.fantasysports.yahoo.com")
   rescue
-    puts "There's been an error regarding accessing the website. This is a troubling start."
+    puts "There's been an error with accessing the website. This is a troubling start."
   end
 end
 
@@ -14,7 +14,7 @@ def click_on_profile
   begin
     @browser.element(:id => 'yucs-profile').click
   rescue
-    puts "There's been an error regarding clicking on the Sign In link. Will refresh and try again!"
+    puts "There's been an error with clicking on the Sign In link. Will refresh and try again!"
     sleep(1)
     @browser.refresh
     sleep(1)
