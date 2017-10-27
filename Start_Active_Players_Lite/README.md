@@ -32,7 +32,7 @@ YOUR_TEAM_NAME = ""
 
 An instance of the Browser class is initialized and is store in the instance variable `@browser` (could have named it anything), which will be accessed throughout the series of function calls. Check out the difference between local variables and instance variables if you would like to know more about the accessibility of a variable (scope). One look at the Watir documentation (essentially a place to see which functions can be invoked as well as updates), an instance of the browser class can be passed information such as the type of web browser to open and switches (similar to options or preferences).
 
-The code originally has a skeleton template of `Watir::Browser.new(browser, *args)`. When a function looks like that, the contents of the parentheses are known as parameters. When the parameters are filled in, such as in the example below, then they are known as arguments. That's that for this section.
+The code originally has a skeleton template of `Watir::Browser.new(browser, *args)`. When a function looks like that, the contents of the parentheses are known as parameters. When the parameters are filled in, such as in the example below, then they are known as arguments. Not all functions are designed to accept parameters, such as `start_browser`(could have been named anything) demonstrates below.
 
 ```ruby
 def start_browser
@@ -103,7 +103,7 @@ The instance variable `number_of_days` is initially set to a value of seven. By 
 
 It may be in your best interest to be mindful of the time of day when you are running this script; Yahoo fantasy basketball moves on to the next day starting at 3:00am or 4:00am Eastern Standard Time. As a result, this script might undershoot or overshoot the `number_of_days` you had intended by a day or so. Approach this as you see fit!
 
-Things that might catch your eye here: loops such as `@number_of_days.times do`, Ruby blocks having a variable within pipes `|counter|`, string interpolation aka `"#{@number_of_days - 1 (counter + 1)}"`, keywords such as `puts`, and regular expressions aka regexp such as `/^Start Active Players$/`.
+Things that might pique your interest: loops such as `@number_of_days.times do`, Ruby blocks having a variable within pipes `|counter|`, string interpolation aka `"#{@number_of_days - 1 (counter + 1)}"`, keywords such as `puts`, and regular expressions aka regexp such as `/^Start Active Players$/`.
 ```ruby
 def set_active_players
   @number_of_days = 7
@@ -145,11 +145,12 @@ end
 
 #### Invoke the main method when this file is executed from the terminal
 
-The main function titled `start_active_players_lite` will be ran from the terminal if the file name typed
-appropriately matches the file name. In the shell, terminal, or command prompt, the command `ruby 'Start_Them'.rb`
-would be entered. The code script would run from there, assuming that the command was called from the proper directory (folder path).
+The main function titled `start_active_players_lite` will be ran from the terminal if the file name typed appropriately matches the file name. In the shell, terminal, or command prompt, the command `ruby 'Start_Them'.rb` would be entered. The code would run from there, assuming that the command was called from the proper directory (folder path).
 
-To clarify, the only function being ran will be the `start_active_players_lite` function, which inherently calls the helper functions step by step. The functions are defined first, and then they are called; the body of a function does not run upon being declared.
+My command prompt looks like this when I run this script: `~\Desktop\YahooFantasyBasketballScript\Benching_Procedure` and I would input `ruby 'Start_Them'.rb` on the side of that path. Some level of navigating the terminal with the command `cd` (cd: change directory aka change folder) and autocompleting folder names with the `tab` key will be tremendously helpful at this point. More to the point, if someone made a new folder on their desktop titled `foo` and dragged and dropped `Start_Them.rb` into it, then the path would reflect that directory (aka folder) accordingly like so: `~\Desktop\foo\` followed by typing in `ruby 'Start_Them.rb'`. You'll get the hang of it, no worries!
+
+
+To clarify the order of operations behind the curtain, the only function being ran will be the `start_active_players_lite` function, which inherently calls the helper functions step by step. The functions are defined first, and then they are called; the body of a function does not run upon being declared.
 
 ```ruby
 if __FILE__ == $PROGRAM_NAME
