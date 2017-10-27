@@ -22,7 +22,7 @@ end
 print "Enter the name of your team: "
 MY_TEAM = gets.chomp
 
-browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --headless])
+browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --incognito])
 
 begin
 	browser.goto("https://basketball.fantasysports.yahoo.com")
@@ -59,21 +59,19 @@ end
 puts " "
 puts "Currently benching all players for #{Time.now.strftime("%B, %d, %Y")}"
 10.times do |i|
-	sleep(2)
 	player_name = browser.table(:id => "statTable0")[i+2][2]
+	next if player_name.text == "(Empty)"
 	puts "Currently putting #{player_name.text} on the bench!"
+	sleep(3)
 	player_name.click
-	sleep(2)
+	sleep(3)
 	browser.elements(:css, "tr[data-pos='BN']").last.click
-	sleep(2)
 end
 
 sleep(1)
 puts " "
 sleep(1)
-puts "Everything is all set for today!"
-sleep(1)
-puts "All your players are on the bench!"
+puts "Success! All your players are on the bench!"
 sleep(1)
 puts "This script took #{(Time.now - START_TIME).to_i} seconds to complete!"
 sleep(1)
