@@ -2,7 +2,7 @@
 
 #### Import the necessary gems and/or libraries
 
-Requiring a gem follows the idea of importing zipped up data that is already housed on your local system. Without these two lines of code, a user cannot interact with the Watir library.
+Requiring a gem follows the idea of importing zipped up data that is already housed on your local system. Without these two lines of code, a user cannot interact with the Watir library or the `DateTime` Ruby class.
 
 Starting up a browser session with `browser = Watir::Browser.new(:chrome)` or `browser.goto("www.google.com")` would throw up error messages. In order for the `require 'watir'` call to process correctly, a user should have already ran `gem install watir` in their terminal at some point in the past. Since the aforementioned has more to do with configuration, please refer to the repository's main `README.md` file where you will find information about an executable file called chromedriver.exe, PATH setup, and more.
 
