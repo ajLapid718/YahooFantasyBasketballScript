@@ -119,8 +119,8 @@ I may have misled you earlier; this is probably the coolest thing to witness if 
 def set_active_players
   puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (NUMBER_OF_DAYS-1)).strftime("%B, %d, %Y")}"
   NUMBER_OF_DAYS.times do |counter|
-    browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
-    browser.element(:class => "Js-next").click
+    @browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
+    @browser.element(:class => "Js-next").click
     puts "#{NUMBER_OF_DAYS - (counter + 1)} day[s] left to go!"
     sleep(3)
   end
@@ -135,7 +135,7 @@ def farewell
   sleep(1)
   puts "Goodbye!"
   sleep(1)
-  browser.close
+  @browser.close
 end
 ```
 
