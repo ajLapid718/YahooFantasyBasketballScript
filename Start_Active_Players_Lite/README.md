@@ -1,13 +1,26 @@
 # Start Active Players Lite
 
 #### Import the necessary gems or libraries
-
 ```ruby
 require 'watir'
 require 'date'
 ```
 
 #### Input pertinent information
+
+Some information is required in order for this activity to be properly automated. For this version,
+of the script to work, it is necessary for a user to manually edit the source code. In other words,
+you will type in your Yahoo e-mail address within the quotation marks. The same goes for your password
+in addition to your team name. An example of a valid entry would be:
+
+- `YOUR_EMAIL_ADDRESS = "person123" or YOUR_EMAIL_ADDRESS = "person123@yahoo.com"`
+- `YOUR_PASSWORD = "password321"`
+- `YOUR_TEAM_NAME = Concrete Jungle`
+
+It is unsafe to have your information out in the open, so you may have to keep typing in your information each time you would like to set your active players. The plus side to this is that if
+are okay with keeping your information in the file, then you never have to retype your information
+again for the rest of the fantasy season unless you change your password.
+
 ```ruby
 YOUR_EMAIL_ADDRESS = ""
 YOUR_PASSWORD = ""
@@ -74,9 +87,7 @@ end
 ```
 
 #### Click the Set Active Players button
-Set Active Players for X Amount of Days (Default is 7)
-By default, if you run this on Monday it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday aka 7 days
-Change the value of the number_of_days variable accordingly
+The instance variable `number_of_days` is initially set to a value of seven. By default, if you run this on a Monday then it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday aka 7 days. Feel free to change the value of the `number_of_days` instance variable accordingly.
 ```ruby
 def set_active_players
   @number_of_days = 7
@@ -116,7 +127,7 @@ def start_active_players_lite
 end
 ```
 
-#### Invoke the main method when this is executed from the terminal
+#### Invoke the main method when this file is executed from the terminal
 ```ruby
 if __FILE__ == $PROGRAM_NAME
   start_active_players_lite
