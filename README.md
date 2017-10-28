@@ -33,7 +33,7 @@
   - This could allow `require_relative 'Shared/Foo'` to be called and would apply the DRY (Do-Not-Repeat-Yourself) principle so that if changes needed to be made, I would only need to change one part of the code, et cetera
     - At the moment, I do not see this as urgent for all intents and purposes but I fully understand that it is critical for a maintainable program and that I can't always get away with spaghetti code
 
-- I could write up a ternary operation so that a user can type into the command line if they would like to use a particular web browser and whether or not they would like to use Google's Incognito Mode or the Headless Chrome feature
+- I could write up a ternary operation so that a user can type into the command line the particular web browser and whether or not they would like to use Google's Incognito Mode or the Headless Chrome feature
   - If a user who downloads this repository wants to springboard off of that idea, the following segment of code could be one approach:
 
 ```ruby
