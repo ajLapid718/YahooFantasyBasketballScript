@@ -76,6 +76,7 @@ Combining my curiosity with my friend who guided me through the concept of autom
   - This text editor has a user-friendly download process and will help you organize and view the code!
   - A text editor is sort of like the Microsoft Word for lines of code!
   - With that analogy in mind, GitHub is like a public Google Docs or Google Drive!
+  - You can even see each save I made if you click on `Commits`!
 - **My Watir Version**: 6.8.4
   - Enter the command `gem install watir` to add this gem/library to your computer!
   - Certain operations are deprecated (no longer supported) in older versions, so this is important!
