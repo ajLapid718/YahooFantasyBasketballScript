@@ -22,7 +22,7 @@
 - Type in `ruby "Start_Active_Players.rb"` in your terminal and press enter
 - ...to be continued
 
-##### Three Possible Areas That Might Need Improvement
+### Possible Areas With Room for Improvement
 
 - I could improve upon the exception handling and consider reducing the global default timeout (30 seconds) to speed things up since the code moves on (in practice so far) after being rescued from the timeout error; I could also be more specific about the errors the code should be rescued from
   - This could be achieved with calling `Watir.default_timeout = 10` at the beginning of the script
