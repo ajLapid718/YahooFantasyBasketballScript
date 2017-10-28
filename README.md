@@ -1,7 +1,9 @@
 ## Preface
 
 **Word Count**: ~2050
+
 **Estimated Amount of Time to Read**: ~15 minutes
+
 **From Square One to Running the Program**: ~Not too long
 
 Hello! You have found your way through the universe and stumbled upon GitHub at this point in time, specifically my GitHub profile so-to-speak. Welcome to my repository that houses three of my Yahoo Fantasy Basketball automation script files written in Ruby. You are currently reading the primary README file, the one with the markdown file extension.
