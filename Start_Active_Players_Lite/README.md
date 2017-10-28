@@ -107,6 +107,8 @@ end
 
 A begin and rescue block (sometimes an ensure block is used as well) is how Ruby handles exceptions and errors. Two errors, among many, that may be encountered include: a timeout error and an element_cannot_be_clicked error. A timeout error is when the web page is still loading and the time elapsed surpasses the default_timeout value of 30 seconds (can be altered). In this case, the team_name might be clickable and loaded, but the rest of the web page is holding things up. Error handling can help achieve the intended goal of clicking the desired element despite such a non-fatal error. The element_cannot_be_clicked may occur in this case for similar reasons.
 
+Those hailing from the Python programming language may know this underlying concept as a `try/except` sequence. Those hailing from JavaScript may know this underlying concept as a `try/catch` sequence.
+
 ```ruby
 def click_on_team_name
   begin
@@ -120,7 +122,7 @@ end
 ```
 
 #### Click the Set Active Players button
-The constant `NUMBER_OF_DAYS` is initially set to a value of seven. By default, if you run this on a Monday then it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday aka 7 days. Feel free to change the value of the `NUMBER_OF_DAYS` constant accordingly.
+The constant `NUMBER_OF_DAYS` is initially set to a value of seven. By default, if you run this on a Monday then it will set your players for: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday aka 7 days. Feel free to change the value of `NUMBER_OF_DAYS` accordingly.
 
 It may be in your best interest to be mindful of the time of day when you are running this script; Yahoo fantasy basketball moves on to the next day starting at 3:00am or 4:00am Eastern Standard Time. As a result, this script might undershoot or overshoot the `NUMBER_OF_DAYS` you had intended by a day or so. Approach this as you see fit!
 
