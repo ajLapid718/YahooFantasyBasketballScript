@@ -32,11 +32,13 @@ NUMBER_OF_DAYS = 7
 
 #### Start a browser session
 
-An instance of the Browser class is initialized and is stored in the instance variable `@browser` (could have named it anything), which will be accessed throughout the series of function calls. Check out the difference between local variables and instance variables if you would like to know more about the accessibility (scope) of a variable. One look at the Watir documentation (essentially a place to see which functions can be invoked as well as updates), an instance of the browser class can be passed information such as the type of web browser to open and switches (similar to options or preferences).
+An instance of the Browser class is initialized and is stored in the instance variable `@browser` (could have named it anything), which will be accessed throughout the series of function calls. Check out the difference between local variables and instance variables if you would like to know more about the accessibility (scope) of a variable. One look at the Watir documentation (essentially a place to see which functions can be invoked as well as updates) shows us that an instance of the browser class can be passed information such as the type of web browser to open and switches (similar to options or preferences).
 
-The code originally has a skeleton template of `Watir::Browser.new(browser, *args)` as detailed in their documentation. When a function appears like that, the contents of the parentheses are known as parameters. When the parameters are filled in, such as in the example below, then they become known as arguments. Not all functions are designed to accept parameters, such as `start_browser`(could have been named anything) demonstrates below. A tangent, but the `.maximize` chained at the end of `@browser.window` is an instance method that belongs to instances of the Window Class. This differs from `do_some_addition` which is a public method. I hope that little blurb helps guide your search!
+The code originally has a skeleton template of `Watir::Browser.new(browser, *args)` as detailed in their documentation. When a function appears like that, the contents of the parentheses are known as parameters. When the parameters are filled in, like they are in the example below, then they become known as arguments. Not all functions are designed to accept parameters, such as `start_browser`(could have been named anything) demonstrates below. For future reference, `start_browser` could also be written as `start_browser()`.
 
-Below is one way to expand on a difference between a parameter and an argument. Hopefully the example helps with demystifying what is going on in the body of the actual script.
+The future is now. A tangent, but the `self.maximize` chained at the end of `@browser.window` (where `@browser` replaces the `self` keyword) is an instance method that belongs to instances of the Window Class. This instance method can be called without parameters and technically can be written as `@browser.window.maximize()` where the empty parentheses indicates no parameters are taken. This differs from `do_some_addition` which is a public method and has two designated parameters. I hope that little blurb helps guide your search!
+
+Below is one way to expand on a difference between a parameter and an argument. Hopefully the example helps with demystifying what is going on in the body of functions throughout the actual script.
 
 ```ruby
 def do_some_addition(num1, num2) # The parameters are: num1 and num2
@@ -105,7 +107,7 @@ end
 
 #### Navigate to My Team
 
-A begin and rescue block (sometimes an ensure block is used as well) is how Ruby handles exceptions and errors. Two errors, among many, that may be encountered include: a timeout error and an element_cannot_be_clicked error. A timeout error is when the web page is still loading and the time elapsed surpasses the default_timeout value of 30 seconds (can be altered). In this case, the team_name might be clickable and loaded, but the rest of the web page is holding things up. Error handling can help achieve the intended goal of clicking the desired element despite such a non-fatal error. The element_cannot_be_clicked may occur in this case for similar reasons.
+A begin and rescue block (sometimes an ensure block is used as well) is how Ruby handles exceptions and errors. Two errors, among many, that may be encountered include: a timeout error and an element_cannot_be_clicked error. A timeout error is when the web page is still loading and the time elapsed surpasses the default_timeout value of 30 seconds (can be altered). In this case, the team_name might be clickable and loaded, but the rest of the web page is holding things up. Error handling can help achieve the intended goal of clicking the desired element despite such a non-fatal error. The element_cannot_be_clicked error may occur in this case for similar reasons.
 
 Those hailing from the Python programming language may know this underlying concept as a `try/except` sequence. Those hailing from JavaScript may know this underlying concept as a `try/catch` sequence.
 
