@@ -34,7 +34,7 @@
     - At the moment, I do not see this as urgent for all intents and purposes but I fully understand that it is critical for a maintainable program and that I can't always get away with spaghetti code
 
 - I could write up a ternary operation so that a user can type into the command line the particular web browser and whether or not they would like to use Google's Incognito Mode or the Headless Chrome feature
-  - If a user who downloads this repository wants to springboard off of that idea, the following segment of code could be one approach:
+  - If a user downloads this repository and wants to springboard off of that idea, the following segment of code could be one approach:
 
 ```ruby
 print "Press and enter the 5 button for incognito mode or any other character for headless mode: "
