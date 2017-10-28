@@ -20,7 +20,7 @@ Jump To: [Potential Improvements](https://github.com/ajLapid718/YahooFantasyBask
 
 **From Square One to Running the Program**: ~Not too long
 
-Hello! You have found your way through the universe and stumbled upon GitHub at this point in time, specifically my GitHub profile so-to-speak. Welcome to my repository that houses three of my Yahoo Fantasy Basketball automation script files written in Ruby. You are currently reading the primary README file, the one with the markdown file extension.
+Hello! You have found your way through the universe and stumbled upon GitHub at this point in time, specifically my GitHub profile so-to-speak. Welcome to my repository that houses three of my Yahoo Fantasy Basketball automation script files written in Ruby. You are currently reading the primary README file, the one with the markdown file extension. Any folder that has README gets this fancy little spot at the bottom of the folder. If you click on the README.md file above, you will have this information, but because you are directly in the file and not at the folder level, you will not see those files above it. This is a cool, safe space.
 
 Normally, a README file is suggested to include details about one's environment configuration in order to properly get the contents of the repository up and running. Some things that are suggested by default are: Ruby version, system dependencies, configuration, database creation, database initialization, how to run the test suite, services (job queues, cache servers, search engines, etc.), deployment instructions. This README will not be normal.
 
