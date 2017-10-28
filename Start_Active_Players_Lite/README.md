@@ -68,7 +68,7 @@ end
 
 #### Click on the Sign In button
 
-In order for the button to be located, Watir provides an instance method (see: instance methods, class methods, public methods) known as `#element` which accepts the argument of `:id` and the id is an HTML attribute. Some level of HTML and CSS as well as the Inspector Tools (right-click + inspect) is helpful for understanding what is going on under the hood. Basically, the sign-in button is labeled with the id of `yucs-profile` and the driver (term for the mechanism performing the automated actions) locates the element (piece of information) and clicks on it (by scanning for the id), just as a person would do manually.
+In order for the button to be located, Watir provides an instance method (see: instance methods, class methods, public methods) known as `#element` which accepts the argument of `:id` and the id is an HTML attribute. Some level of HTML and CSS as well as familiarity with the Inspector Tools (right-click + inspect) will assist in understanding what exactly is going on under the hood. Basically, the sign-in button is labeled with the id of `yucs-profile` and the driver (term for the mechanism performing the automated actions) locates the element (piece of information) and clicks on it (by scanning for the id), just as a person would do manually.
 
 ```ruby
 def sign_in
