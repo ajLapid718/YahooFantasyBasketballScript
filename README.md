@@ -1,5 +1,12 @@
-##
+## Preface
 
+Hello! You have stumbled upon GitHub, specifically my GitHub profile so-to-speak. Welcome to my repository that houses three of my Yahoo Fantasy Basketball automation script files written in Ruby. You are currently reading the primary README file, the one with the markdown file extension.
+
+Normally, a README file is suggested to include details about one's environment configuration in order to properly get the contents of the repository up and running. Some things that are suggested by default are: Ruby version, system dependencies, configuration, database creation, database initialization, how to run the test suite, services (job queues, cache servers, search engines, etc.), deployment instructions.
+
+I vividly remember how overwhelming and lost I was when I wanted to run a program from GitHub on my personal computer. In light of that, I will make my best attempt to cover those bases in a way where I make little to no assumptions about what you may or may not know. In other words, I will make an effort to be as detailed and verbose as possible.
+
+The ideal scenario: You successfully set up the necessary components for your personal computer and can interact with your Yahoo Fantasy Basketball roster in real-time. Hopefully this also succeeds in giving you ideas to explore programming and/or automate other things on your web browser or in general! Let's get to it.
 
 ## Step By Step Functionality
 
