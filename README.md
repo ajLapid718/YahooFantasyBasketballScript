@@ -18,7 +18,7 @@ Combining my curiosity with my friend who guided me through the concept of autom
 
 **How Things Look Like On My End**: Because my computer environment is all set already, all I have to do is open my command line, navigate to the proper directory, type in `ruby 'Start_Active_Players.rb'` or `ruby 'Bench_All_Players'`, and send the enter keystroke to it.
 
-**In Other Words**: I downloaded the necessary files, have the necessary programs, open the command prompt, journey through the folders via the command prompt, type in what I type in, and press the enter button. Then the script is executed and the magic happens. I will try to explain things with simplicity in mind.
+**In Other Words**: I downloaded the necessary files, have the necessary programs, open the command prompt, journey through the folders via the command prompt, type in what I type in, and press the enter button. Then the script is executed and the magic happens. What was once done manually, can now be done with hands-free automation. I will try to explain things with simplicity in mind.
 
 **The Result**: The script, using the ChromeDriver file you'll need to install, acts on my behalf! It will actually result in logging into my Yahoo account, submitting my e-mail address and password, and hit the Start Active Players button as well as the Next Day arrow icon. If you are using the Incognito Mode option in the script file, you can actually witness this happening step by step! If you are using the Headless Mode option in the script file, the ChromeDriver will do this without you seeing anything! It's awesome and amazing. Depending on which script is being used, you will either have your active players started for a certain period of time, bench all your players, and additional features (in the Full Version). In the Full Version, you can discover the amount of starts both your team and your opponent's team has each day and for the week. In the event that you have more than 10 players who have a game for that day, the script will tell you in the command line who is on the bench after it has started the active players.
 
@@ -48,22 +48,45 @@ Combining my curiosity with my friend who guided me through the concept of autom
 
 ## From Configuration to Implementation
 
-- My Ruby Version: Ruby 2.3.3 (type in the command `ruby 'ruby -v'` to determine which version you have)
+- **My Ruby Version**: Ruby 2.3.3 (enter the command `ruby 'ruby -v'` in your command line to determine which version you have)
   - You can go to Google and download Ruby with RubyInstaller for Windows! The instructions are clear and concise!
-- My Operating System: Windows
-  - You can most likely run these scripts on other Operating Systems as well
-- My Preferred Web Browser: Google Chrome
+- **My Operating System**: Windows 10
+  - You can most likely run these scripts on other Operating Systems as well (Mac OS X, Ubuntu, etc.)!
+- **My Preferred Web Browser**: Google Chrome
   - The source code uses Chrome, but you can edit it to use Firefox or Internet Explorer, too!
-- My Preferred Text Editor: Atom
-  - This text editor has a user-friendly download process and will help you organize and see the code!
-- My Watir Version: 6.8.4
+- **My Preferred Text Editor**: Atom
+  - This text editor has a user-friendly download process and will help you organize and view the code!
+- **My Watir Version**: 6.8.4
+  - Enter the command `gem install watir` to add this gem/library to your computer!
   - Certain operations are deprecated (no longer supported) in older versions, so this is important!
-- My Watir-Webdriver Version: 0.9.9
-  - This is the engine which makes direct calls to the browser. This gets things going and runs the show!
-- My Terminal: Git Shell/Windows Power Shell
+- **My Watir-Webdriver Version**: 0.9.9
+  - This is the engine which makes direct calls to the browser. This gets things going!
+- **My Terminal**: Git Shell/Windows Power Shell
   - User-friendly tailored command line, but it can be unnecessary for your purposes!
+- **My PATH**:
+  - Put chromedriver.exe into your Local Disc (C:)!
+  - Check out the YouTube videos for installing chromedriver by DevNami or Artur Spirin!
+  - If all else fails, be sure to check out the "Getting Started" section of Google's ChromeDriver support page
+- **My Highline Version**: 1.7.8
+  - This is necessary for the Full Version to operate properly!
+  - The command for this is `gem install highline`, and feel free to check out their GitHub!
+  - This allows you to type your password into the command line with asterisks replacing each character!
 
+Let's do a quick recap. First, you'll need to download Ruby onto your computer. This will give you the ability to interact with the programming language and the scripts. Your computer needs to be able to know what language you're talking to it in.
 
+Second, you'll need to install the Watir gem with your command line. Ruby has some gems and libraries loaded up already, but the default setup does not include some gems or libraries. This is the reason why we need to install Watir individually. This is also the same reason why you'll need to install Highline individually.
+
+Following that, you will need to do a couple of `cd` commands in your command line and journey through to the folder that has the scripts you may have downloaded from this repository. A quick tutorial could probably get you up to speed. Try to put the folder in your Desktop as opposed to your Downloads; this might make things more intuitive.
+
+Inevitably, you will type in one of the three commands to run the script of your choice: `ruby 'Start_Them.rb'`, `ruby 'Start_Active_Players.rb'`, or `ruby 'Bench_All_Players.rb'`.
+
+## Final Thoughts and Things to Consider
+
+Check out the `README.md` in `Start_Active_Players_Lite` before reading this section! All of this might seem like a lot of work, but now you're more familiar with a little bit of the ins-and-outs of script files, environment setup, and programming. Yes, yes, yes...you can also set up your lineup for the week or bench your players for the day as well as get a mini-report about your opponent's amount of starts for the week...but you've become a part of the community. Whether you are someone deciding to study computer science, computer engineering, software engineering or if you are someone who wants to use the script in a one-and-done manner, you now have a clearer idea of what programmers potentially work with. As I've been told many times, it is important to know where to look and what to ask. In light of that, don't hesitate to use your flavor of search engine (Google, Bing, Quora) to come across answers to questions you may have. Word of advice, please check out StackOverflow as well.
+
+By the way, if you take a look at the actual source code (lines of code in the scripts), you can probably figure out what most of the code is doing. Ruby is generally known for being semantic (readable) and was designed with being as close to English statements as possible. Once you sift through all of the vocabulary (what), find reliable sources of information (who), develop intuition for what goes where (where), get to know rationales for certain designs and principles (why), and keep in mind that there's a time and place for everything (when)...then you'll ride up the learning curve fairly quickly! Patience and confidence helps, too...just like anything else. At the root of it, that's what I'm trying to express: coding is like learning how to learn and is a lot like things you may have had too learn before. Just like any language, there's the read-write-speak domains with separate but related perspectives. Use analogies...use metaphors...use whatever is necessary.
+
+I hope this helps you on your journey, despite how lengthy it turned out to be.
 
 ## Possible Areas With Room for Improvement
 
