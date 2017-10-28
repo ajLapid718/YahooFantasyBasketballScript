@@ -1,10 +1,15 @@
 ## Navigation
 
 Jump To: [Preface](https://github.com/ajLapid718/YahooFantasyBasketballScript#preface)
+
 Jump To: [Introduction](https://github.com/ajLapid718/YahooFantasyBasketballScript#introduction)
+
 Jump To: [Functionality](https://github.com/ajLapid718/YahooFantasyBasketballScript#step-by-step-functionality-summarized)
+
 Jump To: [Configuration](https://github.com/ajLapid718/YahooFantasyBasketballScript#from-configuration-to-implementation)
+
 Jump To: [Thoughts](https://github.com/ajLapid718/YahooFantasyBasketballScript#final-thoughts-and-things-to-consider)
+
 Jump To: [Potential Improvements](https://github.com/ajLapid718/YahooFantasyBasketballScript#possible-areas-with-room-for-improvement)
 
 ## Preface
