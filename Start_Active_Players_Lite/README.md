@@ -175,7 +175,7 @@ end
 
 #### Invoke the main method when this file is executed from the terminal
 
-The main function (function and method are loosely interchangeable) titled `start_active_players_lite` will be ran from the terminal if the file name typed appropriately matches the file name. In the shell, terminal, or command prompt, the command `ruby 'Start_Them'.rb` would be entered. The code would run from there, assuming that the command was called from the proper directory (folder path).
+The main function (function and method are loosely interchangeable terms) titled `start_active_players_lite` will be ran from the terminal if the file name typed appropriately matches the file name. In the shell, terminal, or command prompt, the command `ruby 'Start_Them'.rb` would be entered. The code would run from there, assuming that the command was called from the proper directory (folder path).
 
 My command prompt resembles this: `~\Desktop\YahooFantasyBasketballScript\Start_Active_Players_Lite` and I would input `ruby 'Start_Them'.rb` on the side of that path where the text field exists.
 
