@@ -48,9 +48,22 @@ Combining my curiosity with my friend who guided me through the concept of autom
 
 ## From Configuration to Implementation
 
-- To be continued...
-- Type in `ruby "Start_Active_Players.rb"` in your terminal and press enter
-- ...to be continued
+- My Ruby Version: Ruby 2.3.3 (type in the command `ruby 'ruby -v'` to determine which version you have)
+  - You can go to Google and download Ruby with RubyInstaller for Windows! The instructions are clear and concise!
+- My Operating System: Windows
+  - You can most likely run these scripts on other Operating Systems as well
+- My Preferred Web Browser: Google Chrome
+  - The source code uses Chrome, but you can edit it to use Firefox or Internet Explorer, too!
+- My Preferred Text Editor: Atom
+  - This text editor has a user-friendly download process and will help you organize and see the code!
+- My Watir Version: 6.8.4
+  - Certain operations are deprecated (no longer supported) in older versions, so this is important!
+- My Watir-Webdriver Version: 0.9.9
+  - This is the engine which makes direct calls to the browser. This gets things going and runs the show!
+- My Terminal: Git Shell/Windows Power Shell
+  - User-friendly tailored command line, but it can be unnecessary for your purposes!
+
+
 
 ## Possible Areas With Room for Improvement
 
