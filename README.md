@@ -112,6 +112,8 @@ By the way, if you take a look at the actual source code (lines of code in the s
 
 Now if you know you'll be busy or if you anticipate being on vacation for a while, you can run this script so that your active players are on board. Maybe you can just draft all 13 players and set your lineup for the rest of the year...that'd be interesting. In any case, I hope this helps you on your journey, despite how lengthy it turned out to be. On one final note, I like to believe that lightweight automation is not necessarily meant to be faster or better than what a person can do. The primary point is for the tasks to be done by the computer and not by the person for any reason the user justifies. It's nice to have optimized speeds, but the main intent is just to get the job done on your behalf. Other than that, take care.
 
+Actually, one last thing, for real this time. You will notice that the three folders containing the three scripts have differing compositions. What I mean is: bench_all_players separates the login, the get info process, and the benching process. Meanwhile, the full version is ran as one long script. Lastly, the lite version has helper functions and a main function with a tagline at the bottom that is necessary for it to run, which is not necessary when running one long script like the full version. It's been said that it's important to write the code for two people in mind: yourself and your audience (which can include your future self). Exploring the setup of each file could introduce concepts of Do-Not-Repeat-Yourself (DRY), Separation of Concerns, and Keep-It-Simple(KIS)...among other design patterns and principles. Carry those observations with you moving forward!
+
 Best,
 
 Allan James Lapid
