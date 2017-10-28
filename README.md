@@ -112,6 +112,5 @@ Now if you know you'll be busy or if you anticipate being on vacation for a whil
 
 Actually, one last thing, for real this time. You will notice that the three folders containing the three scripts have differing compositions. What I mean is: bench_all_players separates the login, the get info process, and the benching process. Meanwhile, the full version is ran as one long script. Lastly, the lite version has helper functions and a main function with a tagline at the bottom that is necessary for it to run, which is not necessary when running one long script like the full version. It's been said that it's important to write the code for two people in mind: yourself and your audience (which can include your future self). Exploring the setup of each file could introduce concepts of Do-Not-Repeat-Yourself (DRY), Separation of Concerns, and Keep-It-Simple (KIS)...among other design patterns and principles. Carry those observations with you moving forward, please! Note: I'm not necessarily claiming I am implementing the top-tier best practices, but what you notice for yourself could spur into how to organize and cleanup one's code.
 
-Best,
-
-Allan James Lapid
+###### Best,
+###### Allan James Lapid
