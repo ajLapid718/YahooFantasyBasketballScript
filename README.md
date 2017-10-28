@@ -22,7 +22,9 @@ Combining my curiosity with my friend who guided me through the concept of autom
 
 **The Result**: The script, using the ChromeDriver file you'll need to install, acts on my behalf! It will actually result in logging into my Yahoo account, submitting my e-mail address and password, and hit the Start Active Players button as well as the Next Day arrow icon. If you are using the Incognito Mode option in the script file, you can actually witness this happening step by step! If you are using the Headless Mode option in the script file, the ChromeDriver will do this without you seeing anything! It's awesome and amazing. Depending on which script is being used, you will either have your active players started for a certain period of time, bench all your players, and additional features (in the Full Version). In the Full Version, you can discover the amount of starts both your team and your opponent's team has each day and for the week. In the event that you have more than 10 players who have a game for that day, the script will tell you in the command line who is on the bench after it has started the active players.
 
-## Step By Step Functionality
+## Step By Step Functionality Summarized
+
+***Please refer to the README.md file in the Start_Active_Players_Lite folder for a more detailed breakdown***
 
 1. Opens a web browser session
 2. Maximizes the web browser window
@@ -33,9 +35,15 @@ Combining my curiosity with my friend who guided me through the concept of autom
 7. Fills out your password
 8. Submits your password
 9. Navigates to My Team
-10. Clicks on the "start active players" button
-11. Clicks on the "next day" arrow
-12. Repeats step 10 and step 11 until the desired amount of days are covered and handled
+10. Clicks on the "Start Active Players" button
+11. Clicks on the "Next Day" arrow icon
+12. Repeats both Step 10 and Step 11 until the desired amount of days are covered and handled
+  i. If you are running `ruby Start_Active_Players_Full.rb`, then more features are involved
+    i. From here, navigates to your opponent's team
+    ii. Counts the amount of players who have a game on that day
+    iii. Clicks the "Next Day" arrow icon
+    iv. Repeats the previous two steps
+    v. Reports information to you
 13. Closes the browser session
 
 ## From Configuration to Implementation
