@@ -111,7 +111,6 @@ By the way, if you take a look at the actual source code (lines of code in the s
 Now if you know you'll be busy or if you anticipate being on vacation for a while, you can run this script so that your active players are on board. Maybe you can just draft all 13 players and set your lineup for the rest of the year...that'd be interesting. In any case, I hope this helps you on your journey, despite how lengthy it turned out to be. On one final note, I like to believe that lightweight automation is not necessarily meant to be faster or better than what a person can do. The primary point is for the tasks to be done by the computer and not by the person for any reason the user justifies. It's nice to have optimized speeds, but the main intent is just to get the job done on your behalf. Other than that, take care.
 
 Best,
-
 Allan James Lapid
 
 ## Possible Areas With Room for Improvement
