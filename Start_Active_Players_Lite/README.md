@@ -36,7 +36,7 @@ An instance of the Browser class is initialized and is stored in the instance va
 
 The code originally has a skeleton template of `Watir::Browser.new(browser, *args)` as detailed in their documentation. When a function appears like that, the contents of the parentheses are known as parameters. When the parameters are filled in, like they are in the example below, then they become known as arguments. Not all functions are designed to accept parameters, such as `start_browser`(could have been named anything) demonstrates below. For future reference, `start_browser` could also be written as `start_browser()`.
 
-The future is now. A tangent, but the `self.maximize` chained at the end of `@browser.window` (where `@browser` replaces the `self` keyword) is an instance method that belongs to instances of the Window Class. This instance method can be called without parameters and technically can be written as `@browser.window.maximize()` where the empty parentheses indicates no parameters are taken. This differs from `do_some_addition` which is a public method and has two designated parameters. I hope that little blurb helps guide your search!
+The future is now. A tangent, but the `self.maximize` chained at the end of `@browser.window` (where `@browser` replaces the `self` keyword) is an instance method that belongs to instances of the Window Class. This instance method can be called without parameters and technically can be written as `@browser.window.maximize()` where the empty parentheses indicates no parameters are taken. This differs from `do_some_addition` which is a public method and has two designated parameters. I hope that little blurb helps guide your search! You may also want to check out your programming language's style guide of choice where certain conventions (soft yet strongly encouraged rules and guidelines) are displayed.
 
 Below is one way to expand on a difference between a parameter and an argument. Hopefully the example helps with demystifying what is going on in the body of functions throughout the actual script.
 
@@ -68,7 +68,7 @@ end
 
 #### Click on the Sign In button
 
-In order for the button to be located, Watir provides an instance method (see: instance methods, class methods, public methods) known as `#element` which accepts the argument of `:id` and the id is an HTML attribute. Some level of HTML and CSS as well as the Inspector Tools (right-click + inspect) is helpful for understanding what is going on under the hood. Basically, the sign-in button is labeled with the id of `yucs-profile` and the driver (term for the mechanism performing the automated actions) locates the element (piece of information) and clicks on it, just as a person would do manually.
+In order for the button to be located, Watir provides an instance method (see: instance methods, class methods, public methods) known as `#element` which accepts the argument of `:id` and the id is an HTML attribute. Some level of HTML and CSS as well as the Inspector Tools (right-click + inspect) is helpful for understanding what is going on under the hood. Basically, the sign-in button is labeled with the id of `yucs-profile` and the driver (term for the mechanism performing the automated actions) locates the element (piece of information) and clicks on it (by scanning for the id), just as a person would do manually.
 
 ```ruby
 def sign_in
