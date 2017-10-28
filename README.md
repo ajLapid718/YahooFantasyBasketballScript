@@ -6,7 +6,7 @@ Normally, a README file is suggested to include details about one's environment 
 
 I vividly remember how overwhelmingly lost I was when I wanted to run a program from GitHub on my personal computer...this time last year (the current date: October 2017). In light of that, I will make my best attempt to cover those bases in a way where I make little to no assumptions about what you may or may not know. In other words, I will make an effort to be as detailed and verbose as possible.
 
-The ideal scenario: You successfully set up the necessary components for your personal computer and can interact with your Yahoo Fantasy Basketball roster in real-time. Hopefully this also succeeds in giving you ideas to explore programming and/or automate other things on your web browser or in general! Let's get to it.
+**The ideal scenario**: You successfully set up the necessary components for your personal computer and can interact with your Yahoo Fantasy Basketball roster in real-time. Hopefully this also succeeds in giving you ideas to explore programming and/or automate other things on your web browser or in general! Let's get to it.
 
 ## Step By Step Functionality
 
