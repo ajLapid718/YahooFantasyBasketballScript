@@ -6,7 +6,7 @@ Jump To: [Introduction](https://github.com/ajLapid718/YahooFantasyBasketballScri
 
 Jump To: [Functionality](https://github.com/ajLapid718/YahooFantasyBasketballScript#step-by-step-functionality-summarized)
 
-Jump To: [Configuration](https://github.com/ajLapid718/YahooFantasyBasketballScript#from-configuration-to-implementation)
+Jump To: [Configuration](https://github.com/ajLapid718/YahooFantasyBasketballScript#from-configuration-to-implementation!)
 
 Jump To: [Thoughts](https://github.com/ajLapid718/YahooFantasyBasketballScript#final-thoughts-and-things-to-consider)
 
@@ -66,16 +66,18 @@ Combining my curiosity with my friend who guided me through the concept of autom
     - 12e). Reports information to you
 13. Closes the browser session
 
-## From Configuration to Implementation
+## From Configuration to Implementation!
 
 - **My Ruby Version**: Ruby 2.3.3 (enter the command `ruby 'ruby -v'` in your command line to determine which version you have)
   - You can go to Google and download Ruby with RubyInstaller for Windows! The instructions are clear and concise!
 - **My Operating System**: Windows 10
   - You can most likely run these scripts on other Operating Systems as well (Mac OS X, Ubuntu, etc.)!
 - **My Preferred Web Browser**: Google Chrome
-  - The source code uses Chrome, but you can edit it to use Firefox or Internet Explorer, too!
+  - The source code (fancy way of saying the contents of the files) uses Chrome, but you can edit it to use Firefox or Internet Explorer, too!
 - **My Preferred Text Editor**: Atom
   - This text editor has a user-friendly download process and will help you organize and view the code!
+  - A text editor is sort of like the Microsoft Word for lines of code!
+  - With that analogy in mind, GitHub is like a public Google Docs or Google Drive!
 - **My Watir Version**: 6.8.4
   - Enter the command `gem install watir` to add this gem/library to your computer!
   - Certain operations are deprecated (no longer supported) in older versions, so this is important!
@@ -106,7 +108,11 @@ Check out the `README.md` in `Start_Active_Players_Lite` before reading this sec
 
 By the way, if you take a look at the actual source code (lines of code in the scripts), you can probably figure out what most of the code is doing. Ruby is generally known for being semantic (readable) and was designed with being as close to English statements as possible. Once you sift through all of the vocabulary (what), find reliable sources of information (who), develop intuition for what goes where (where), get to know rationales for certain designs and principles (why), and keep in mind that there's a time and place for everything (when)...then you'll ride up the learning curve fairly quickly! Patience and confidence helps, too...just like anything else. At the root of it, that's what I'm trying to express: coding is like learning how to learn and is a lot like things you may have had too learn before. Just like any language, there's the read-write-speak domains with separate but related perspectives. Use analogies...use metaphors...use whatever is necessary.
 
-I hope this helps you on your journey, despite how lengthy it turned out to be.
+Now if you know you'll be busy or if you anticipate being on vacation for a while, you can run this script so that your active players are on board. Maybe you can just draft all 13 players and set your lineup for the rest of the year...that'd be interesting. In any case, I hope this helps you on your journey, despite how lengthy it turned out to be. On one final note, I like to believe that lightweight automation is not necessarily meant to be faster or better than what a person can do. The primary point is for the tasks to be done by the computer and not by the person for any reason the user justifies. It's nice to have optimized speeds, but the main intent is just to get the job done on your behalf. Other than that, take care.
+
+Best,
+
+Allan James Lapid
 
 ## Possible Areas With Room for Improvement
 
