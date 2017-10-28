@@ -36,7 +36,7 @@ An instance of the Browser class is initialized and is stored in the instance va
 
 The code originally has a skeleton template of `Watir::Browser.new(browser, *args)` as detailed in their documentation. When a function appears like that, the contents of the parentheses are known as parameters. When the parameters are filled in, such as in the example below, then they become known as arguments. Not all functions are designed to accept parameters, such as `start_browser`(could have been named anything) demonstrates below.
 
-Below is one way to expand on a difference between a parameter and an argument. Hopefully it helps with understanding what is going on in the body of the actual script.
+Below is one way to expand on a difference between a parameter and an argument. Hopefully the example helps with demystifying what is going on in the body of the actual script.
 
 ```ruby
 def do_some_addition(num1, num2) # The parameters are: num1 and num2
@@ -104,6 +104,9 @@ end
 ```
 
 #### Navigate to My Team
+
+A begin and rescue block (sometimes an ensure block is used as well) is how Ruby handles exceptions and errors. Two errors, among many, that may be encountered include: a timeout error and an element_cannot_be_clicked error. A timeout error is when the web page is still loading and the time elapsed surpasses the default_timeout value of 30 seconds (can be altered). In this case, the team_name might be clickable and loaded, but the rest of the web page is holding things up. Error handling can help achieve the intended goal of clicking the desired element despite such a non-fatal error. The element_cannot_be_clicked may occur in this case for similar reasons.
+
 ```ruby
 def click_on_team_name
   begin
@@ -138,6 +141,9 @@ end
 ```
 
 #### Recap and farewell messages plus browser shutdown
+
+It is important to close the browser session because it takes up space and will run in the background otherwise.
+
 ```ruby
 def farewell
   sleep(1)
@@ -167,10 +173,10 @@ end
 
 The main function titled `start_active_players_lite` will be ran from the terminal if the file name typed appropriately matches the file name. In the shell, terminal, or command prompt, the command `ruby 'Start_Them'.rb` would be entered. The code would run from there, assuming that the command was called from the proper directory (folder path).
 
-My command prompt looks like this when I run this script: `~\Desktop\YahooFantasyBasketballScript\Benching_Procedure` and I would input `ruby 'Start_Them'.rb` on the side of that path where the text field exists. Some experience with navigating the terminal using the command `cd` (cd: change directory aka change folder) and autocompleting folder names with the `tab` key will be tremendously helpful at this point. More to the point, if someone made a new folder on their desktop titled `foo` and dragged and dropped `Start_Them.rb` into it, then the path would reflect that directory (aka folder) accordingly like so: `~\Desktop\foo\` followed by typing in `ruby 'Start_Them.rb'`. You'll get the hang of the command line and running scripts on it, no worries! Just a matter of practice!
+My command prompt looks like this when I run this script: `~\Desktop\YahooFantasyBasketballScript\Start_Active_Players_Lite` and I would input `ruby 'Start_Them'.rb` on the side of that path where the text field exists. Some experience with navigating the terminal using the command `cd` (cd: change directory aka change folder) and autocompleting folder names with the `tab` key will be tremendously helpful at this point. More to the point, if someone made a new folder on their desktop titled `foo` and dragged and dropped `Start_Them.rb` into it, then the path would reflect that directory (aka folder) accordingly like so: `~\Desktop\foo\` followed by typing in `ruby 'Start_Them.rb'`. You'll get the hang of the command line and running scripts on it, no worries! Just a matter of practice!
 
 
-To clarify the order of operations going on behind the curtain, the only function being ran will be the `start_active_players_lite` function, which inherently calls the helper functions step by step. The functions are defined first, and then they are called; the body of a function does not run upon being declared.
+To clarify the order of operations going on behind the curtain, the only function being ran will be the `start_active_players_lite` function, which inherently calls the helper functions step by step. The functions are defined first; the body of a function does not run upon being declared...so we need to call them like so (see below).
 
 ```ruby
 if __FILE__ == $PROGRAM_NAME
