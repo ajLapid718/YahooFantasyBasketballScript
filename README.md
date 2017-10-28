@@ -6,7 +6,19 @@ Normally, a README file is suggested to include details about one's environment 
 
 I vividly remember how overwhelmingly lost I was when I wanted to run a program from GitHub on my personal computer...this time last year (the current date: October 2017). In light of that, I will make my best attempt to cover those bases in a way where I make little to no assumptions about what you may or may not know. In other words, I will make an effort to be as detailed and verbose as possible.
 
-**The ideal scenario**: You successfully set up the necessary components for your personal computer and can interact with your Yahoo Fantasy Basketball roster in real-time. Hopefully this also succeeds in giving you ideas to explore programming and/or automate other things on your web browser or in general! Let's get to it.
+**The Ideal Outcome**: You successfully set up the necessary components for your personal computer and can interact with your Yahoo Fantasy Basketball roster in real-time. Hopefully this also succeeds in giving you ideas to explore programming and/or automate other things on your web browser or in general! Let's get to it.
+
+## Introduction
+
+I love sports and I'm an especially huge fan of basketball. For the 2015-2016 NBA season, my family-friends and I decided to participate in Fantasy Basketball via Yahoo. I was also thrown into a second league with my friends from college. After getting a full experience of fantasy basketball, I took the 2016-2017 season off. Recently, my good friends wanted to do fantasy basketball for the 2017-2018 season.
+
+This is my first time participating in Yahoo Fantasy basketball with somewhat of a budding background in coding. I started to see things differently and I also started to explore certain things with the Google Chrome Inspector Tools. I noticed details about how the page was loading...things of that nature...that I could previously describe on a higher-level, but now I have a clearer idea of what is going on behind the curtain.
+
+Combining my curiosity with my friend who guided me through the concept of automation, the idea of these three automation scripts were incepted. The grind to build them began, but it was more fun and less frustrating because I got really into it.
+
+***How Things Look Like On My End***: Because my computer environment is all set already, all I have to do is open my command line, navigate to the proper directory, type in `ruby 'Start_Active_Players.rb'` or `ruby 'Bench_All_Players'`, and send the enter keystroke to it.
+
+***In Other Words***: I downloaded the necessary files, have the necessary programs, open the command prompt, journey through the folders via the command prompt, type in what I type in, and press the enter button. I will try to explain things with simplicity in mind.
 
 ## Step By Step Functionality
 
