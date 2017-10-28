@@ -1,3 +1,12 @@
+## Navigation
+
+https://github.com/ajLapid718/YahooFantasyBasketballScript#preface
+https://github.com/ajLapid718/YahooFantasyBasketballScript#introduction
+https://github.com/ajLapid718/YahooFantasyBasketballScript#step-by-step-functionality-summarized
+https://github.com/ajLapid718/YahooFantasyBasketballScript#from-configuration-to-implementation
+https://github.com/ajLapid718/YahooFantasyBasketballScript#final-thoughts-and-things-to-consider
+https://github.com/ajLapid718/YahooFantasyBasketballScript#possible-areas-with-room-for-improvement
+
 ## Preface
 
 **Word Count**: ~2050
@@ -20,7 +29,7 @@ I love sports and I'm an especially huge fan of basketball. For the 2015-2016 NB
 
 This is my first time participating in Yahoo Fantasy basketball with somewhat of a budding background in coding. I started to see things differently and I also started to explore certain things with the Google Chrome Inspector Tools. I noticed details about how the page was loading...things of that nature...that I could previously describe on a higher-level, but now I have a clearer idea of what is going on behind the curtain.
 
-Combining my curiosity with my friend who guided me through the concept of automation, the idea of these three automation scripts were incepted. The grind to build them began, but it was more fun and less frustrating because I got really into it.
+Combining my curiosity with my friend who guided me through the concept of automation, the idea of these three automation scripts was incepted. The grind to build them began, but it was more fun and less frustrating because I got really into it.
 
 **How Things Look Like On My End**: Because my computer environment is all set already, all I have to do is open my command line, navigate to the proper directory, type in `ruby 'Start_Active_Players.rb'` or `ruby 'Bench_All_Players'`, and send the enter keystroke to it.
 
