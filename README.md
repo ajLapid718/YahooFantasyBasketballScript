@@ -67,7 +67,7 @@ Combining my curiosity with my friend who guided me through the concept of autom
 ## From Configuration to Implementation!!!
 
 - **My Ruby Version**: Ruby 2.3.3
-  - Enter the command `ruby 'ruby -v'` in your command line to determine which version you have!
+  - Enter the command `ruby -v` in your command line to determine which version you have!
   - You can go to Google and download Ruby with RubyInstaller for Windows! The instructions are clear and concise!
 - **My Operating System**: Windows 10
   - You can most likely run these scripts on other Operating Systems as well (Mac OS X, Ubuntu, etc.)!
