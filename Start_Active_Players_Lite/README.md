@@ -107,7 +107,7 @@ end
 
 #### Navigate to My Team
 
-A begin and rescue block (sometimes an ensure block is used as well) is how Ruby handles exceptions and errors. Two errors, among many, that may be encountered include: a timeout error and an element_cannot_be_clicked error. A timeout error is when the web page is still loading and the time elapsed surpasses the default_timeout value of 30 seconds (can be altered). In this case, the team_name might be clickable and loaded, but the rest of the web page is holding things up. Error handling can help achieve the intended goal of clicking the desired element despite such a non-fatal error. The element_cannot_be_clicked error may occur in this case for similar reasons.
+A begin and rescue block (sometimes an ensure block is used as well) is how Ruby handles exceptions and errors. Two errors, among many, that may be encountered include: a timeout error and an element_cannot_be_clicked error. A timeout error is when the web page is still loading and the time elapsed surpasses the default_timeout value of 30 seconds (can be altered). In this case, the team_name might be clickable and loaded, but the rest of the web page is holding things up (advertisements, images, etc). Error handling can help achieve the intended goal of clicking the desired element despite such a non-fatal error. The element_cannot_be_clicked error may occur in this case for similar reasons.
 
 Those hailing from the Python programming language may know this underlying concept as a `try/except` sequence. Those hailing from JavaScript may know this underlying concept as a `try/catch` sequence.
 
