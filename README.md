@@ -34,7 +34,7 @@ This is my first time participating in Yahoo Fantasy basketball with somewhat of
 
 Combining my curiosity with my friend who guided me through the concept of automation, the idea of these three automation scripts was incepted. The grind to build them began, but it was more fun and less frustrating because I got really into it.
 
-**How Things Look Like On My End**: Because my computer environment is all set already, all I have to do is open my command line, navigate to the proper directory, type in `ruby 'Start_Active_Players.rb'` or `ruby 'Bench_All_Players'`, and send the enter keystroke to it.
+**How Things Look Like On My End**: Because my computer environment is all set already, all I have to do is open my command line, traverse to the proper directory, type in `ruby 'Start_Active_Players.rb'` or `ruby 'Bench_All_Players'`, and send the enter keystroke to it.
 
 **In Other Words**: I downloaded the necessary files, have the necessary programs, open the command prompt, journey through the folders via the command prompt, type in what I type in, and press the enter button. Then the script is executed and the magic happens. What was once done manually, can now be done with hands-free automation. I will try to explain things with simplicity in mind.
 
@@ -87,7 +87,7 @@ Combining my curiosity with my friend who guided me through the concept of autom
 - **My PATH**:
   - Put chromedriver.exe into your Local Disc (C:)!
   - Check out the YouTube videos for installing chromedriver by DevNami or Artur Spirin!
-  - If all else fails, be sure to check out the "Getting Started" section of Google's ChromeDriver support page
+  - If all else fails, be sure to check out the "Getting Started" section of Google's ChromeDriver support page!
 - **My Highline Version**: 1.7.8
   - This is necessary for the Full Version to operate properly!
   - The command for this is `gem install highline`, and feel free to check out their GitHub!
