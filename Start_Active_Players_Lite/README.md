@@ -146,7 +146,7 @@ end
 
 #### Recap and farewell messages plus browser shutdown
 
-It is important to close the browser session because it takes up space and will run in the background otherwise.
+It is important to close the browser session because it takes up space and will run in the background otherwise. In other automation engines, there is a significant distinction between `@browser.close` and `@browser.quit` and even `@browser.dispose`. In Watir, the close method closes the window and ends the session completely...so it is functionally equivalent to the quit command and they are interchangeable according to the Watir docs.
 
 ```ruby
 def farewell
@@ -175,7 +175,7 @@ end
 
 #### Invoke the main method when this file is executed from the terminal
 
-The main function titled `start_active_players_lite` will be ran from the terminal if the file name typed appropriately matches the file name. In the shell, terminal, or command prompt, the command `ruby 'Start_Them'.rb` would be entered. The code would run from there, assuming that the command was called from the proper directory (folder path).
+The main function (function and method are loosely interchangeable) titled `start_active_players_lite` will be ran from the terminal if the file name typed appropriately matches the file name. In the shell, terminal, or command prompt, the command `ruby 'Start_Them'.rb` would be entered. The code would run from there, assuming that the command was called from the proper directory (folder path).
 
 My command prompt resembles this: `~\Desktop\YahooFantasyBasketballScript\Start_Active_Players_Lite` and I would input `ruby 'Start_Them'.rb` on the side of that path where the text field exists.
 
