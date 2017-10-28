@@ -1,5 +1,6 @@
 def start_browser_session
   @browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --headless])
+  Watir.default_timeout = 10
 end
 
 def go_to_yahoo
