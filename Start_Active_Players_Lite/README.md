@@ -40,7 +40,7 @@ Below is one way to expand on a difference between a parameter and an argument. 
 
 ```ruby
 def do_some_addition(num1, num2) # The parameters are: num1 and num2
-  num1 + num2 # Ruby has implicit returns, so there's no need (also no harm) to explicitly type: return num1 + num2
+  num1 + num2 # Ruby has implicit returns; there's no need (also no harm) to explicitly type: return num1 + num2
 end # The do_some_addition function becomes defined so that it can be called at some later point in time
 
 do_some_addition(6, 4) # The function is called and is passed in (given) the arguments of: 6 and 4
