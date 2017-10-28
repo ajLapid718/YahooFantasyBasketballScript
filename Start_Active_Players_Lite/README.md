@@ -34,7 +34,17 @@ NUMBER_OF_DAYS = 7
 
 An instance of the Browser class is initialized and is stored in the instance variable `@browser` (could have named it anything), which will be accessed throughout the series of function calls. Check out the difference between local variables and instance variables if you would like to know more about the accessibility of a variable (scope). One look at the Watir documentation (essentially a place to see which functions can be invoked as well as updates), an instance of the browser class can be passed information such as the type of web browser to open and switches (similar to options or preferences).
 
-The code originally has a skeleton template of `Watir::Browser.new(browser, *args)`. When a function looks like that, the contents of the parentheses are known as parameters. When the parameters are filled in, such as in the example below, then they are known as arguments. Not all functions are designed to accept parameters, such as `start_browser`(could have been named anything) demonstrates below.
+The code originally has a skeleton template of `Watir::Browser.new(browser, *args)` as detailed in their documentation. When a function appears like that, the contents of the parentheses are known as parameters. When the parameters are filled in, such as in the example below, then they become known as arguments. Not all functions are designed to accept parameters, such as `start_browser`(could have been named anything) demonstrates below.
+
+Below is one way to expand on a difference between a parameter and an argument. Hopefully it helps with understanding what is going on in the body of the actual script.
+
+```ruby
+def do_some_addition(num1, num2) # The parameters are: num1 and num2
+  num1 + num2 # Ruby calls an implicit return, so there's no need (but also no harm here) to explicitly write: return num1 + num2
+end
+
+do_some_addition(6, 4) # The arguments are: 6 and 4
+```
 
 ```ruby
 def start_browser
