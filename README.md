@@ -18,7 +18,9 @@ Combining my curiosity with my friend who guided me through the concept of autom
 
 **How Things Look Like On My End**: Because my computer environment is all set already, all I have to do is open my command line, navigate to the proper directory, type in `ruby 'Start_Active_Players.rb'` or `ruby 'Bench_All_Players'`, and send the enter keystroke to it.
 
-**In Other Words**: I downloaded the necessary files, have the necessary programs, open the command prompt, journey through the folders via the command prompt, type in what I type in, and press the enter button. I will try to explain things with simplicity in mind.
+**In Other Words**: I downloaded the necessary files, have the necessary programs, open the command prompt, journey through the folders via the command prompt, type in what I type in, and press the enter button. Then the script is executed and the magic happens. I will try to explain things with simplicity in mind.
+
+**The Result**: The script, using the ChromeDriver file you'll need to install, acts on my behalf! It will actually result in logging into my Yahoo account, submitting my e-mail address and password, and hit the Start Active Players button as well as the Next Day arrow icon. If you are using the Incognito Mode option in the script file, you can actually witness this happening step by step! If you are using the Headless Mode option in the script file, the ChromeDriver will do this without you seeing anything! It's awesome and amazing. Depending on which script is being used, you will either have your active players started for a certain period of time, bench all your players, and additional features (in the Full Version). In the Full Version, you can discover the amount of starts both your team and your opponent's team has each day and for the week. In the event that you have more than 10 players who have a game for that day, the script will tell you in the command line who is on the bench after it has started the active players.
 
 ## Step By Step Functionality
 
