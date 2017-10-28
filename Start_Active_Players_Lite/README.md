@@ -21,7 +21,7 @@ of the script to work, it is necessary for a user to manually edit the source co
 - `YOUR_TEAM_NAME = "Concrete Jungle"`
 - `NUMBER_OF_DAYS = 14`
 
-It is typically unsafe to have your private information in any file on your computer, so you may have to keep re-entering and removing your information in a back-and-forth manner each time you would like to set your active players. However, the plus side to this is that if you are comfortable with leaving your information in the file, then you may never have to retype your information again for the rest of the fantasy season unless you change your password. You could just open the terminal and run the script with less hassle involved. Keep in mind that once these variables (constants) are filled out here, you do not have to alter any other part of the source code at any point.
+It is typically unsafe to have your private information in any file on your computer, so you may have to keep re-entering and removing your information in a back-and-forth manner each time you would like to set your active players. That could get pretty irritating. However, the plus side to this is that if you are comfortable with leaving your information in the file, then you may never have to retype your information again for the rest of the fantasy season unless you change your password. You could just open the terminal and run the script with less hassle involved. Keep in mind that once these variables (constants) are filled out here, you do not have to alter any other part of the source code at any point.
 
 ```ruby
 YOUR_EMAIL_ADDRESS = ""
