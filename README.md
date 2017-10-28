@@ -66,7 +66,7 @@ Combining my curiosity with my friend who guided me through the concept of autom
     - 12e). Reports information to you
 13. Closes the browser session
 
-## From Configuration to Implementation!
+## From Configuration to Implementation!!!
 
 - **My Ruby Version**: Ruby 2.3.3 (enter the command `ruby 'ruby -v'` in your command line to determine which version you have)
   - You can go to Google and download Ruby with RubyInstaller for Windows! The instructions are clear and concise!
@@ -85,6 +85,7 @@ Combining my curiosity with my friend who guided me through the concept of autom
   - This is the engine which makes direct calls to the browser. This gets things going!
 - **My Terminal**: Git Shell/Windows Power Shell
   - User-friendly tailored command line, but it can be unnecessary for your purposes!
+  - The regular command prompt should suffice!
 - **My PATH**:
   - Put chromedriver.exe into your Local Disc (C:)!
   - Check out the YouTube videos for installing chromedriver by DevNami or Artur Spirin!
@@ -93,6 +94,7 @@ Combining my curiosity with my friend who guided me through the concept of autom
   - This is necessary for the Full Version to operate properly!
   - The command for this is `gem install highline`, and feel free to check out their GitHub!
   - This allows you to type your password into the command line with asterisks replacing each character!
+  - By the way, you can type in `gem list` into the command line and you'll see all the gems you have!
 
 Let's do a quick recap. First, you'll need to download Ruby onto your computer. This will give you the ability to interact with the programming language and the scripts. Your computer needs to be able to know what language you're talking to it in.
 
