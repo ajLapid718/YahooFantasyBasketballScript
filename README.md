@@ -1,6 +1,6 @@
 # Yahoo Fantasy Basketball
 
-##### Step By Step Functionality
+### Step By Step Functionality
 
 1. Opens a web browser session
 2. Maximizes the web browser window
@@ -16,7 +16,7 @@
 12. Repeats step 10 and step 11 until the desired amount of days are covered and handled
 13. Closes the browser session
 
-##### From Configuration to Implementation
+### From Configuration to Implementation
 
 - To be continued...
 - Type in `ruby "Start_Active_Players.rb"` in your terminal and press enter
