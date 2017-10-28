@@ -38,12 +38,12 @@ Combining my curiosity with my friend who guided me through the concept of autom
 10. Clicks on the "Start Active Players" button
 11. Clicks on the "Next Day" arrow icon
 12. Repeats both Step 10 and Step 11 until the desired amount of days are covered and handled
-  If you are running `ruby Start_Active_Players_Full.rb`, then more features are involved
-    12a) From here, navigates to your opponent's team
-    12b). Counts the amount of players who have a game on that day
-    12c). Clicks the "Next Day" arrow icon
-    12d). Repeats the previous two steps
-    12e). Reports information to you
+  - If you are running `ruby Start_Active_Players_Full.rb`, then more features are involved
+    - 12a) From here, navigates to your opponent's team
+    - 12b). Counts the amount of players who have a game on that day
+    - 12c). Clicks the "Next Day" arrow icon
+    - 12d). Repeats the previous two steps
+    - 12e). Reports information to you
 13. Closes the browser session
 
 ## From Configuration to Implementation
