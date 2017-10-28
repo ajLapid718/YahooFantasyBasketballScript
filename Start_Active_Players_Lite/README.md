@@ -181,7 +181,7 @@ My command prompt resembles this: `~\Desktop\YahooFantasyBasketballScript\Start_
 
 Some experience with navigating the terminal using the command `cd` (cd: change directory aka change folder) and autocompleting folder names with the `tab` key will be tremendously helpful at this point. More to the point, if someone made a new folder on their desktop titled `foo` and dragged and dropped `Start_Them.rb` into it, then the path would reflect that directory (aka folder) accordingly like so: `~\Desktop\foo\` followed by typing in `ruby 'Start_Them.rb'`. You'll get the hang of the command line and running scripts on it, no worries! Just a matter of practice!
 
-To clarify the order of operations going on behind the curtain, the only function being ran will be the `start_active_players_lite` function, which inherently calls the helper functions step by step. The functions are defined first; the body of a function does not run upon being declared...so we need to call them like so (see below).
+To clarify the order of operations behind the curtain, the only function being ran will be the `start_active_players_lite` function, which inherently calls the helper functions step by step. The functions are defined first; the body of a function does not run upon being declared...so we need to call them like so (see below).
 
 ```ruby
 if __FILE__ == $PROGRAM_NAME
