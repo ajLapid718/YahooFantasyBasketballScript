@@ -91,6 +91,8 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
 - **My Preferred Text Editor**: Atom
   - This text editor has a user-friendly download process and will help you organize and view the code
   - Notepad and Sublime Text are two alternatives to Atom so that you can edit the source code
+  - The online version of a text editor/interpreter is an Integrated Development Environment (IDE) like Cloud9 or REPL
+  - For our purposes, it might be more intuitive to not worry about IDEs at the moment; still good to be aware of them though
   - A text editor is sort of like the Microsoft Word for lines of code
   - With that analogy in mind, GitHub is like a public Google Docs or Google Drive
   - You can even see each save I made if you click on `Commits` in the top left of this page
@@ -114,7 +116,7 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
   - Side note: to install a particular version of this gem, the command would be `gem install highline -v 1.7.8` or `gem install highline -v '~> 1.7.8'`
   - By the way, you can type in `gem list` into the command line and you'll see all the gems you have plus their versions
 
-Let's do a quick recap. First, you'll need to download Ruby onto your computer. This will give you the ability to interact with the programming language and the files. Your computer needs to be able to know what language you're talking to it with!
+Let's do a quick recap. First, you'll need to download Ruby onto your computer. This will give you the ability to interact with the programming language and the files via the interpreter. Your computer needs to be able to know what language you're talking to it with!
 
 Second, you'll need to install the Watir gem with your command line. Ruby has some gems and libraries loaded up already, but the default setup does not include some gems or libraries. This is the reason why we need to install Watir individually. This is also the same reason why we need to install Highline individually.
 
