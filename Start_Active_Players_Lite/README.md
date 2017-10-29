@@ -201,17 +201,24 @@ My shell resembles this: `~\Desktop\YahooFantasyBasketballScript\Start_Active_Pl
 4. The shell shows `~` and from there I type `cd d` and press the `tab` key to autocomplete the folder name; I keep pressing tab until it gets to `.\Desktop` then I press enter
 5. The shell shows `~\Desktop` so I type in `cd y` and press the `tab` key to autocomplete the folder name for me
 6. Now that my shell is showing `~\Desktop\YahooFantasyBasketballScript` I need to be in the folder that houses the desired script
-7. From Step 6, you can pick your choice of command: `cd b` + `tab` or `cd s` + `tab`
+7. From Step 6, you can type in: `cd b` + `tab` to be one step away from benching all your players
 
-    7a. If I want to bench all my players, then I will hit enter after typing `cd b` + `tab` and then enter in `ruby 'Bench_All_Players.rb'` which follows the template of `ruby 'Name_of_File.rb'` to be clear
+    7a. Enter in `ruby 'Bench_All_Players.rb'` which follows the template of `ruby 'Name_of_File.rb'` for the sake of clarity
 
-    7b. For the latter, you can keep tapping the tab key because two folders begin with the letter 'S' and thus there are two options
+8. From Step 6, you can type in: `cd s` + `tab` to be close to the lite or full folder
+
+    8a. Keep tapping the tab key because two folders begin with the letter 'S' and thus there are two options to choose from
+
+    8b. After settling between the lite or full version, refer to Step 7a to run the respective script
+
+9. Type in `exit` in your terminal after the script finishes
 
 ###### Tips
 - If you are in the wrong folder, then use `cd ..` to go back one folder in the folder tree or use `cd` like previously
 - If you want to know what files or folders are in a folder, then type in the command `ls` to have that list which can remind you what letters to type to start up the autocompletion
 - If you want to know the entire path aka what's behind the tilde symbol (~), you would type in `pwd` (UNIX) into the terminal which stands for print working directory
 - For the default command prompt: the functionality of `ls` in UNIX is achieved with typing in `dir` in the Windows command line
+- If you want to exit the terminal, `ctrl` + `c` or `ctrl` + `q` can assist with that
 
 More to the point, if someone made a new folder on their desktop titled `foo` and dragged and dropped `Start_Them.rb` into it, then the path would reflect that directory (aka folder) accordingly like so: `~\Desktop\foo\` followed by typing in `ruby 'Start_Them.rb'`. So moving through files via the command prompt is an explicit description of what we do when we click through folders day to day.
 
