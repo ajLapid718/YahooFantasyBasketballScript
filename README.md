@@ -63,15 +63,15 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
 
     If you are running `ruby Start_Active_Players_Full.rb`, then more features are involved
 
-    12a. From here, navigates to your opponent's team
+        12a. From here, navigates to your opponent's team
 
-    12b. Counts the amount of players who have a game on that day
+        12b. Counts the amount of players who have a game on that day
 
-    12c. Clicks the "Next Day" arrow icon
+        12c. Clicks the "Next Day" arrow icon
 
-    12d. Repeats the previous two steps
+        12d. Repeats the previous two steps
 
-    12e. Reports information to you
+        12e. Reports information to you
 
 13. Closes the browser session
 
