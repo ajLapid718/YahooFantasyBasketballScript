@@ -12,9 +12,9 @@ Jump To: [Thoughts](https://github.com/ajLapid718/YahooFantasyBasketballScript#f
 
 ## Preface
 
-**Word Count**: ~2600
+**Word Count**: ~2800
 
-**Estimated Amount of Time to Read**: ~15 minutes
+**Estimated Amount of Time to Read**: ~20 minutes
 
 **From Square One to Running the Program**: ~Not too long
 
@@ -118,7 +118,9 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
 
 Let's do a quick recap. First, you'll need to download Ruby onto your computer. This will give you the ability to interact with the programming language and the files via the interpreter. Your computer needs to be able to know what language you're talking to it with!
 
-Second, you'll need to install the Watir gem with your command line. Ruby has some gems and libraries loaded up already, but the default setup does not include some gems or libraries. This is the reason why we need to install Watir individually. This is also the same reason why we need to install Highline individually.
+Second, you'll need to install ChromeDriver and put it in your PATH. The YouTube will smoothly walk you through it. Consider downloading the Git Powershell for Windows or the Atom text editor...but as stated above, the default command prompt and notepad should be acceptable.
+
+After that, you'll need to install the Watir gem with your command line. Ruby has some gems and libraries loaded up already, but the default setup does not include some gems or libraries. This is the reason why we need to install Watir individually. This is also the same reason why we need to install Highline individually.
 
 Following that, you will need to download or `clone` this repository zipped up. Then, you'll do a couple of `cd` commands in your command line and journey through to the folder that has the scripts you may have downloaded from this repository. A quick online tutorial could probably get you up to speed. **Suggestion**: put the folder in your Desktop as opposed to your Downloads since this might make things more intuitive as it did for me.
 
