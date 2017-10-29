@@ -61,11 +61,11 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
 11. Clicks on the "Next Day" arrow icon
 12. Repeats both Step 10 and Step 11 until the desired amount of days are covered and handled
   - If you are running `ruby Start_Active_Players_Full.rb`, then more features are involved
-    - 12a) From here, navigates to your opponent's team
-    - 12b). Counts the amount of players who have a game on that day
-    - 12c). Clicks the "Next Day" arrow icon
-    - 12d). Repeats the previous two steps
-    - 12e). Reports information to you
+  - 12a) From here, navigates to your opponent's team
+  - 12b). Counts the amount of players who have a game on that day
+  - 12c). Clicks the "Next Day" arrow icon
+  - 12d). Repeats the previous two steps
+  - 12e). Reports information to you
 13. Closes the browser session
 
 ## From Configuration to Implementation
@@ -84,8 +84,9 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
   - With that analogy in mind, GitHub is like a public Google Docs or Google Drive
   - You can even see each save I made if you click on `Commits` in the top left of this page
 - **My Watir Version**: 6.8.4
-  - Enter the command `gem install watir` to add this gem/library to your computer
+  - Enter the command `gem install watir` to add the latest version of this gem/library to your computer
   - Certain operations are deprecated (no longer supported) from version to version, so this is important
+  - Side note: to install a particular version of this gem, the command would be `gem install watir -v 6.8.4` or `gem install watir -v '~> 6.8.4'`
 - **My Watir-Webdriver Version**: 0.9.9
   - This is the engine which makes direct calls to the browser; this gets things going!
 - **My Terminal**: Git Shell/Windows Power Shell
@@ -97,8 +98,9 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
   - If all else fails, be sure to check out the "Getting Started" section of Google's ChromeDriver support page
 - **My Highline Version**: 1.7.8
   - This is necessary for the Full Version to operate properly
-  - The command for this is `gem install highline`, and feel free to check out their GitHub
   - This allows you to type your password into the command line with asterisks replacing each character
+  - The command for this is `gem install highline`, and feel free to check out their GitHub
+  - Side note: to install a particular version of this gem, the command would be `gem install highline -v 1.7.8` or `gem install highline -v '~> 1.7.8'`
   - By the way, you can type in `gem list` into the command line and you'll see all the gems you have plus their versions
 
 Let's do a quick recap. First, you'll need to download Ruby onto your computer. This will give you the ability to interact with the programming language and the scripts. Your computer needs to be able to know what language you're talking to it with!
@@ -121,7 +123,7 @@ At the root of it all, here's what I want to express: coding is about learning h
 
 Aside from all of that, you've got what you came for! Now if you know you'll be busy or if you anticipate being on vacation for a while, you can run this script so that your active players are on board. Maybe you can just draft all 13 players and set your lineup for the rest of the year...that'd be interesting. Maybe you'll bench all of your players knowing that you've secured a win and don't want to jeopardize percentages or turnovers. In any case, I hope all of this contributes to your journey, despite how lengthy it turned out to be. On one final note, I like to believe that lightweight automation is not necessarily supposed to be faster or better than what a person can do. The primary point is for the computer to shoulder a person's tasks for any reason the user justifies. It's nice to have optimized speeds, but the main intent is simply to get the job done on one's behalf.
 
-One last thing, for real. You will notice that the three folders containing the three scripts have differing compositions. What I mean is: bench_all_players separates the login process, the get info process, and the benching process. On the other hand, the full version is ran as one long script. Conversely, the lite version has helper functions and a main function with a tagline at the bottom that is necessary for it to run, which is not necessary when running one long script like the full version. The code can certainly be refactored (revised). It's been said that it's important to write the code for two people in mind: yourself and your audience (which can include your future self). Exploring the setup of each file could introduce concepts of Do-Not-Repeat-Yourself (DRY), Separation of Concerns, and Single-Responsibility-Principle (SRP)...among other design patterns, principles, and techniques. Carry those observations with you moving forward, please! Note: I'm not necessarily claiming I am implementing the top-tier best practices, but what you notice for yourself could positively spur questions about how to organize and cleanup one's code. Other than that, take care.
+One last thing, for real. You will notice that the three folders containing the three scripts have differing compositions. What I mean is: bench_all_players separates the login process, the get info process, and the benching process. On the other hand, the full version is ran as one long script. Conversely, the lite version has helper functions and a main function with a tagline at the bottom that is necessary for it to run, which is not necessary when running one long script like the full version. The code can certainly be refactored (revised). It's been said that it's important to write the code for two people in mind: yourself and your audience (which can include your future self). Exploring the setup of each file could introduce concepts of Do-Not-Repeat-Yourself (DRY), Separation of Concerns, and Single-Responsibility-Principle (SRP)...among other design patterns, principles, and techniques. Carry those observations with you moving forward, please! Note: I'm not necessarily claiming I am implementing the top-tier best practices, but what you notice for yourself could positively spur questions about how to organize and cleanup one's code. That's that, take care.
 
 ###### Best,
 ###### Allan James Lapid
