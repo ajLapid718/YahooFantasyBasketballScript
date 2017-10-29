@@ -201,15 +201,15 @@ My shell resembles this: `~\Desktop\YahooFantasyBasketballScript\Start_Active_Pl
 4. The shell shows `~` and from there I type `cd d` and press the `tab` key to autocomplete the folder name; I keep pressing tab until it gets to `.\Desktop` then I press enter
 5. The shell shows `~\Desktop` so I type in `cd y` and press the `tab` key to autocomplete the folder name for me
 6. Now that my shell is showing `~\Desktop\YahooFantasyBasketballScript` I need to be in the folder that houses the desired script
-7A. From Step 6, you can type in: `cd b` + `tab` to be one step away from benching all your players
+7. From Step 6, you can type in: `cd b` + `tab` to be one step away from benching all your players
 
-    A: Enter in `ruby 'Bench_All_Players.rb'` which follows the template of `ruby 'Name_of_File.rb'` for the sake of clarity
+    7a. Enter in `ruby 'Bench_All_Players.rb'` which follows the template of `ruby 'Name_of_File.rb'` for the sake of clarity
 
-7B. From Step 6, you can type in: `cd s` + `tab` to be close to the lite or full folder
+7. From Step 6, you can type in: `cd s` + `tab` to be close to the lite or full folder
 
-    A: Keep tapping the tab key because two folders begin with the letter 'S' and thus there are two options to choose from
+    7a. Keep tapping the tab key because two folders begin with the letter 'S' and thus there are two options to choose from
 
-    B: After settling between the lite or full version, refer to Step 7a to run the respective script
+    7b. After settling between the lite or full version, refer to Step 7a to run the respective script
 
 8. Type in `exit` in your terminal after the script finishes
 
