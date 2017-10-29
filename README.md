@@ -12,7 +12,7 @@ Jump To: [Thoughts](https://github.com/ajLapid718/YahooFantasyBasketballScript#f
 
 ## Preface
 
-**Word Count**: ~2400
+**Word Count**: ~2600
 
 **Estimated Amount of Time to Read**: ~15 minutes
 
