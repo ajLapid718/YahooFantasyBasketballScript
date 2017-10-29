@@ -11,7 +11,7 @@
 
 - I could write up a ternary operation so that a user can type into the command line the particular web browser and whether or not they would like to use Google's Incognito Mode or the Headless Chrome feature
   - If a user downloads this repository and wants to springboard off of that idea, the segment of code below could be one approach
-    - At the moment, I do not believe that this will be a make-or-break scenario from a UX perspective
+    - At the moment, I do not believe that this will be a make-or-break scenario from a user-experience (UX) perspective
 ```ruby
 print "Press and enter the 5 button for incognito mode or any other character for headless mode: "
 mode = gets.chomp.to_i
