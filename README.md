@@ -90,6 +90,7 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
   - Typing `chrome://settings/help` in your search bar might be helpful to find out the version on your machine
 - **My Preferred Text Editor**: Atom
   - This text editor has a user-friendly download process and will help you organize and view the code
+  - Notepad and Sublime Text are two alternatives to Atom so that you can edit the source code
   - A text editor is sort of like the Microsoft Word for lines of code
   - With that analogy in mind, GitHub is like a public Google Docs or Google Drive
   - You can even see each save I made if you click on `Commits` in the top left of this page
