@@ -92,7 +92,7 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
   - This text editor has a user-friendly download process and will help you organize and view the code
   - Notepad and Sublime Text are two alternatives to Atom so that you can edit the source code
   - The online version of a text editor/interpreter is an Integrated Development Environment (IDE) like Cloud9 or REPL
-  - For our purposes, it might be more intuitive to not worry about IDEs at the moment; still good to be aware of them though
+  - For our purposes, it might be more productive to not worry about IDEs at the moment; doesn't hurt to be aware of them though!
   - A text editor is sort of like the Microsoft Word for lines of code
   - With that analogy in mind, GitHub is like a public Google Docs or Google Drive
   - You can even see each save I made if you click on `Commits` in the top left of this page
