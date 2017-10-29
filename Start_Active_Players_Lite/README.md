@@ -198,7 +198,7 @@ My shell resembles this: `~\Desktop\YahooFantasyBasketballScript\Start_Active_Pl
 1. By default, my Git Shell opens up in `~\Documents\Github`
 2. From there, I need to enter `cd ..` once to leave the Github folder
 3. The shell shows `~\Documents` and then I enter `cd ..` to leave the Documents folder
-4. The shell shows `~` and from there I type `cd d` and press the `tab` key to autocomplete the folder name; I keep pressing tab until it gets to `.\Desktop` then I press enter
+4. The shell shows `~` and from there I type `cd d` and press the `tab` key to autocomplete the folder name; I keep pressing tab until it gets to `.\Desktop` then I press enter; this could also be accomplished without autocomplete by typing `cd .\Desktop` initially
 5. The shell shows `~\Desktop` so I type in `cd y` and press the `tab` key to autocomplete the folder name for me
 6. Now that my shell is showing `~\Desktop\YahooFantasyBasketballScript` I need to be in the folder that houses the desired script
 7. From Step 6, you can type in: `cd b` + `tab` to be one step away from benching all your players
