@@ -75,8 +75,9 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
   - You can go to Google and download Ruby with RubyInstaller for Windows; the instructions are clear and concise!
 - **My Operating System**: Windows 10
   - You can most likely run these scripts on other Operating Systems as well (Mac OS X, Ubuntu, etc.)
-- **My Preferred Web Browser**: Google Chrome
+- **My Web Browser**: Google Chrome Version 62 (Official Build) (64-bit)
   - The source code (fancy way of saying the contents of the files) uses Chrome, but you can edit it to use Firefox or Internet Explorer, too
+  - Typing `chrome://settings/help` in your search bar might be helpful to find out the version on your machine
 - **My Preferred Text Editor**: Atom
   - This text editor has a user-friendly download process and will help you organize and view the code
   - A text editor is sort of like the Microsoft Word for lines of code
