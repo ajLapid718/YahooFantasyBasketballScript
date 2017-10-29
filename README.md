@@ -114,7 +114,7 @@ Let's do a quick recap. First, you'll need to download Ruby onto your computer. 
 
 Second, you'll need to install the Watir gem with your command line. Ruby has some gems and libraries loaded up already, but the default setup does not include some gems or libraries. This is the reason why we need to install Watir individually. This is also the same reason why we need to install Highline individually.
 
-Following that, you will need to download or `clone` this repository zipped up. Then, you'll do a couple of `cd` commands in your command line and journey through to the folder that has the scripts you may have downloaded from this repository. A quick online tutorial could probably get you up to speed. Try to put the folder in your Desktop as opposed to your Downloads; this might make things more intuitive as it did for me.
+Following that, you will need to download or `clone` this repository zipped up. Then, you'll do a couple of `cd` commands in your command line and journey through to the folder that has the scripts you may have downloaded from this repository. A quick online tutorial could probably get you up to speed. Suggestion: put the folder in your Desktop as opposed to your Downloads since this might make things more intuitive as it did for me.
 
 Inevitably, you will type in one of the three commands to run the script of your choice: `ruby 'Start_Them.rb'`, `ruby 'Start_Active_Players.rb'`, or `ruby 'Bench_All_Players.rb'`.
 
