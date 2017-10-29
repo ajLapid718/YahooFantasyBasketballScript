@@ -106,7 +106,7 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
 - **My Highline Version**: 1.7.8
   - This is necessary for the Full Version to operate properly
   - This allows you to type your password into the command line with asterisks replacing each character
-  - The command for this is `gem install highline`, and feel free to check out their GitHub
+  - The command to install the gem's latest version is `gem install highline`, and feel free to check out their GitHub
   - Side note: to install a particular version of this gem, the command would be `gem install highline -v 1.7.8` or `gem install highline -v '~> 1.7.8'`
   - By the way, you can type in `gem list` into the command line and you'll see all the gems you have plus their versions
 
