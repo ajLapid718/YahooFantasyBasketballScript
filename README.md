@@ -103,8 +103,10 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
 - **My Watir-Webdriver Version**: 0.9.9
   - This is the engine which makes direct calls to the browser; this gets things going!
 - **My Terminal**: Git Shell/Windows Power Shell
-  - User-friendly tailored command line, but it can be unnecessary for your purposes
+  - This is a user-friendly command line tailored to Git, but it can be unnecessary for your purposes
   - The regular command prompt should suffice
+  - My terminal accepts both Windows and UNIX (again, no need to worry about this but it's good to know of the term) commands
+  - The default command prompt typically accepts Windows commands
 - **My PATH**:
   - Put chromedriver.exe into your Local Disc (C:)
   - Check out the YouTube videos for installing chromedriver by DevNami or Artur Spirin
@@ -118,11 +120,11 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
 
 Let's do a quick recap. First, you'll need to download Ruby onto your computer. This will give you the ability to interact with the programming language and the files via the interpreter. Your computer needs to be able to know what language you're talking to it with!
 
-Second, you'll need to install ChromeDriver and put it in your PATH. The YouTube will smoothly walk you through it. Consider downloading the Git Powershell for Windows or the Atom text editor...but as stated above, the default command prompt and notepad should be acceptable.
+Second, you'll need to install ChromeDriver and put it in your PATH. Those YouTubers will smoothly walk you through it. Consider downloading the Git Powershell for Windows or the Atom text editor...but as stated above, the default command prompt and notepad should be acceptable.
 
 After that, you'll need to install the Watir gem with your command line. Ruby has some gems and libraries loaded up already, but the default setup does not include some gems or libraries. This is the reason why we need to install Watir individually. This is also the same reason why we need to install Highline individually.
 
-Following that, you will need to download or `clone` this repository zipped up. Then, you'll do a couple of `cd` commands in your command line and journey through to the folder that has the scripts you may have downloaded from this repository. A quick online tutorial could probably get you up to speed. **Suggestion**: put the folder in your Desktop as opposed to your Downloads since this might make things more intuitive as it did for me.
+Following that, you will need to download or `clone` this repository zipped up. Then, you'll do a couple of `cd` commands in your command line and journey through to the folder that has the scripts you may have downloaded from this repository. A quick online tutorial could probably get you up to speed. **Suggestion**: put the folder in your Desktop as opposed to your Downloads since this might make things more intuitive as it did for me. See the detailed description in the Start_Active_Players_Lite that delves into this.
 
 Inevitably, you will type in one of the three commands to run the script of your choice: `ruby 'Start_Them.rb'`, `ruby 'Start_Active_Players.rb'`, or `ruby 'Bench_All_Players.rb'`.
 

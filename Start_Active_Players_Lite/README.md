@@ -177,10 +177,6 @@ end
 
 The main function (function and method are loosely interchangeable terms) titled `start_active_players_lite` will be ran from the terminal if the file name typed appropriately matches the file name. In the shell, terminal, or command prompt, the command `ruby 'Start_Them'.rb` would be entered. The code would run from there, assuming that the command was called from the proper directory (folder path).
 
-My command prompt resembles this: `~\Desktop\YahooFantasyBasketballScript\Start_Active_Players_Lite` and I would input `ruby 'Start_Them'.rb` on the side of that path where the text field exists.
-
-Some experience with navigating the terminal using the command `cd` (cd: change directory aka change folder) and autocompleting folder names with the `tab` key will be tremendously helpful at this point. More to the point, if someone made a new folder on their desktop titled `foo` and dragged and dropped `Start_Them.rb` into it, then the path would reflect that directory (aka folder) accordingly like so: `~\Desktop\foo\` followed by typing in `ruby 'Start_Them.rb'`. You'll get the hang of the command line and running scripts on it, no worries! Just a matter of practice!
-
 To clarify the order of operations behind the curtain, the only function being ran will be the `start_active_players_lite` function, which inherently calls the helper functions step by step. The functions are defined first; the body of a function does not run upon being declared...so we need to call them like so (see below).
 
 ```ruby
@@ -188,3 +184,45 @@ if __FILE__ == $PROGRAM_NAME
   start_active_players_lite
 end
 ```
+
+#### Navigating the Command Prompt or Git Powershell for Windows
+
+Some experience with navigating the terminal using the command `cd` (cd: change directory aka change folder) along with periods and autocompleting folder names with the `tab` key will be tremendously helpful at this point.
+
+**The Short Story**
+
+My shell resembles this: `~\Desktop\YahooFantasyBasketballScript\Start_Active_Players_Lite` and I would input `ruby 'Start_Them'.rb` on the side of that path where the text field exists.
+
+**The Longer Story**
+
+1. By default, my Git Shell opens up in `~\Documents\Github`
+2. From there, I need to enter `cd ..` once to leave the Github folder
+3. The shell shows `~\Documents` and then I enter `cd ..` to leave the Documents folder
+4. The shell shows `~` and from there I type `cd d` and press the `tab` key to autocomplete the folder name; I keep pressing tab until it gets to `.\Desktop` then I press enter
+5. The shell shows `~\Desktop` so I type in `cd y` and press the `tab` key to autocomplete the folder name for me
+6. Now that my shell is showing `~\Desktop\YahooFantasyBasketballScript` I need to be in the folder that houses the desired script
+7. From Step 6, you can pick your choice of command: `cd b` + `tab` or `cd s` + `tab`
+
+    7a. If I want to bench all my players, then I will hit enter after typing `cd b` + `tab` and then enter in `ruby 'Bench_All_Players.rb'` which follows the template of `ruby 'Name_of_File.rb'` to be clear
+
+    7b. For the latter, you can keep tapping the tab key because two folders begin with the letter 'S' and thus there are two options
+
+**Tips**
+- If you are in the wrong folder, then use `cd ..` to go back one folder in the folder tree or use `cd` like previously
+- If you want to know what files or folders are in a folder, then type in the command `ls` to have that list which can remind you what letters to type to start up the autocompletion
+- If you want to know the entire path aka what's behind the tilde symbol (~), you would type in `pwd` (UNIX) into the terminal which stands for print working directory
+- For the default command prompt: the functionality of `ls` in UNIX is achieved with typing in `dir` in the Windows command line
+
+More to the point, if someone made a new folder on their desktop titled `foo` and dragged and dropped `Start_Them.rb` into it, then the path would reflect that directory (aka folder) accordingly like so: `~\Desktop\foo\` followed by typing in `ruby 'Start_Them.rb'`. So moving through files via the command prompt is an explicit description of what we do when we click through folders day to day.
+
+```
+# Microsoft Windows Command Prompt Navigation for Start_Active_Players_Full
+
+C:\Users\John> cd Desktop
+C:\Users\John\Desktop> cd YahooFantasyBasketballScript
+C:\Users\John\Desktop\YahooFantasyBasketballScript> cd Start_Active_Players_Full
+C:\Users\John\Desktop\YahooFantasyBasketballScript\Start_Active_Players_Full> ruby 'Start_Active_Players_Full.rb'
+
+```
+
+You'll get the hang of the command line and running scripts on it, no worries! Just a matter of practice and then you can navigate the command prompt swiftly!
