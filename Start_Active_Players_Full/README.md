@@ -28,7 +28,7 @@ Enter the name of your team: Balling on a Budget
 Enter the name of your opponent's team: Milk and Cereal
 ```
 
-## Possible Areas With Room for Improvement
+## There's Always Room for Improvement
 
 - I could improve upon the exception handling and consider reducing the global default timeout (30 seconds) to speed things up since the code moves on (in practice so far) after being rescued from the timeout error; I could also be more specific about the errors the code should be rescued from
   - This could be achieved with calling `Watir.default_timeout = 10` at the beginning of the script
