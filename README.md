@@ -32,7 +32,7 @@ I vividly remember how overwhelmingly lost I was when I wanted to run a program 
 
 ## Introduction
 
-I love sports and I'm an especially huge fan of basketball. For the 2015-2016 NBA season, my family-friends and I decided to participate in Fantasy Basketball via Yahoo. That same year, I was also thrown into a second league with my friends from college. After getting a full experience of fantasy basketball, I took the 2016-2017 season off. Recently, my good friends wanted to do fantasy basketball for the 2017-2018 season.
+I love sports and I'm an especially huge fan of basketball. For the 2015-2016 NBA season, my family-friends and I decided to participate in Fantasy Basketball via Yahoo. That same year, I was also thrown into a second league with my friends from college. After getting a full experience of fantasy basketball, I took the 2016-2017 season off. Recently, my good friends wanted to do season-long Yahoo Fantasy Basketball for the 2017-2018 season with nine categories and standard Head-To-Head settings...and a single IL/IR spot.
 
 This is my first time participating in Yahoo Fantasy basketball with somewhat of a budding background in coding. I started to pay attention to things differently, observe the little things, and I also started to explore certain aspects with the Google Chrome Inspector Tools. I noticed details about how the page was loading...things of that nature...that I could previously describe on a higher-level (think of the compound word: overview), but this time around I have a clearer idea of what is going on behind the scenes.
 
@@ -48,6 +48,7 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
 
 ***Please refer to the README.md file in the Start_Active_Players_Lite folder for a more detailed breakdown***
 
+0. I would recommend running these scripts on Monday morning or Monday afternoon
 1. Opens a web browser session
 2. Maximizes the web browser window
 3. Goes to the Yahoo Fantasy Basketball website
@@ -66,6 +67,8 @@ Putting my curiosity together with the questions I asked my friend who kindly ex
         12a. From here, navigates to your opponent's team
 
         12b. Counts the amount of players who have a game on that day
+        ###  If your fantasy league has an IL/IR spot, their games apply toward this count...so subtract if necessary
+        ###  If not, the count should be accurate
 
         12c. Clicks the "Next Day" arrow icon
 
