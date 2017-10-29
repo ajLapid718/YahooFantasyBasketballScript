@@ -4,7 +4,7 @@ Jump To: [Preface](https://github.com/ajLapid718/YahooFantasyBasketballScript#pr
 |
 Jump To: [Introduction](https://github.com/ajLapid718/YahooFantasyBasketballScript#introduction)
 |
-Jump To: [Functionality](https://github.com/ajLapid718/YahooFantasyBasketballScript#step-by-step-functionality-summarized)
+Jump To: [Functionality](https://github.com/ajLapid718/YahooFantasyBasketballScript#step-by-step-functionality-lite-and-full)
 |
 Jump To: [Configuration](https://github.com/ajLapid718/YahooFantasyBasketballScript#from-configuration-to-implementation)
 |
