@@ -1,3 +1,33 @@
+## Prompts
+
+You will receive prompts when you run this version of the script. The prompts will ask you for the following:
+
+- Yahoo E-Mail Address
+- Yahoo Password
+- Password Confirmation
+- Your Team Name
+- Your Opponent's Team Name
+
+The prompts will look like this:
+
+```
+Enter your Yahoo e-mail address (example: person123):
+Enter your password:
+Confirm your password:
+Enter the name of your team:
+Enter the name of your opponent's team:
+```
+
+A valid prompt will end up resembling something along these lines:
+
+```
+Enter your Yahoo e-mail address (example: person123): abc321
+Enter your password: ********
+Confirm your password: ********
+Enter the name of your team: Balling on a Budget
+Enter the name of your opponent's team: Milk and Cereal
+```
+
 ## Possible Areas With Room for Improvement
 
 - I could improve upon the exception handling and consider reducing the global default timeout (30 seconds) to speed things up since the code moves on (in practice so far) after being rescued from the timeout error; I could also be more specific about the errors the code should be rescued from
