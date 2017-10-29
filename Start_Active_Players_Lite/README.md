@@ -189,11 +189,11 @@ end
 
 Some experience with navigating the terminal using the command `cd` (cd: change directory aka change folder) along with periods and autocompleting folder names with the `tab` key will be tremendously helpful at this point.
 
-**The Short Story**
+###### The Short Story
 
 My shell resembles this: `~\Desktop\YahooFantasyBasketballScript\Start_Active_Players_Lite` and I would input `ruby 'Start_Them'.rb` on the side of that path where the text field exists.
 
-**The Longer Story**
+###### The Longer Story
 
 1. By default, my Git Shell opens up in `~\Documents\Github`
 2. From there, I need to enter `cd ..` once to leave the Github folder
@@ -207,7 +207,7 @@ My shell resembles this: `~\Desktop\YahooFantasyBasketballScript\Start_Active_Pl
 
     7b. For the latter, you can keep tapping the tab key because two folders begin with the letter 'S' and thus there are two options
 
-**Tips**
+###### Tips
 - If you are in the wrong folder, then use `cd ..` to go back one folder in the folder tree or use `cd` like previously
 - If you want to know what files or folders are in a folder, then type in the command `ls` to have that list which can remind you what letters to type to start up the autocompletion
 - If you want to know the entire path aka what's behind the tilde symbol (~), you would type in `pwd` (UNIX) into the terminal which stands for print working directory
