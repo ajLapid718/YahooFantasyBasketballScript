@@ -205,13 +205,13 @@ My shell resembles this: `~\Desktop\YahooFantasyBasketballScript\Start_Active_Pl
 
     7a. Enter in `ruby 'Bench_All_Players.rb'` which follows the template of `ruby 'Name_of_File.rb'` for the sake of clarity
 
-7. From Step 6, you can type in: `cd s` + `tab` to be close to the lite or full folder
+8. From Step 6, you can type in: `cd s` + `tab` to be close to the lite or full folder
 
     7a. Keep tapping the tab key because two folders begin with the letter 'S' and thus there are two options to choose from
 
     7b. After settling between the lite or full version, refer to Step 7a to run the respective script
 
-8. Type in `exit` in your terminal after the script finishes
+9. Type in `exit` in your terminal after the script finishes
 
 ###### Tips
 - If you are in the wrong folder, then use `cd ..` to go back one folder in the folder tree or use `cd` like previously
