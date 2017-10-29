@@ -28,7 +28,7 @@ Enter the name of your team: Balling on a Budget
 Enter the name of your opponent's team: Milk and Cereal
 ```
 
-What you should have as an output:
+What you should expect to have as an output:
 
 ```
 DevTools listening on...
