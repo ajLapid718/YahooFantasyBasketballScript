@@ -20,7 +20,7 @@ def bench_roster
     sleep(3)
     player_name.click
     sleep(3)
-    @browser.elements(:css, "tr[data-pos='BN']").last.click
+    @browser.elements(:css => "tr[data-pos='BN']").last.click
   end
 end
 
