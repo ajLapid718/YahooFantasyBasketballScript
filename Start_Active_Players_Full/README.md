@@ -28,6 +28,64 @@ Enter the name of your team: Balling on a Budget
 Enter the name of your opponent's team: Milk and Cereal
 ```
 
+## Expected Output
+
+You should see something that resembles the following:
+
+```
+DevTools listening...
+Currently logging in...
+Successfully logged in. Navigating to My Team now.
+
+Currently setting active players from October, 30, 2017 to November, 05, 2017...
+
+Successfully set: You have 8 players who have a game on October, 30, 2017!
+6 day[s] left to go!
+
+Successfully set: You have 5 players who have a game on October, 31, 2017!
+5 day[s] left to go!
+
+Successfully set: You have 11 players who have a game on November, 01, 2017!
+The following players remain on the bench, you may want to review this day:
+1) Draymond Green GS - SF,PF,C and he does not have a game
+2) DeMarre Carroll Bkn - SF,PF
+Out and he does not have a game
+3) Kawhi Leonard SA - SG,SF
+Injured and he does not have a game
+4 day[s] left to go!
+
+Successfully set: You have 3 players who have a game on November, 02, 2017!
+3 day[s] left to go!
+
+Successfully set: You have 11 players who have a game on November, 03, 2017!
+The following players remain on the bench, you may want to review this day:
+1) Al-Farouq Aminu Por - SF,PF and he does not have a game
+2) DeAndre Jordan LAC - C and he does not have a game
+3) Eric Bledsoe Pho - PG,SG
+Out and he is playing against @NY
+2 day[s] left to go!
+
+Successfully set: You have 4 players who have a game on November, 04, 2017!
+1 day[s] left to go!
+
+Successfully set: You have 9 players who have a game on November, 05, 2017!
+0 day[s] left to go!
+
+Your opponent's starts per day from October, 30, 2017 to November, 05, 2017
+Your opponent has 10 players who have a game on October, 30, 2017!
+Your opponent has 2 players who have a game on October, 31, 2017!
+Your opponent has 8 players who have a game on November, 01, 2017!
+Your opponent has 4 players who have a game on November, 02, 2017!
+Your opponent has 9 players who have a game on November, 03, 2017!
+Your opponent has 2 players who have a game on November, 04, 2017!
+Your opponent has 11 players who have a game on November, 05, 2017!
+
+Everything is all set for 7 day[s] (including today)!
+You have a total of 51 starts and your opponent has a total of 46 starts! Whoa!
+This script took 242 seconds to complete!
+Goodbye!
+```
+
 ## There's Always Room for Improvement
 
 *"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away"* - Antoine de Saint-Exupery
