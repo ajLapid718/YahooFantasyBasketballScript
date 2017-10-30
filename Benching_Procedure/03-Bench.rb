@@ -21,11 +21,16 @@ def bench_roster
     sleep(3)
     player_row.click
     sleep(3)
-    @browser.elements(:css => "tr[data-pos='BN']").last.click
-    if player_condition.nil?
-      puts "Success! By the way, he has a player condition of: Healthy and Available"
+    bottom_row = @browser.elements(:css => "tr[data-pos='BN']").last
+    if bottom_row.text.include?("Empty")
+      bottom_row.click
+      if player_condition.nil?
+        puts "Success! By the way, he has a player condition of: Healthy and Available"
+      else
+        puts "Success! By the way, he has a player condition of: #{player_condition}"
+      end
     else
-      puts "Success! By the way, he has a player condition of: #{player_condition}"
+      puts "Sorry, #{player_name} is either playing already or has finished playing for the day!"
     end
   end
 end
