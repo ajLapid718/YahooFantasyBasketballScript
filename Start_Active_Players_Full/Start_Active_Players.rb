@@ -25,7 +25,7 @@ print "Enter the name of your opponent's team: "
 TEAM_NAME_OF_YOUR_OPPONENT = gets.chomp
 
 browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --headless])
-
+Watir.default_timeout = 5
 begin
   browser.goto("https://basketball.fantasysports.yahoo.com")
 rescue
@@ -118,7 +118,11 @@ number_of_days.times do |counter|
   amount_of_starts = browser.as(:target => "sports").size
   sleep(2)
   puts "Your opponent has #{amount_of_starts} players who have a game on #{(DateTime.now + counter).strftime("%B, %d, %Y")}!"
-  browser.element(:class => "Js-next").click
+  begin
+    browser.element(:class => "Js-next").click
+  rescue
+    puts "Moving on..."
+  end
   their_amount_of_starts += amount_of_starts
   sleep(2)
 end
