@@ -80,7 +80,12 @@ number_of_days.times do |counter|
     sleep(2)
   end
 
-  browser.element(:class => "Js-next").click
+  begin
+    browser.element(:class => "Js-next").click
+  rescue
+    "Moving on..."
+  end
+
   puts "#{number_of_days - (counter + 1)} day[s] left to go!"
   your_amount_of_starts += amount_of_starts
   sleep(3)

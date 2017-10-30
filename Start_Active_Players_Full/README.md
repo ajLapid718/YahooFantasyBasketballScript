@@ -48,10 +48,8 @@ Successfully set: You have 5 players who have a game on October, 31, 2017!
 Successfully set: You have 11 players who have a game on November, 01, 2017!
 The following players remain on the bench, you may want to review this day:
 1) Draymond Green GS - SF,PF,C and he does not have a game
-2) DeMarre Carroll Bkn - SF,PF
-Out and he does not have a game
-3) Kawhi Leonard SA - SG,SF
-Injured and he does not have a game
+2) DeMarre Carroll Bkn - SF,PF Out and he does not have a game
+3) Kawhi Leonard SA - SG,SF Injured and he does not have a game
 4 day[s] left to go!
 
 Successfully set: You have 3 players who have a game on November, 02, 2017!
@@ -61,8 +59,7 @@ Successfully set: You have 11 players who have a game on November, 03, 2017!
 The following players remain on the bench, you may want to review this day:
 1) Al-Farouq Aminu Por - SF,PF and he does not have a game
 2) DeAndre Jordan LAC - C and he does not have a game
-3) Eric Bledsoe Pho - PG,SG
-Out and he is playing against @NY
+3) Eric Bledsoe Pho - PG,SG Out and he is playing against @NY
 2 day[s] left to go!
 
 Successfully set: You have 4 players who have a game on November, 04, 2017!
@@ -112,6 +109,18 @@ Although I have reservations about the term perfection, the sentiment of this qu
 - I could create a folder called `Shared` which can house certain overlapping functionality such as the acquiring user information process, certain instances of navigation and clicking, and some of the logic of some of the loops
   - This could allow `require_relative 'Shared/Foo'` to be called and would apply the DRY (Do-Not-Repeat-Yourself) principle so that if changes needed to be made, I would only need to change one part of the code, et cetera
     - At the moment, I do not see this as urgent for all intents and purposes but I fully understand that it is critical for a maintainable program and that I can't always get away with spaghetti code
+
+- I believe that the semi-pseudo code that would adjust the count properly might look like:
+
+```ruby
+if (browser.table(:id => "statTable0")[15][1].text == "IL") && !(browser.table(:id => "statTable0")[15][4].text.empty?)
+  amount_of_starts -= 1
+end
+
+if ["Injured", "Out", "GTD"].include?(browser.table(:id => "statTable0")[2..14][2].text)
+  amount_of_starts -= 1
+end
+```
 
 - I could write up a ternary operation so that a user can type into the command line the particular web browser and whether or not they would like to use Google's Incognito Mode or the Headless Chrome feature
   - If a user downloads this repository and wants to springboard off of that idea, the segment of code below could be one approach
