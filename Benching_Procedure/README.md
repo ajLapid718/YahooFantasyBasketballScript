@@ -45,35 +45,35 @@ Currently benching all players for October, 30, 2017
 
 Attempting to put De'Aaron Fox Sac - PG on the bench!
 UNSUCCESSFUL: he is already locked in for his game and for the day!
-As a reminder, he has a status of: Healthy!
+As a reminder, he has a status of: Healthy
 
 Attempting to put Victor Oladipo Ind - PG,SG on the bench!
 UNSUCCESSFUL: he is already locked in for his game and for the day!
-As a reminder, he has a status of: Healthy!
+As a reminder, he has a status of: Healthy
 
 Attempting to put Khris Middleton Mil - SG,SF on the bench!
 UNSUCCESSFUL: he is already locked in for his game and for the day!
-As a reminder, he has a status of: Healthy!
+As a reminder, he has a status of: Healthy
 
 Attempting to put Kawhi Leonard SA - SG,SF on the bench!
 UNSUCCESSFUL: he is already locked in for his game and for the day!
-As a reminder, he has a status of: Injured!
+As a reminder, he has a status of: Injured
 
 Attempting to put DeMarre Carroll Bkn - SF,PF on the bench!
 UNSUCCESSFUL: he is already locked in for his game and for the day!
-As a reminder, he has a status of: Out!
+As a reminder, he has a status of: Out
 
 Attempting to put Myles Turner Ind - PF,C on the bench!
 UNSUCCESSFUL: he is already locked in for his game and for the day!
-As a reminder, he has a status of: Injured!
+As a reminder, he has a status of: Injured
 
 Attempting to put Kristaps Porzingis NY - PF,C on the bench!
 UNSUCCESSFUL: he is already locked in for his game and for the day!
-As a reminder, he has a status of: Healthy!
+As a reminder, he has a status of: Healthy
 
 Attempting to put Draymond Green GS - SF,PF,C on the bench!
 UNSUCCESSFUL: he is already locked in for his game and for the day!
-As a reminder, he has a status of: Healthy!
+As a reminder, he has a status of: Healthy
 
 Attempting to put DeAndre Jordan LAC - C on the bench!
 SUCCESSFUL: By the way, he has a player condition of: Healthy
@@ -81,8 +81,8 @@ SUCCESSFUL: By the way, he has a player condition of: Healthy
 Attempting to put Jrue Holiday NO - PG on the bench!
 SUCCESSFUL: By the way, he has a player condition of: Healthy
 
-Success! All your players that could be benched are on the bench now!
-This script took 161 seconds to complete!
+Success! All your players that could be benched are on the bench now.
+This script took 161 seconds to complete.
 Goodbye!
 ```
 

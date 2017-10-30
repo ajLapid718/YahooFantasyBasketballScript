@@ -32,7 +32,7 @@ def bench_roster
       end
     else
       puts "UNSUCCESSFUL: he is already locked in for his game and for the day!"
-      puts "As a reminder, he has a status of: #{player_condition}!"
+      puts "As a reminder, he has a status of: #{player_condition}"
     end
   end
 end
