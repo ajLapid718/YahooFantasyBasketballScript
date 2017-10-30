@@ -228,7 +228,7 @@ More to the point, if someone made a new folder on their desktop titled `foo` an
 C:\Users\John> cd Desktop
 C:\Users\John\Desktop> cd YahooFantasyBasketballScript
 C:\Users\John\Desktop\YahooFantasyBasketballScript> cd Start_Active_Players_Full
-C:\Users\John\Desktop\YahooFantasyBasketballScript\Start_Active_Players_Full> ruby 'Start_Active_Players_Full.rb'
+C:\Users\John\Desktop\YahooFantasyBasketballScript\Start_Active_Players_Full> ruby 'Start_Active_Players.rb'
 
 ```
 
