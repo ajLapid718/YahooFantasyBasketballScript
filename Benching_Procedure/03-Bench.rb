@@ -2,11 +2,7 @@ def click_on_my_team
   begin
     @browser.element(:class => 'F-link', text: MY_TEAM).click
   rescue
-    puts "There's been an error regarding clicking on your team name."
-    sleep(1)
-    @browser.refresh
-    sleep(1)
-    retry
+    puts "There's been an error regarding clicking on your team name. Err."
   end
 end
 
@@ -15,22 +11,25 @@ def bench_roster
   puts "Currently benching all players for #{Time.now.strftime("%B, %d, %Y")}"
   10.times do |i|
     player_row = @browser.table(:id => "statTable0")[i+2][2]
-    player_name, player_condition = player_row.split("\n").join(" ")
-    next if player_name.text == "(Empty)"
-    puts "Currently putting #{player_name} on the bench!"
+    player_name, player_condition = player_row.text.split("\n")
+    next if player_name == "(Empty)"
+    puts " "
+    puts "Attempting to put #{player_name} on the bench!"
     sleep(3)
     player_row.click
     sleep(3)
     bottom_row = @browser.elements(:css => "tr[data-pos='BN']").last
+    player_condition.nil? ? player_condition = "Healthy" : player_condition = "#{player_condition}"
     if bottom_row.text.include?("Empty")
       bottom_row.click
-      if player_condition.nil?
-        puts "Success! By the way, he has a player condition of: Healthy and Available"
+      if player_condition == "Healthy"
+        puts "Success! By the way, he has a player condition of: Healthy"
       else
         puts "Success! By the way, he has a player condition of: #{player_condition}"
       end
     else
-      puts "Sorry, #{player_name} is either playing already or has finished playing for the day!"
+      puts "Sorry, #{player_name} is already locked in for his game and for the day!"
+      puts "Reminder: he is #{player_condition}!"
     end
   end
 end

@@ -1,6 +1,6 @@
 def start_browser_session
   @browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --headless])
-  Watir.default_timeout = 10
+  Watir.default_timeout = 15
 end
 
 def go_to_yahoo
@@ -15,11 +15,7 @@ def click_on_sign_in
   begin
     @browser.element(:id => 'yucs-profile').click
   rescue
-    puts "There's been an error with clicking on the Sign In link. Will refresh and try again!"
-    sleep(1)
-    @browser.refresh
-    sleep(1)
-    retry
+    puts "There's been an error with clicking on the Sign In link. Umm."
   end
 end
 
