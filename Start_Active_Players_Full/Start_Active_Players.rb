@@ -71,9 +71,9 @@ number_of_days.times do |counter|
 
   if amount_of_starts >= 11
     puts "The following players remain on the bench, you may want to review this day: "
-    a, b = [browser.table(:id => "statTable0")[12][2].text, browser.table(:id => "statTable0")[12][4].text]
-    c, d = [browser.table(:id => "statTable0")[13][2].text, browser.table(:id => "statTable0")[13][4].text]
-    e, f = [browser.table(:id => "statTable0")[14][2].text, browser.table(:id => "statTable0")[14][4].text]
+    a, b = [browser.table(:id => "statTable0")[12][2].text.split("\n").join(" "), browser.table(:id => "statTable0")[12][4].text]
+    c, d = [browser.table(:id => "statTable0")[13][2].text.split("\n").join(" "), browser.table(:id => "statTable0")[13][4].text]
+    e, f = [browser.table(:id => "statTable0")[14][2].text.split("\n").join(" "), browser.table(:id => "statTable0")[14][4].text]
     puts "1) #{a} and he #{b.empty? ? "does not have a game" : "is playing against #{b}"}"
     puts "2) #{c} and he #{d.empty? ? "does not have a game" : "is playing against #{d}"}"
     puts "3) #{e} and he #{f.empty? ? "does not have a game" : "is playing against #{f}"}"
