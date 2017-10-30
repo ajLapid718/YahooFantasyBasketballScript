@@ -65,7 +65,8 @@ puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} t
 number_of_days.times do |counter|
   amount_of_starts = browser.as(:target => "sports").size
   sleep(2)
-  puts "You have #{amount_of_starts} players who have a game on #{(DateTime.now + counter).strftime("%B, %d, %Y")}!"
+  puts " "
+  puts "Successfully set: You have #{amount_of_starts} players who have a game on #{(DateTime.now + counter).strftime("%B, %d, %Y")}!"
   browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
 
   if amount_of_starts >= 11
@@ -73,9 +74,9 @@ number_of_days.times do |counter|
     a, b = [browser.table(:id => "statTable0")[12][2].text, browser.table(:id => "statTable0")[12][4].text]
     c, d = [browser.table(:id => "statTable0")[13][2].text, browser.table(:id => "statTable0")[13][4].text]
     e, f = [browser.table(:id => "statTable0")[14][2].text, browser.table(:id => "statTable0")[14][4].text]
-    puts "#{a} and his schedule: #{b.empty? ? "does not have a game" : b}"
-    puts "#{c} and his schedule: #{d.empty? ? "does not have a game" : d}"
-    puts "#{e} and his schedule #{f.empty? ? "does not have a game" : f}"
+    puts "1) #{a} and he #{b.empty? ? "does not have a game" : "is playing against #{b}"}"
+    puts "2) #{c} and he #{d.empty? ? "does not have a game" : "is playing against #{d}"}"
+    puts "3) #{e} and he #{f.empty? ? "does not have a game" : "is playing against #{f}"}"
     sleep(2)
   end
 
