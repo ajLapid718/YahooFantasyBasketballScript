@@ -86,4 +86,4 @@ This script took 161 seconds to complete.
 Goodbye!
 ```
 
-**Reminder**: The time the script will take to complete can vary. The timer starts the moment the first prompt appears. Expect the duration to range from a little over two minutes to a little under four minutes. Another thing that might seem problematic is receiving an error message. For the most part, there should be no worries about these. The program should proceed as expected afterwards.
+**Reminder**: The time the script will take to complete can vary. The timer starts the moment the first prompt appears. Expect the duration to range from a little over two minutes to a little under four minutes. Heavy internet traffic can be one of many reasons for this deviation. Another thing that might seem problematic is receiving an error message. For the most part, there is nothing to fear here. Hakuna matata. The program should proceed as expected afterwards.
