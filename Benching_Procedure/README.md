@@ -85,4 +85,4 @@ Goodbye!
 
 **Reminder**: The time the script will take to complete can vary. The timer starts the moment the first prompt appears. Expect the duration to range from a little over two minutes to a little under four minutes. Heavy internet traffic can be one of many reasons for this deviation. Another thing that might seem problematic is receiving an error message. For the most part, there is nothing to fear here. Hakuna matata. The program should proceed as expected afterwards.
 
-I had a rough week in Fantasy Basketball with all those injuries. Sigh.
+My team had a rough week with all of those injuries. Sigh.
