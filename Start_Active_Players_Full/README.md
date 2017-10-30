@@ -30,6 +30,10 @@ Enter the name of your opponent's team: Milk and Cereal
 
 ## There's Always Room for Improvement
 
+***"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away"*** - Antoine de Saint-Exupery
+
+Although I have reservations about the term perfection, the sentiment of this quote steers my rationale of the following:
+
 - I could improve upon the exception handling and consider reducing the global default timeout (30 seconds) to speed things up since the code moves on (in practice so far) after being rescued from the timeout error; I could also be more specific about the errors the code should be rescued from
   - This could be achieved with calling `Watir.default_timeout = 10` at the beginning of the script
   - I could specify `rescue Watir::Exception::UnknownObjectException, Timeout::Error`
