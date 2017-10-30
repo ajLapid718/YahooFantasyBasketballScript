@@ -60,7 +60,6 @@ your_amount_of_starts = 0
 puts "Currently setting active players from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (number_of_days-1)).strftime("%B, %d, %Y")}"
 number_of_days.times do |counter|
   amount_of_starts = browser.as(:target => "sports").size
-  sleep(2)
   puts " "
   puts "Successfully set: You have #{amount_of_starts} players who have a game on #{(DateTime.now + counter).strftime("%B, %d, %Y")}!"
   begin
@@ -87,6 +86,7 @@ number_of_days.times do |counter|
 
   puts "#{number_of_days - (counter + 1)} day[s] left to go!"
   your_amount_of_starts += amount_of_starts
+  sleep(2)
 end
 
 begin
