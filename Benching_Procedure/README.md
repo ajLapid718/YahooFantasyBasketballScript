@@ -6,7 +6,6 @@ You will receive prompts when you run this version of the script. The prompts wi
 - Yahoo Password
 - Password Confirmation
 - Your Team Name
-- Your Opponent's Team Name
 
 The prompts will look like this:
 
@@ -15,7 +14,6 @@ Enter your Yahoo e-mail address (example: person123):
 Enter your password:
 Confirm your password:
 Enter the name of your team:
-Enter the name of your opponent's team:
 ```
 
 A valid prompt will end up resembling something along these lines:
@@ -25,7 +23,6 @@ Enter your Yahoo e-mail address (example: person123): abc321
 Enter your password: ********
 Confirm your password: ********
 Enter the name of your team: Balling on a Budget
-Enter the name of your opponent's team: Milk and Cereal
 ```
 
 ## Expected Output
@@ -87,3 +84,5 @@ Goodbye!
 ```
 
 **Reminder**: The time the script will take to complete can vary. The timer starts the moment the first prompt appears. Expect the duration to range from a little over two minutes to a little under four minutes. Heavy internet traffic can be one of many reasons for this deviation. Another thing that might seem problematic is receiving an error message. For the most part, there is nothing to fear here. Hakuna matata. The program should proceed as expected afterwards.
+
+I had a rough week in Fantasy Basketball with all those injuries. Sigh.
