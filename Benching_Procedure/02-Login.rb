@@ -1,6 +1,7 @@
 def start_browser_session
   @browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --headless])
-  Watir.default_timeout = 15
+  Watir.default_timeout = 10
+  puts "Opening browser session..."
 end
 
 def go_to_yahoo
@@ -22,8 +23,16 @@ end
 def log_user
   puts " "
   puts "Currently logging in..."
-  @browser.tap { |b| b.text_field(:id => 'login-username').set(YAHOO_EMAIL_ADDRESS) }.send_keys(:enter)
-  @browser.tap { |b| b.text_field(:id => 'login-passwd').set(YAHOO_PASSWORD) }.send_keys(:enter)
+  begin
+    @browser.tap { |b| b.text_field(:id => 'login-username').set(YAHOO_EMAIL_ADDRESS) }.send_keys(:enter)
+  rescue
+    puts "Rescued!"
+  end
+  begin
+    @browser.tap { |b| b.text_field(:id => 'login-passwd').set(YAHOO_PASSWORD) }.send_keys(:enter)
+  rescue
+    puts "Rescued!"
+  end
   puts "Successfully logged in. Navigating to My Team now."
 end
 
