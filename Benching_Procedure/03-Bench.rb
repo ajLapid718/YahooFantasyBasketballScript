@@ -2,8 +2,11 @@ def click_on_my_team
   begin
     @browser.element(:class => 'F-link', text: MY_TEAM).click
   rescue
-    puts "There's been an error regarding clicking on your team name. Err."
+    puts "There's been an error regarding clicking on your team name. Will refresh "
+    @browser.refresh
+    sleep(3)
   end
+  puts "Looking at your roster at the moment..."
 end
 
 def bench_roster
@@ -23,13 +26,13 @@ def bench_roster
     if bottom_row.text.include?("Empty")
       bottom_row.click
       if player_condition == "Healthy"
-        puts "Success! By the way, he has a player condition of: Healthy"
+        puts "SUCCESSFUL: By the way, he has a player condition of: Healthy"
       else
-        puts "Success! By the way, he has a player condition of: #{player_condition}"
+        puts "SUCCESSFUL: By the way, he has a player condition of: #{player_condition}"
       end
     else
-      puts "Sorry, #{player_name} is already locked in for his game and for the day!"
-      puts "Reminder: he is #{player_condition}!"
+      puts "UNSUCCESSFUL: #{player_name} is already locked in for his game and for the day!"
+      puts "As a reminder, this player has a status of: #{player_condition}!"
     end
   end
 end

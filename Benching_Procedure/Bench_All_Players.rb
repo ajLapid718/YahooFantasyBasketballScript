@@ -8,7 +8,7 @@ require_relative 'requirements'
 sleep(1)
 puts " "
 sleep(1)
-puts "Success! All your players are on the bench!"
+puts "Success! All your players that could be benched are on the bench now!"
 sleep(1)
 puts "This script took #{(Time.now - START_TIME).to_i} seconds to complete!"
 sleep(1)
