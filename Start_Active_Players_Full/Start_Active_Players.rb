@@ -87,7 +87,6 @@ number_of_days.times do |counter|
 
   puts "#{number_of_days - (counter + 1)} day[s] left to go!"
   your_amount_of_starts += amount_of_starts
-  sleep(3)
 end
 
 begin
@@ -116,7 +115,6 @@ their_amount_of_starts = 0
 puts "Your opponent's starts per day from #{Time.now.strftime("%B, %d, %Y")} to #{(DateTime.now + (number_of_days-1)).strftime("%B, %d, %Y")}"
 number_of_days.times do |counter|
   amount_of_starts = browser.as(:target => "sports").size
-  sleep(2)
   puts "Your opponent has #{amount_of_starts} players who have a game on #{(DateTime.now + counter).strftime("%B, %d, %Y")}!"
   begin
     browser.element(:class => "Js-next").click
