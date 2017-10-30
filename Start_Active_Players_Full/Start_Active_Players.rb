@@ -35,11 +35,7 @@ end
 begin
   browser.element(:id => 'yucs-profile').click
 rescue
-  puts "There's been an error regarding clicking on the Sign In link. Will refresh and try again!"
-  sleep(1)
-  browser.refresh
-  sleep(1)
-  retry
+  puts "There's been an error regarding clicking on the Sign In link. Moving on..."
 end
 
 puts " "
@@ -77,13 +73,13 @@ number_of_days.times do |counter|
     puts "1) #{a} and he #{b.empty? ? "does not have a game" : "is playing against #{b}"}"
     puts "2) #{c} and he #{d.empty? ? "does not have a game" : "is playing against #{d}"}"
     puts "3) #{e} and he #{f.empty? ? "does not have a game" : "is playing against #{f}"}"
-    sleep(2)
   end
 
   begin
     browser.element(:class => "Js-next").click
   rescue
     "Moving on..."
+    sleep(2)
   end
 
   puts "#{number_of_days - (counter + 1)} day[s] left to go!"
