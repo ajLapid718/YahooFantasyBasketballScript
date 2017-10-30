@@ -30,7 +30,7 @@ Enter the name of your opponent's team: Milk and Cereal
 
 ## There's Always Room for Improvement
 
-***"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away"*** - Antoine de Saint-Exupery
+*"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away"* - Antoine de Saint-Exupery
 
 Although I have reservations about the term perfection, the sentiment of this quote steers my rationale of the following:
 
