@@ -22,7 +22,7 @@ def bench_roster
     player_row.click
     sleep(3)
     bottom_row = @browser.elements(:css => "tr[data-pos='BN']").last
-    player_condition.nil? ? player_condition = "Healthy" : player_condition = "#{player_condition}"
+    player_condition = "Healthy" if player_condition.nil?
     if bottom_row.text.include?("Empty")
       bottom_row.click
       if player_condition == "Healthy"
