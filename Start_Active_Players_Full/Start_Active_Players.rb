@@ -63,7 +63,11 @@ number_of_days.times do |counter|
   sleep(2)
   puts " "
   puts "Successfully set: You have #{amount_of_starts} players who have a game on #{(DateTime.now + counter).strftime("%B, %d, %Y")}!"
-  browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
+  begin
+    browser.element(:class => ["Btn", "Btn-short", "Btn-primary", "Mend-med"], text: /^Start Active Players$/).click
+  rescue
+    puts "Moving on..."
+  end
 
   if amount_of_starts >= 11
     puts "The following players remain on the bench, you may want to review this day: "
@@ -79,7 +83,6 @@ number_of_days.times do |counter|
     browser.element(:class => "Js-next").click
   rescue
     "Moving on..."
-    sleep(2)
   end
 
   puts "#{number_of_days - (counter + 1)} day[s] left to go!"
