@@ -94,7 +94,7 @@ Things get tricky with the IL/IR spot because some leagues will differ in the am
 
 Usually there's a relatively even amount of starts between opponents, so it does raise the question of: "Is this all that necessary?" It's nice to have a heads-up for that one fateful day where you have 2 players and on that very same day your opponent has 10 players, and vice-versa. That way when you check in throughout the week, you aren't fully surprised by the highs and lows. I would imagine this is especially important during the playoffs where more information is key.
 
-If you do not find yourself in need of the player report or the player count, or if you are planning to set your roster for longer than week, you may be better suited with the Lite version of this script.
+If you do not find yourself in need of the player report or the player count, or if you are planning to set your roster for longer than a week, you may be better suited with the Lite version of this script.
 
 ## There's Always Room for Improvement
 
