@@ -214,13 +214,13 @@ My shell resembles this: `~\Desktop\YahooFantasyBasketballScript\Start_Active_Pl
 9. Type in `exit` in your terminal after the script finishes
 
 ###### Tips
-- If you are in the wrong folder, then use `cd ..` to go back one folder in the folder tree or use `cd` like previously
+- If you are in the wrong folder, then use `cd ..` to go back one folder in the folder tree or use `cd + letter + tab` like previously
 - If you want to know what files or folders are in a folder, then type in the command `ls` to have that list which can remind you what letters to type to start up the autocompletion
 - If you want to know the entire path aka what's behind the tilde symbol (~), you would type in `pwd` (UNIX) into the terminal which stands for print working directory
 - For the default command prompt: the functionality of `ls` in UNIX is achieved with typing in `dir` in the Windows command line
 - If you want to exit the terminal, `ctrl` + `c` or `ctrl` + `q` can assist with that
 
-More to the point, if someone made a new folder on their desktop titled `foo` and dragged and dropped `Start_Them.rb` into it, then the path would reflect that directory (aka folder) accordingly like so: `~\Desktop\foo\` followed by typing in `ruby 'Start_Them.rb'`. So moving through files via the command prompt is an explicit description of what we do when we click through folders day to day.
+More to the point, if someone made a new folder on their desktop titled `foo` and dragged and dropped `Start_Them.rb` into it, then the path would reflect that directory (aka folder) accordingly like so: `~\Desktop\foo\` followed by typing in `ruby 'Start_Them.rb'`. So moving through files via the command prompt is an explicit description of what we do when we click through folders day to day...just without the Graphical-User-Interface (GUI) (essentially the icons, images, and buttons that we see and click).
 
 ```
 # Microsoft Windows Command Prompt Navigation for Start_Active_Players_Full
