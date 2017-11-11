@@ -46,6 +46,12 @@ def enter_email
 end
 
 def enter_password
+  begin
+    @browser.tap { |b| b.text_field(:id => "login-passwd").set(PASSWORD) }.send_keys(:enter)
+  rescue
+    puts "Moving on..."
+  end
+  puts "Successfully logged in. Navigating to the League link now."
 end
 
 def click_on_league
