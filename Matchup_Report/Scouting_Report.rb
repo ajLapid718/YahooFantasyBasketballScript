@@ -36,6 +36,13 @@ def click_on_sign_in
 end
 
 def enter_email
+  puts " "
+  puts "Currently logging in..."
+  begin
+    @browser.tap { |b| b.text_field(:id => "login-username").set(EMAIL) }.send_keys(:enter)
+  rescue
+    puts "Moving on..."
+  end
 end
 
 def enter_password
