@@ -22,6 +22,9 @@ def get_password
 end
 
 def start_browser_session
+  @browser = Watir::Browser.start("https://basketball.fantasysports.yahoo.com", :chrome, switches: %w[--log-level=3 --headless])
+  Watir.default_timeout = 10
+  puts "Successfully opened to Yahoo Fantasy Basketball's website."
 end
 
 def click_on_sign_in
