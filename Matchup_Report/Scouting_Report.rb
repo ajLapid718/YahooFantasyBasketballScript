@@ -64,16 +64,26 @@ def click_on_league
 end
 
 def generate_report
+
 end
 
 def shutdown
 end
 
 def grab_all_stats
+  start_browser_session
+  click_on_sign_in
+  enter_email
+  enter_password
+  click_on_league
+  generate_report
 end
 
 if __FILE__ == $PROGRAM_NAME
+  START_TIME = Time.now
   EMAIL = get_email
   PASSWORD = get_password
   grab_all_stats
+  shutdown
+  puts "Time elapsed: #{(Time.now - START_TIME).to_i} seconds."
 end
