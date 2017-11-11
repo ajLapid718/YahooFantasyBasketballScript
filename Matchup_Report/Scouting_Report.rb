@@ -2,6 +2,8 @@ require 'watir'
 require 'highline/import'
 
 def get_email
+  print "Enter your Yahoo e-mail address (example: person123): "
+  return gets.chomp
 end
 
 def get_password
