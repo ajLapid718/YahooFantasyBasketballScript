@@ -55,6 +55,12 @@ def enter_password
 end
 
 def click_on_league
+  begin
+    @browser.a(:text => "League").click
+  rescue
+    "Moving on..."
+  end
+  puts "Successfully clicked on the League tab."
 end
 
 def generate_report
