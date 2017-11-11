@@ -68,6 +68,12 @@ def generate_report
 end
 
 def shutdown
+  sleep(1)
+  puts "Everything is all taken care of!"
+  sleep(1)
+  puts "Goodbye!"
+  sleep(1)
+  @browser.close
 end
 
 def grab_all_stats
