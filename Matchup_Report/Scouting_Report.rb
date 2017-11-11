@@ -1,1 +1,2 @@
-Placeholder Text
+require 'watir'
+require 'highline/import'
