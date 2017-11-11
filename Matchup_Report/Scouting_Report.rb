@@ -28,6 +28,11 @@ def start_browser_session
 end
 
 def click_on_sign_in
+  begin
+    @browser.element(:id => "yucs-profile").click
+  rescue
+    puts "Moving on..."
+  end
 end
 
 def enter_email
