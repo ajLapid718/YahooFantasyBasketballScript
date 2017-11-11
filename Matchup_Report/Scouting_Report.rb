@@ -7,6 +7,18 @@ def get_email
 end
 
 def get_password
+  begin
+    yahoo_password = ask("Enter your password: ") { |q| q.echo = "*" }
+    password_confirmation = ask("Confirm your password: ") { |q| q.echo = "*" }
+    if yahoo_password == password_confirmation
+      return yahoo_password
+    else
+      raise Exception.new("Your passwords do not match. Try again.")
+    end
+  rescue Exception => error_msg
+    puts error_msg
+    retry
+  end
 end
 
 def start_browser_session
