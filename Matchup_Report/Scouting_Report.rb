@@ -67,15 +67,6 @@ def generate_report
 
 end
 
-def shutdown
-  sleep(1)
-  puts "Everything is all taken care of!"
-  sleep(1)
-  puts "Goodbye!"
-  sleep(1)
-  @browser.close
-end
-
 def grab_all_stats
   start_browser_session
   click_on_sign_in
@@ -83,6 +74,15 @@ def grab_all_stats
   enter_password
   click_on_league
   generate_report
+end
+
+def shutdown
+  sleep(1)
+  puts "Everything is all taken care of!"
+  sleep(1)
+  puts "Goodbye!"
+  sleep(1)
+  @browser.close
 end
 
 if __FILE__ == $PROGRAM_NAME
