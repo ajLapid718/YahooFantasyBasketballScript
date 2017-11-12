@@ -1,5 +1,6 @@
 require 'watir'
 require 'highline/import'
+require 'csv'
 
 def get_email
   print "Enter your Yahoo e-mail address (example: person123): "
