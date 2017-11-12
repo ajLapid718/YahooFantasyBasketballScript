@@ -48,7 +48,7 @@ end
 
 def enter_email
   puts " "
-  puts "Currently logging in..."
+  puts "Currently typing in your username..."
   begin
     @browser.tap { |b| b.text_field(:id => "login-username").set(EMAIL) }.send_keys(:enter)
   rescue
@@ -57,6 +57,7 @@ def enter_email
 end
 
 def enter_password
+  puts "Currently typing in your password..."
   begin
     @browser.tap { |b| b.text_field(:id => "login-passwd").set(PASSWORD) }.send_keys(:enter)
   rescue
@@ -82,6 +83,7 @@ def go_to_previous_week
 end
 
 def initialize_csv
+  puts " "
   today = Time.now.strftime("%F")
   @new_spreadsheet = CSV.open("Matchups#{today}.csv", "wb")
   puts "Created a blank spreadsheet file."
