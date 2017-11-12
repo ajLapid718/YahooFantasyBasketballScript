@@ -95,8 +95,8 @@ def generate_report
   matchups = @browser.divs(:class => /^Grid-table Phone-px-med$/)
   amount_of_matchups = matchups.count
   puts "Currently storing values in the spreadsheet..."
-  puts " "
   amount_of_matchups.times do |current_matchup|
+    puts "Lap #{current_matchup + 1}."
     calibrated_tally = (amount_of_matchups) - (current_matchup + 1)
     matchups[current_matchup].click
     @new_spreadsheet << @browser.tr(:class => /^First Last$/).text.split("\n")
