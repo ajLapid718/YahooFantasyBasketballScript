@@ -64,7 +64,11 @@ def click_on_league
 end
 
 def generate_report
-
+  matchups = @browser.divs(:class => /^Grid-table Phone-px-med$/)
+  amount_of_matchups = matchups.count
+  amount_of_matchups.times do |counter|
+    matchups[counter].click
+  end
 end
 
 def grab_all_stats
