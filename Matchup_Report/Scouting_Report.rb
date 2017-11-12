@@ -84,8 +84,8 @@ end
 
 def initialize_csv
   puts " "
-  today = Time.now.strftime("%F")
-  @new_spreadsheet = CSV.open("Matchups#{today}.csv", "wb")
+  prior_week = @browser.span(:class => /^flyout-title$/).text.strip
+  @new_spreadsheet = CSV.open("Matchups#{prior_week}.csv", "wb")
   puts "Created a blank spreadsheet file."
   sleep(3)
 end
