@@ -64,11 +64,16 @@ def click_on_league
   puts "Successfully clicked on the League tab."
 end
 
+def initialize_csv
+  today = Time.now.strftime("%F")
+  @new_spreadsheet = CSV.open("Matchups#{today}.csv", "wb")
+end
+
 def generate_report
   matchups = @browser.divs(:class => /^Grid-table Phone-px-med$/)
   amount_of_matchups = matchups.count
-  amount_of_matchups.times do |counter|
-    matchups[counter].click
+  amount_of_matchups.times do |current_matchup|
+    matchups[current_matchup].click
   end
 end
 
@@ -78,6 +83,7 @@ def grab_all_stats
   enter_email
   enter_password
   click_on_league
+  initialize_csv
   generate_report
 end
 
