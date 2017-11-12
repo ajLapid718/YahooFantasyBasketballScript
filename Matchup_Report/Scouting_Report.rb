@@ -98,13 +98,17 @@ def generate_report
   amount_of_matchups.times do |current_matchup|
     puts "Lap #{current_matchup + 1}."
     calibrated_tally = (amount_of_matchups) - (current_matchup + 1)
+    sleep(1)
     matchups[current_matchup].click
+    sleep(1)
     @new_spreadsheet << @browser.tr(:class => /^First Last$/).text.split("\n")
     @new_spreadsheet << @browser.tr(:class => /^First$/).text.split("\n")
     @new_spreadsheet << @browser.tr(:class => /^Alt Last$/).text.split("\n")
     puts "#{calibrated_tally} matchups left to go."
     click_on_league unless calibrated_tally == 0
+    sleep(1)
     go_to_previous_week unless calibrated_tally == 0
+    sleep(1)
   end
   @new_spreadsheet.close
 end
