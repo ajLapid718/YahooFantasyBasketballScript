@@ -96,13 +96,14 @@ def generate_report
   puts "Currently storing values in the spreadsheet..."
   puts " "
   amount_of_matchups.times do |current_matchup|
+    calibrated_tally = (amount_of_matchups) - (current_matchup + 1)
     matchups[current_matchup].click
     @new_spreadsheet << @browser.tr(:class => /^First Last$/).text.split("\n")
     @new_spreadsheet << @browser.tr(:class => /^First$/).text.split("\n")
     @new_spreadsheet << @browser.tr(:class => /^Alt Last$/).text.split("\n")
-    puts "#{(amount_of_matchups) - (current_matchup + 1)} matchups left to go."
-    click_on_league
-    go_to_previous_week
+    puts "#{calibrated_tally} matchups left to go."
+    click_on_league unless calibrated_tally == 0
+    go_to_previous_week unless calibrated_tally == 0
   end
   @new_spreadsheet.close
 end
