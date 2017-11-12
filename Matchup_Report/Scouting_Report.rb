@@ -70,7 +70,9 @@ def click_on_league
   rescue
     "Moving on..."
   end
-  puts "Successfully clicked on the League tab."
+end
+
+def go_to_previous_week
   begin
     @browser.a(:class => "Js-prev").click
   rescue
@@ -96,6 +98,7 @@ def generate_report
     @new_spreadsheet << @browser.tr(:class => /^Alt Last$/).text.split("\n")
     puts "#{(amount_of_matchups) - (current_matchup + 1)} matchups left to go."
     click_on_league
+    go_to_previous_week
   end
   @new_spreadsheet.close
 end
@@ -107,6 +110,7 @@ def grab_all_stats
   enter_email
   enter_password
   click_on_league
+  go_to_previous_week
   initialize_csv
   generate_report
 end
