@@ -79,6 +79,8 @@ def generate_report
     @new_spreadsheet << @browser.tr(:class => /^First Last$/).text.split("\n")
     @new_spreadsheet << @browser.tr(:class => "First").text.split("\n")
     @new_spreadsheet << @browser.tr(:class => /^Alt Last$/).text.split("\n")
+    puts "#{(amount_of_matchups) - (current_matchup + 1)} matchups left to go."
+    click_on_league
   end
   @new_spreadsheet.close
 end
