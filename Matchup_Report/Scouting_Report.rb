@@ -23,9 +23,18 @@ def get_password
 end
 
 def start_browser_session
-  @browser = Watir::Browser.start("https://basketball.fantasysports.yahoo.com", :chrome, switches: %w[--log-level=3 --headless])
+  @browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --headless])
   Watir.default_timeout = 10
-  puts "Successfully opened to Yahoo Fantasy Basketball's website."
+  puts "Opened a browser session with Google Chrome."
+end
+
+def go_to_yahoo
+  begin
+    @browser.goto("https://basketball.fantasysports.yahoo.com")
+  rescue
+    "Moving on..."
+  end
+  puts "Successfully opened Yahoo's Fantasy Basketball website."
 end
 
 def click_on_sign_in
@@ -62,12 +71,18 @@ def click_on_league
     "Moving on..."
   end
   puts "Successfully clicked on the League tab."
+  begin
+    @browser.a(:class => "Js-prev").click
+  rescue
+    "Moving on..."
+  end
 end
 
 def initialize_csv
   today = Time.now.strftime("%F")
   @new_spreadsheet = CSV.open("Matchups#{today}.csv", "wb")
   puts "Created a blank spreadsheet file."
+  sleep(3)
 end
 
 def generate_report
@@ -77,7 +92,7 @@ def generate_report
   amount_of_matchups.times do |current_matchup|
     matchups[current_matchup].click
     @new_spreadsheet << @browser.tr(:class => /^First Last$/).text.split("\n")
-    @new_spreadsheet << @browser.tr(:class => "First").text.split("\n")
+    @new_spreadsheet << @browser.tr(:class => /^First$/).text.split("\n")
     @new_spreadsheet << @browser.tr(:class => /^Alt Last$/).text.split("\n")
     puts "#{(amount_of_matchups) - (current_matchup + 1)} matchups left to go."
     click_on_league
@@ -87,6 +102,7 @@ end
 
 def grab_all_stats
   start_browser_session
+  go_to_yahoo
   click_on_sign_in
   enter_email
   enter_password
