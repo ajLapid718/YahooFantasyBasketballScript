@@ -83,7 +83,7 @@ def go_to_previous_week
 end
 
 def initialize_csv
-  puts " "
+  puts ""
   prior_week = @browser.span(:class => /^flyout-title$/).text.strip
   @new_spreadsheet = CSV.open("Matchups#{prior_week}.csv", "wb")
   puts "Created a blank spreadsheet file."
