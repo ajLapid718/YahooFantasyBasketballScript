@@ -67,6 +67,7 @@ end
 def initialize_csv
   today = Time.now.strftime("%F")
   @new_spreadsheet = CSV.open("Matchups#{today}.csv", "wb")
+  puts "Created a blank spreadsheet file."
 end
 
 def generate_report
@@ -74,6 +75,9 @@ def generate_report
   amount_of_matchups = matchups.count
   amount_of_matchups.times do |current_matchup|
     matchups[current_matchup].click
+    @new_spreadsheet << @browser.tr(:class => /^First Last$/).text.split("\n")
+    @new_spreadsheet << @browser.tr(:class => "First").text.split("\n")
+    @new_spreadsheet << @browser.tr(:class => /^Alt Last$/).text.split("\n")
   end
 end
 
