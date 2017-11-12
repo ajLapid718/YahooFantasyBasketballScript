@@ -25,6 +25,7 @@ end
 def start_browser_session
   @browser = Watir::Browser.new(:chrome, switches: %w[--log-level=3 --headless])
   Watir.default_timeout = 10
+  puts " "
   puts "Opened a browser session with Google Chrome."
 end
 
@@ -91,6 +92,7 @@ def generate_report
   matchups = @browser.divs(:class => /^Grid-table Phone-px-med$/)
   amount_of_matchups = matchups.count
   puts "Currently storing values in the spreadsheet..."
+  puts " "
   amount_of_matchups.times do |current_matchup|
     matchups[current_matchup].click
     @new_spreadsheet << @browser.tr(:class => /^First Last$/).text.split("\n")
@@ -116,6 +118,8 @@ def grab_all_stats
 end
 
 def shutdown
+  sleep(1)
+  puts " "
   sleep(1)
   puts "Everything is all taken care of!"
   sleep(1)
