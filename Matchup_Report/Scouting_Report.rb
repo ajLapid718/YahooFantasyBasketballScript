@@ -73,12 +73,14 @@ end
 def generate_report
   matchups = @browser.divs(:class => /^Grid-table Phone-px-med$/)
   amount_of_matchups = matchups.count
+  puts "Currently storing values in the spreadsheet..."
   amount_of_matchups.times do |current_matchup|
     matchups[current_matchup].click
     @new_spreadsheet << @browser.tr(:class => /^First Last$/).text.split("\n")
     @new_spreadsheet << @browser.tr(:class => "First").text.split("\n")
     @new_spreadsheet << @browser.tr(:class => /^Alt Last$/).text.split("\n")
   end
+  @new_spreadsheet.close
 end
 
 def grab_all_stats
