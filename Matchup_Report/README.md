@@ -4,8 +4,9 @@ In any fantasy sport, having as much information as possible facilitates opportu
 
 With the collected information, a user can see side-by-side where he or she stands down to the decimal. Specifically, a user can extrapolate how he or she will fare against the current opponent of the week based on a comparison of how his or her team performed last week relative to how his or her opponent performed last week. Another advantage involves the added transparency of the league's needs. Trades can be proposed with pertinent data on hand to construct strong cases. Categories can be analyzed in order to see which teams are focusing on which statistics. All in all, more insight is provided and the user can capitalize on the information as he or she sees fit.
 
-An example: [Week 4 Matchup Report](https://github.com/ajLapid718/YahooFantasyBasketballScript/blob/master/Matchup_Report/Week4-Matchups.csv)
+Example: [Week 4 Matchup Report](https://github.com/ajLapid718/YahooFantasyBasketballScript/blob/master/Matchup_Report/Week4-Matchups.csv)
 
+Experimenting with the file in Google Sheets or Microsoft Excel is highly recommended.
 
 ## Prompts
 
